@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Vehículos Disponibles</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      padding-top: 3rem;
+      color: white;
+    }
+    .card {
+      background-color: white;
+      color: black;
+      border-radius: 15px;
+      padding: 2rem;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+    .auto-card {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      background-color: #f8f9fa;
+      transition: transform 0.2s;
+    }
+    .auto-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .disponible {
+      color: #28a745;
+      font-weight: bold;
+    }
+    .search-box {
+      background-color: #f8f9fa;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h3><i class="fas fa-car me-2"></i>Vehículos Disponibles</h3>
+        <div>
+          <a href="/index.html" class="btn btn-light me-2">
+            <i class="fas fa-home me-2"></i>Inicio
+          </a>
+          <button id="cerrarSesion" class="btn btn-outline-secondary">
+            <i class="fas fa-sign-out-alt me-2"></i>Cerrar Sesión
+          </button>
+        </div>
+      </div>
+
+      <!-- Barra de búsqueda -->
+      <div class="search-box">
+        <div class="row g-3">
+          <div class="col-md-3">
+            <label for="buscarMarca" class="form-label">Marca</label>
+            <select class="form-select" id="buscarMarca">
+              <option value="">Todas las marcas</option>
+            </select>
+          </div>
+          <div class="col-md-3">
+            <label for="buscarModelo" class="form-label">Modelo</label>
+            <select class="form-select" id="buscarModelo">
+              <option value="">Todos los modelos</option>
+            </select>
+          </div>
+          <div class="col-md-2">
+            <label for="buscarAnio" class="form-label">Año</label>
+            <input type="number" class="form-control" id="buscarAnio" placeholder="Año...">
+          </div>
+          <div class="col-md-2">
+            <label for="buscarColor" class="form-label">Color</label>
+            <input type="text" class="form-control" id="buscarColor" placeholder="Color...">
+          </div>
+          <div class="col-md-2 d-flex align-items-end">
+            <button type="button" id="btnLimpiar" class="btn btn-outline-secondary w-100">
+              <i class="fas fa-eraser me-1"></i>Limpiar
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contador de vehículos -->
+      <div class="mb-3">
+        <span id="contadorVehiculos" class="badge bg-primary fs-6">
+          <i class="fas fa-car me-1"></i>Cargando vehículos...
+        </span>
+      </div>
+
+      <!-- Lista de vehículos -->
+      <div id="listaVehiculos" class="row">
+        <!-- Los vehículos se cargarán aquí dinámicamente -->
+      </div>
+
+      <!-- Mensaje cuando no hay vehículos -->
+      <div id="sinVehiculos" class="text-center py-4" style="display: none;">
+        <i class="fas fa-car-crash fa-3x text-muted mb-3"></i>
+        <h5 class="text-muted">No se encontraron vehículos disponibles</h5>
+        <p class="text-muted">Intenta ajustar los filtros de búsqueda</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const token = localStorage.getItem('token');
+    const rol = localStorage.getItem('rol');
+
+    // Verificar acceso (empleado o encargado)
+    if (!token || (rol !== 'empleado' && rol !== 'encargado')) {
+      alert('Acceso denegado - Solo empleados y encargados pueden acceder a esta sección');
+      location.href = 'login.html';
+    }
+
+    let vehiculosOriginales = [];
+    let vehiculosFiltrados = [];
+    let marcasModelos = {};
+
+    // Funcionalidad del botón cerrar sesión
+    document.getElementById('cerrarSesion').addEventListener('click', () => {
+      if (confirm('¿Estás seguro de que deseas cerrar sesión?')) {
+        localStorage.removeItem('token');
+        localStorage.removeItem('rol');
+        localStorage.removeItem('usuario');
+        window.location.href = '/login.html';
+      }
+    });
+
+    // Cargar marcas y modelos
+    async function cargarMarcasYModelos() {
+      try {
+        console.log('Cargando marcas y modelos...');
+        const res = await fetch('http://localhost:3000/api/autos/marcas-modelos', {
+          headers: { 'Authorization': `Bearer ${token}` }
+        });
+
+        if (!res.ok) {
+          throw new Error(`Error ${res.status}: ${await res.text()}`);
+        }
+
+        marcasModelos = await res.json();
+        console.log('Marcas y modelos cargados:', marcasModelos);
+        
+        // Llenar el select de marcas
+        const selectMarca = document.getElementById('buscarMarca');
+        marcasModelos.marcas.forEach(marca => {
+          const option = document.createElement('option');
+          option.value = marca;
+          option.textContent = marca;
+          selectMarca.appendChild(option);
+        });
+
+        console.log('Marcas agregadas al select:', marcasModelos.marcas.length);
+      } catch (error) {
+        console.error('Error al cargar marcas y modelos:', error);
+      }
+    }
+
+    // Actualizar modelos según la marca seleccionada
+    function actualizarModelos() {
+      const marcaSeleccionada = document.getElementById('buscarMarca').value;
+      const selectModelo = document.getElementById('buscarModelo');
+      
+      console.log('Marca seleccionada:', marcaSeleccionada);
+      console.log('Datos marcasModelos disponibles:', marcasModelos);
+      
+      // Limpiar modelos existentes
+      selectModelo.innerHTML = '<option value="">Todos los modelos</option>';
+      
+      if (marcaSeleccionada && marcasModelos.modelosPorMarca && marcasModelos.modelosPorMarca[marcaSeleccionada]) {
+        console.log('Modelos para la marca', marcaSeleccionada, ':', marcasModelos.modelosPorMarca[marcaSeleccionada]);
+        
+        marcasModelos.modelosPorMarca[marcaSeleccionada].forEach(modelo => {
+          const option = document.createElement('option');
+          option.value = modelo;
+          option.textContent = modelo;
+          selectModelo.appendChild(option);
+          console.log('Agregado modelo:', modelo);
+        });
+      } else {
+        console.log('No se encontraron modelos para la marca:', marcaSeleccionada);
+        console.log('marcasModelos.modelosPorMarca:', marcasModelos.modelosPorMarca);
+      }
+      
+      // Aplicar filtro después de cambiar los modelos
+      filtrarVehiculos();
+    }
+
+    // Cargar vehículos disponibles
+    async function cargarVehiculosDisponibles() {
+      try {
+        console.log('Cargando vehículos disponibles...');
+        const res = await fetch('http://localhost:3000/api/autos/disponibles', {
+          headers: { 'Authorization': `Bearer ${token}` }
+        });
+
+        if (!res.ok) {
+          const errorText = await res.text();
+          console.error('Error del servidor:', errorText);
+          throw new Error(`Error ${res.status}: ${errorText}`);
+        }
+
+        vehiculosOriginales = await res.json();
+        vehiculosFiltrados = [...vehiculosOriginales];
+        console.log('Vehículos cargados:', vehiculosOriginales.length);
+        
+        mostrarVehiculos();
+        actualizarContador();
+      } catch (error) {
+        console.error('Error al cargar vehículos:', error);
+        document.getElementById('contadorVehiculos').innerHTML = 
+          '<i class="fas fa-exclamation-triangle me-1"></i>Error al cargar vehículos';
+        document.getElementById('contadorVehiculos').className = 'badge bg-danger fs-6';
+      }
+    }
+
+    // Mostrar vehículos en la interfaz
+    function mostrarVehiculos() {
+      const container = document.getElementById('listaVehiculos');
+      const sinVehiculos = document.getElementById('sinVehiculos');
+
+      if (vehiculosFiltrados.length === 0) {
+        container.innerHTML = '';
+        sinVehiculos.style.display = 'block';
+        return;
+      }
+
+      sinVehiculos.style.display = 'none';
+      container.innerHTML = vehiculosFiltrados.map(vehiculo => `
+        <div class="col-md-6 col-lg-4">
+          <div class="auto-card">
+            <div class="d-flex justify-content-between align-items-start mb-2">
+              <h5 class="mb-0">${vehiculo.marca} ${vehiculo.modelo}</h5>
+              <span class="disponible">
+                <i class="fas fa-check-circle me-1"></i>Disponible
+              </span>
+            </div>
+            <div class="mb-2">
+              <strong>Año:</strong> ${vehiculo.anio}<br>
+              <strong>Color:</strong> ${vehiculo.color || 'No especificado'}<br>
+              <strong>Placas:</strong> ${vehiculo.placas}
+            </div>
+            <div class="text-end">
+              <small class="text-muted">
+                <i class="fas fa-car me-1"></i>Listo para alquiler
+              </small>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // Actualizar contador
+    function actualizarContador() {
+      const contador = document.getElementById('contadorVehiculos');
+      contador.innerHTML = `<i class="fas fa-car me-1"></i>${vehiculosFiltrados.length} vehículo(s) disponible(s)`;
+      contador.className = vehiculosFiltrados.length > 0 ? 'badge bg-success fs-6' : 'badge bg-warning fs-6';
+    }
+
+    // Función de filtrado
+    function filtrarVehiculos() {
+      const marca = document.getElementById('buscarMarca').value;
+      const modelo = document.getElementById('buscarModelo').value;
+      const anio = document.getElementById('buscarAnio').value;
+      const color = document.getElementById('buscarColor').value.toLowerCase();
+
+      vehiculosFiltrados = vehiculosOriginales.filter(vehiculo => {
+        const cumpleMarca = !marca || vehiculo.marca === marca;
+        const cumpleModelo = !modelo || vehiculo.modelo === modelo;
+        const cumpleAnio = !anio || vehiculo.anio.toString() === anio;
+        const cumpleColor = !color || (vehiculo.color && vehiculo.color.toLowerCase().includes(color));
+
+        return cumpleMarca && cumpleModelo && cumpleAnio && cumpleColor;
+      });
+
+      mostrarVehiculos();
+      actualizarContador();
+    }
+
+    // Limpiar filtros
+    function limpiarFiltros() {
+      document.getElementById('buscarMarca').value = '';
+      document.getElementById('buscarModelo').value = '';
+      document.getElementById('buscarAnio').value = '';
+      document.getElementById('buscarColor').value = '';
+      
+      // Limpiar modelos cuando se limpia marca
+      const selectModelo = document.getElementById('buscarModelo');
+      selectModelo.innerHTML = '<option value="">Todos los modelos</option>';
+      
+      vehiculosFiltrados = [...vehiculosOriginales];
+      mostrarVehiculos();
+      actualizarContador();
+    }
+
+    // Event listeners para filtros en tiempo real
+    document.getElementById('buscarMarca').addEventListener('change', actualizarModelos);
+    document.getElementById('buscarModelo').addEventListener('change', filtrarVehiculos);
+    document.getElementById('buscarAnio').addEventListener('input', filtrarVehiculos);
+    document.getElementById('buscarColor').addEventListener('input', filtrarVehiculos);
+    document.getElementById('btnLimpiar').addEventListener('click', limpiarFiltros);
+
+    // Cargar datos al inicio
+    async function inicializar() {
+      await cargarMarcasYModelos();
+      await cargarVehiculosDisponibles();
+    }
+    
+    inicializar();
+  </script>
+</body>
+</html>

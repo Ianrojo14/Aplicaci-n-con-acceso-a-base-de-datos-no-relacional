@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Estadísticas de Autos Más Rentados</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      padding-top: 3rem;
+      color: white;
+    }
+    .card {
+      background-color: white;
+      color: black;
+      border-radius: 15px;
+      padding: 2rem;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+    .auto-card {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+      background: linear-gradient(45deg, #f8f9fa, #e9ecef);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .auto-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+    .auto-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #28a745, #20c997);
+    }
+    .ranking-badge {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: white;
+      font-size: 0.9rem;
+    }
+    .ranking-1 { background: linear-gradient(45deg, #FFD700, #FFA500); }
+    .ranking-2 { background: linear-gradient(45deg, #C0C0C0, #A9A9A9); }
+    .ranking-3 { background: linear-gradient(45deg, #CD7F32, #B8860B); }
+    .ranking-default { background: linear-gradient(45deg, #6c757d, #495057); }
+    .stat-item {
+      background: rgba(0,123,255,0.1);
+      border-radius: 8px;
+      padding: 0.75rem;
+      margin: 0.25rem 0;
+      border-left: 4px solid #007bff;
+    }
+    .no-data {
+      text-align: center;
+      padding: 3rem;
+      color: #6c757d;
+    }
+    .loading {
+      text-align: center;
+      padding: 2rem;
+    }
+    .periodo-info {
+      background: rgba(40,167,69,0.1);
+      border-radius: 10px;
+      padding: 1rem;
+      margin-bottom: 2rem;
+      border-left: 4px solid #28a745;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+          <h3><i class="fas fa-chart-bar me-2"></i>Autos Más Rentados</h3>
+          <p class="text-muted mb-0">Estadísticas de los últimos 2 meses</p>
+        </div>
+        <div>
+          <a href="/index.html" class="btn btn-outline-primary me-2">
+            <i class="fas fa-home me-1"></i>Inicio
+          </a>
+          <button id="cerrarSesion" class="btn btn-outline-danger">
+            <i class="fas fa-sign-out-alt me-1"></i>Cerrar Sesión
+          </button>
+        </div>
+      </div>
+
+      <!-- Información del período -->
+      <div class="periodo-info">
+        <div class="row align-items-center">
+          <div class="col-md-8">
+            <h5 class="mb-1"><i class="fas fa-calendar-alt me-2"></i>Período de Consulta</h5>
+            <p class="mb-0">Mostrando estadísticas desde <strong id="fechaInicio"></strong> hasta <strong id="fechaFin"></strong></p>
+          </div>
+          <div class="col-md-4 text-end">
+            <button id="actualizarBtn" class="btn btn-success">
+              <i class="fas fa-sync-alt me-1"></i>Actualizar Datos
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Resumen general -->
+      <div id="resumenGeneral" class="row mb-4" style="display: none;">
+        <div class="col-md-3">
+          <div class="stat-item text-center">
+            <h4 class="text-primary mb-1" id="totalAutos">0</h4>
+            <small class="text-muted">Autos Rentados</small>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="stat-item text-center">
+            <h4 class="text-success mb-1" id="totalRentas">0</h4>
+            <small class="text-muted">Total Rentas</small>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="stat-item text-center">
+            <h4 class="text-info mb-1" id="ingresoTotal">$0</h4>
+            <small class="text-muted">Ingresos Totales</small>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="stat-item text-center">
+            <h4 class="text-warning mb-1" id="promedioRentas">0</h4>
+            <small class="text-muted">Promedio por Auto</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Loading -->
+      <div id="loading" class="loading">
+        <div class="spinner-border text-primary" role="status">
+          <span class="visually-hidden">Cargando...</span>
+        </div>
+        <p class="mt-2">Cargando estadísticas...</p>
+      </div>
+
+      <!-- Lista de autos -->
+      <div id="listaAutos"></div>
+
+      <!-- Sin datos -->
+      <div id="noData" class="no-data" style="display: none;">
+        <i class="fas fa-chart-line fa-3x mb-3 text-muted"></i>
+        <h4>No hay datos disponibles</h4>
+        <p>No se encontraron rentas de autos en los últimos 2 meses.</p>
+        <a href="/alquileres.html" class="btn btn-primary">
+          <i class="fas fa-plus me-1"></i>Crear Primer Alquiler
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Verificar autenticación
+    const token = localStorage.getItem('token');
+    if (!token) {
+      window.location.href = '/login.html';
+    }
+
+    // Verificar permisos de rol (solo encargados)
+    const rol = localStorage.getItem('rol');
+    if (rol !== 'encargado') {
+      alert('Solo los encargados tienen acceso a las estadísticas de autos');
+      window.location.href = '/index.html';
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // Configurar fechas del período
+      configurarPeriodo();
+      
+      // Cargar estadísticas iniciales
+      cargarEstadisticas();
+
+      // Event listeners
+      document.getElementById('actualizarBtn').addEventListener('click', cargarEstadisticas);
+      
+      document.getElementById('cerrarSesion').addEventListener('click', function() {
+        if (confirm('¿Estás seguro de que deseas cerrar sesión?')) {
+          localStorage.removeItem('token');
+          localStorage.removeItem('rol');
+          localStorage.removeItem('usuario');
+          window.location.href = '/login.html';
+        }
+      });
+    });
+
+    function configurarPeriodo() {
+      const fechaFin = new Date();
+      const fechaInicio = new Date();
+      fechaInicio.setMonth(fechaInicio.getMonth() - 2);
+
+      document.getElementById('fechaInicio').textContent = fechaInicio.toLocaleDateString('es-ES');
+      document.getElementById('fechaFin').textContent = fechaFin.toLocaleDateString('es-ES');
+    }
+
+    async function cargarEstadisticas() {
+      try {
+        console.log('Cargando estadísticas de autos más rentados...');
+        
+        // Mostrar loading
+        document.getElementById('loading').style.display = 'block';
+        document.getElementById('listaAutos').innerHTML = '';
+        document.getElementById('noData').style.display = 'none';
+        document.getElementById('resumenGeneral').style.display = 'none';
+
+        const response = await fetch('http://localhost:3000/api/alquileres/estadisticas/autos-mas-rentados', {
+          headers: {
+            'Authorization': `Bearer ${token}`
+          }
+        });
+
+        if (!response.ok) {
+          throw new Error(`Error ${response.status}: ${await response.text()}`);
+        }
+
+        const estadisticas = await response.json();
+        console.log('Estadísticas recibidas:', estadisticas);
+
+        // Ocultar loading
+        document.getElementById('loading').style.display = 'none';
+
+        if (estadisticas.length === 0) {
+          document.getElementById('noData').style.display = 'block';
+          return;
+        }
+
+        // Mostrar resumen general
+        mostrarResumenGeneral(estadisticas);
+        
+        // Mostrar lista de autos
+        mostrarAutosRentados(estadisticas);
+
+      } catch (error) {
+        console.error('Error al cargar estadísticas:', error);
+        document.getElementById('loading').style.display = 'none';
+        document.getElementById('listaAutos').innerHTML = `
+          <div class="alert alert-danger">
+            <i class="fas fa-exclamation-triangle me-2"></i>
+            Error al cargar estadísticas: ${error.message}
+          </div>
+        `;
+      }
+    }
+
+    function mostrarResumenGeneral(estadisticas) {
+      const totalAutos = estadisticas.length;
+      const totalRentas = estadisticas.reduce((sum, auto) => sum + auto.totalRentas, 0);
+      const ingresoTotal = estadisticas.reduce((sum, auto) => sum + auto.ingresoTotal, 0);
+      const promedioRentas = totalAutos > 0 ? (totalRentas / totalAutos).toFixed(1) : 0;
+
+      document.getElementById('totalAutos').textContent = totalAutos;
+      document.getElementById('totalRentas').textContent = totalRentas;
+      document.getElementById('ingresoTotal').textContent = `$${ingresoTotal.toLocaleString()}`;
+      document.getElementById('promedioRentas').textContent = promedioRentas;
+      
+      document.getElementById('resumenGeneral').style.display = 'block';
+    }
+
+    function mostrarAutosRentados(estadisticas) {
+      const listaAutos = document.getElementById('listaAutos');
+      
+      listaAutos.innerHTML = estadisticas.map((auto, index) => {
+        const ranking = index + 1;
+        let rankingClass = 'ranking-default';
+        let rankingIcon = ranking;
+        
+        if (ranking === 1) {
+          rankingClass = 'ranking-1';
+          rankingIcon = '🥇';
+        } else if (ranking === 2) {
+          rankingClass = 'ranking-2';
+          rankingIcon = '🥈';
+        } else if (ranking === 3) {
+          rankingClass = 'ranking-3';
+          rankingIcon = '🥉';
+        }
+
+        const ultimaRenta = new Date(auto.ultimaRenta).toLocaleDateString('es-ES');
+        const primeraRenta = new Date(auto.primeraRenta).toLocaleDateString('es-ES');
+
+        return `
+          <div class="auto-card">
+            <div class="ranking-badge ${rankingClass}">${rankingIcon}</div>
+            
+            <div class="row">
+              <div class="col-md-6">
+                <h5 class="mb-3">
+                  <i class="fas fa-car me-2 text-primary"></i>
+                  ${auto.marca} ${auto.modelo} ${auto.anio}
+                </h5>
+                
+                <div class="row mb-2">
+                  <div class="col-6">
+                    <small class="text-muted">Color:</small><br>
+                    <strong>${auto.color}</strong>
+                  </div>
+                  <div class="col-6">
+                    <small class="text-muted">Placas:</small><br>
+                    <strong>${auto.placas}</strong>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-md-6">
+                <div class="row">
+                  <div class="col-6">
+                    <div class="stat-item text-center">
+                      <h4 class="text-success mb-1">${auto.totalRentas}</h4>
+                      <small class="text-muted">Rentas</small>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="stat-item text-center">
+                      <h4 class="text-info mb-1">$${auto.ingresoTotal.toLocaleString()}</h4>
+                      <small class="text-muted">Ingresos</small>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="mt-2">
+                  <small class="text-muted">
+                    <i class="fas fa-calendar me-1"></i>
+                    Primera renta: ${primeraRenta} | Última renta: ${ultimaRenta}
+                  </small>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Gestión de Reparaciones</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      font-family: Arial, sans-serif;
+      min-height: 100vh;
+    }
+    .container {
+      margin-top: 4rem;
+    }
+    .card {
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card p-4">
+      <h3 class="mb-4 text-center">Reparaciones del Auto</h3>
+        <div class="d-flex justify-content-between mb-3">
+            <a href="/index.html" class="btn btn-light">
+            <i class="fas fa-home me-2"></i>Inicio
+            </a>
+            <a href="/auto.html" class="btn btn-light">
+              <i class="fas fa-car me-2"></i>Reparaciones
+            </a>
+            <button id="cerrarSesion" class="btn btn-outline-secondary">
+            <i class="fas fa-sign-out-alt me-2"></i>Cerrar Sesión
+            </button>
+        </div>
+
+      <div class="mb-3">
+        <label for="autoSelect" class="form-label">Selecciona un Auto</label>
+        <select class="form-select" id="autoSelect">
+            <option value="">-- Selecciona un auto --</option>
+        </select>
+    </div>
+
+
+      <div class="d-grid gap-2 d-md-block mb-3">
+        <button class="btn btn-primary" onclick="obtenerReparaciones()">Buscar</button>
+        <button class="btn btn-success" onclick="mostrarFormularioNueva()">Nueva Reparación</button>
+      </div>
+
+      <div id="reparacionesList" class="table-responsive mt-3" style="display: none;">
+        <table class="table table-striped table-bordered">
+          <thead>
+            <tr>
+              <th>Descripción</th>
+              <th>Fecha</th>
+              <th>Costo</th>
+              <th>Taller</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="tablaReparaciones"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal para registrar/editar reparación -->
+  <div class="modal fade" id="modalReparacion" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <form id="formReparacion">
+          <div class="modal-header bg-primary text-white">
+            <h5 class="modal-title" id="modalTitulo">Registrar Reparación</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <input type="hidden" id="reparacionId">
+            <div class="mb-3">
+              <label for="descripcion" class="form-label">Descripción</label>
+              <input type="text" class="form-control" id="descripcion" required>
+            </div>
+            <div class="mb-3">
+              <label for="fecha" class="form-label">Fecha de Reparación</label>
+              <input type="date" class="form-control" id="fecha" required>
+            </div>
+            <div class="mb-3">
+              <label for="costo" class="form-label">Costo</label>
+              <input type="number" class="form-control" id="costo" step="0.01" required>
+            </div>
+            <div class="mb-3">
+              <label for="taller" class="form-label">Taller</label>
+              <input type="text" class="form-control" id="taller">
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary">Guardar</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    const token = localStorage.getItem('token');
+    const rol = localStorage.getItem('rol');
+    const modal = new bootstrap.Modal(document.getElementById('modalReparacion'));
+
+    if (!token || (rol !== 'encargado')) {
+      alert('Acceso denegado');
+      window.location.href = 'login.html';
+    }
+
+    // Funcionalidad del botón cerrar sesión
+    document.getElementById('cerrarSesion').addEventListener('click', () => {
+      localStorage.removeItem('token');
+      localStorage.removeItem('rol');
+      window.location.href = 'login.html';
+    });
+
+    let autoIdActual = '';
+    let reparacionEditando = null;
+
+    async function cargarAutos() {
+      try {
+        const res = await fetch('http://localhost:3000/api/autos', {
+          headers: { 'Authorization': `Bearer ${token}` }
+        });
+        
+        if (res.ok) {
+          const autos = await res.json();
+          const select = document.getElementById('autoSelect');
+          autos.forEach(auto => {
+            const option = document.createElement('option');
+            option.value = auto._id;
+            option.textContent = `${auto.marca} ${auto.modelo} (${auto.placas})`;
+            select.appendChild(option);
+          });
+        } else {
+          alert('Error al cargar los autos');
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        alert('Error al cargar los autos');
+      }
+    }
+
+    cargarAutos();
+
+    // Event listener para actualizar autoIdActual cuando se selecciona un auto
+    document.getElementById('autoSelect').addEventListener('change', function() {
+      autoIdActual = this.value;
+    });
+
+    async function obtenerReparaciones() {
+      if (!autoIdActual) {
+        autoIdActual = document.getElementById('autoSelect').value;
+      }
+      if (!autoIdActual) return alert('Por favor selecciona un auto');
+
+      const res = await fetch(`http://localhost:3000/api/reparaciones/auto/${autoIdActual}`, {
+        headers: { 'Authorization': `Bearer ${token}` }
+      });
+      
+      if (res.ok) {
+        reparacionesData = await res.json();
+        mostrarTabla(reparacionesData);
+      } else {
+        alert('Error al cargar las reparaciones');
+      }
+    }
+
+    function mostrarTabla(reparaciones) {
+      document.getElementById('reparacionesList').style.display = 'block';
+      const tbody = document.getElementById('tablaReparaciones');
+      tbody.innerHTML = '';
+      reparaciones.forEach((rep, index) => {
+        const fila = document.createElement('tr');
+        fila.innerHTML = `
+          <td>${rep.descripcion}</td>
+          <td>${new Date(rep.fecha).toLocaleDateString()}</td>
+          <td>$${rep.costo}</td>
+          <td>${rep.taller || '-'}</td>
+          <td>
+            <button class="btn btn-sm btn-warning" onclick='editarReparacion(${index})'>Editar</button>
+          </td>
+        `;
+        tbody.appendChild(fila);
+      });
+    }
+
+    let reparacionesData = []; // Variable para almacenar las reparaciones
+
+    function mostrarFormularioNueva() {
+      if (!autoIdActual) {
+        alert('Por favor selecciona un auto primero');
+        return;
+      }
+      document.getElementById('formReparacion').reset();
+      document.getElementById('modalTitulo').innerText = 'Registrar Reparación';
+      document.getElementById('reparacionId').value = '';
+      
+      // Establecer fecha actual por defecto
+      const hoy = new Date().toISOString().split('T')[0];
+      document.getElementById('fecha').value = hoy;
+      
+      reparacionEditando = null;
+      modal.show();
+    }
+
+    function editarReparacion(index) {
+      const reparacion = reparacionesData[index];
+      document.getElementById('modalTitulo').innerText = 'Editar Reparación';
+      document.getElementById('reparacionId').value = reparacion._id;
+      document.getElementById('descripcion').value = reparacion.descripcion;
+      document.getElementById('fecha').value = reparacion.fecha ? reparacion.fecha.split('T')[0] : '';
+      document.getElementById('costo').value = reparacion.costo;
+      document.getElementById('taller').value = reparacion.taller || '';
+      reparacionEditando = reparacion._id;
+      modal.show();
+    }
+
+    document.getElementById('formReparacion').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const descripcion = document.getElementById('descripcion').value;
+      const fecha = document.getElementById('fecha').value;
+      const costo = document.getElementById('costo').value;
+      const taller = document.getElementById('taller').value;
+
+      const datos = { descripcion, fecha, costo, taller };
+
+      if (reparacionEditando) {
+        // actualizar
+        const res = await fetch(`http://localhost:3000/api/reparaciones/${reparacionEditando}`, {
+          method: 'PUT',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`
+          },
+          body: JSON.stringify(datos)
+        });
+        
+        if (res.ok) {
+          alert('Reparación actualizada exitosamente');
+        } else {
+          alert('Error al actualizar la reparación');
+        }
+      } else {
+        // registrar nueva
+        datos.autoId = autoIdActual;
+        const res = await fetch('http://localhost:3000/api/reparaciones', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`
+          },
+          body: JSON.stringify(datos)
+        });
+        
+        if (res.ok) {
+          alert('Reparación registrada exitosamente');
+        } else {
+          alert('Error al registrar la reparación');
+        }
+      }
+
+      modal.hide();
+      obtenerReparaciones();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Gestión de Alquileres</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      padding-top: 3rem;
+      color: white;
+    }
+    .card {
+      background-color: white;
+      color: black;
+      border-radius: 15px;
+      padding: 2rem;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+    .estado-activo {
+      color: #28a745;
+      font-weight: bold;
+    }
+    .estado-finalizado {
+      color: #6c757d;
+      font-weight: bold;
+    }
+    .alquiler-card {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      background-color: #f8f9fa;
+      transition: transform 0.2s;
+    }
+    .alquiler-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h3><i class="fas fa-handshake me-2"></i>Gestión de Alquileres</h3>
+        <div>
+          <button id="btnNuevoAlquiler" class="btn btn-success me-2">
+            <i class="fas fa-plus me-2"></i>Nuevo Alquiler
+          </button>
+          <a href="/index.html" class="btn btn-light me-2">
+            <i class="fas fa-home me-2"></i>Inicio
+          </a>
+          <button id="cerrarSesion" class="btn btn-outline-secondary">
+            <i class="fas fa-sign-out-alt me-2"></i>Cerrar Sesión
+          </button>
+        </div>
+      </div>
+
+      <!-- Filtros -->
+      <div class="row mb-4">
+        <div class="col-md-4">
+          <label for="filtroEstado" class="form-label">Estado</label>
+          <select class="form-select" id="filtroEstado">
+            <option value="">Todos los estados</option>
+            <option value="activo">Activos</option>
+            <option value="finalizado">Finalizados</option>
+          </select>
+        </div>
+        <div class="col-md-4">
+          <label for="filtroCliente" class="form-label">Cliente</label>
+          <select class="form-select" id="filtroCliente">
+            <option value="">Todos los clientes</option>
+          </select>
+        </div>
+        <div class="col-md-4">
+          <label for="filtroAuto" class="form-label">Auto</label>
+          <input type="text" class="form-control" id="filtroAuto" placeholder="Buscar por auto...">
+        </div>
+      </div>
+
+      <!-- Contador de alquileres -->
+      <div class="mb-3">
+        <span id="contadorAlquileres" class="badge bg-primary fs-6">
+          <i class="fas fa-handshake me-1"></i>Cargando alquileres...
+        </span>
+      </div>
+
+      <!-- Lista de alquileres -->
+      <div id="listaAlquileres">
+        <!-- Los alquileres se cargarán aquí dinámicamente -->
+      </div>
+
+      <!-- Mensaje cuando no hay alquileres -->
+      <div id="sinAlquileres" class="text-center py-4" style="display: none;">
+        <i class="fas fa-calendar-times fa-3x text-muted mb-3"></i>
+        <h5 class="text-muted">No se encontraron alquileres</h5>
+        <p class="text-muted">Comienza registrando un nuevo alquiler</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal para nuevo/editar alquiler -->
+  <div class="modal fade" id="modalAlquiler" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="tituloModal">
+            <i class="fas fa-plus me-2"></i>Nuevo Alquiler
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form id="formAlquiler">
+            <input type="hidden" id="alquilerId">
+            
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="clienteId" class="form-label">Cliente *</label>
+                <select class="form-select" id="clienteId" required>
+                  <option value="">Seleccionar cliente...</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label for="autoId" class="form-label">Auto *</label>
+                <select class="form-select" id="autoId" required>
+                  <option value="">Seleccionar auto...</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label for="fechaInicio" class="form-label">Fecha Inicio *</label>
+                <input type="date" class="form-control" id="fechaInicio" required>
+              </div>
+              <div class="col-md-6">
+                <label for="fechaFin" class="form-label">Fecha Fin</label>
+                <input type="date" class="form-control" id="fechaFin">
+              </div>
+              <div class="col-md-6">
+                <label for="monto" class="form-label">Monto *</label>
+                <div class="input-group">
+                  <span class="input-group-text">$</span>
+                  <input type="number" class="form-control" id="monto" step="0.01" required>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <label for="estado" class="form-label">Estado</label>
+                <select class="form-select" id="estado">
+                  <option value="activo">Activo</option>
+                  <option value="finalizado">Finalizado</option>
+                </select>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" id="btnGuardarAlquiler" class="btn btn-primary">
+            <i class="fas fa-save me-2"></i>Guardar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const token = localStorage.getItem('token');
+    const rol = localStorage.getItem('rol');
+
+    // Verificar acceso (empleado, encargado o dueño)
+    if (!token || (rol !== 'empleado' && rol !== 'encargado' && rol !== 'Dueno')) {
+      alert('Acceso denegado - Solo empleados, encargados y dueños pueden acceder a esta sección');
+      location.href = 'login.html';
+    }
+
+    let alquileresOriginales = [];
+    let alquileresFiltrados = [];
+    let clientes = [];
+    let autos = [];
+    
+    const modalAlquiler = new bootstrap.Modal(document.getElementById('modalAlquiler'));
+
+    // Funcionalidad del botón cerrar sesión
+    document.getElementById('cerrarSesion').addEventListener('click', () => {
+      if (confirm('¿Estás seguro de que deseas cerrar sesión?')) {
+        localStorage.removeItem('token');
+        localStorage.removeItem('rol');
+        localStorage.removeItem('usuario');
+        window.location.href = '/login.html';
+      }
+    });
+
+    // Cargar datos iniciales
+    async function cargarDatos() {
+      try {
+        await Promise.all([
+          cargarAlquileres(),
+          cargarClientes(),
+          cargarAutos()
+        ]);
+      } catch (error) {
+        console.error('Error al cargar datos:', error);
+      }
+    }
+
+    // Cargar alquileres
+    async function cargarAlquileres() {
+      try {
+        console.log('Cargando alquileres...');
+        const res = await fetch('http://localhost:3000/api/alquileres', {
+          headers: { 'Authorization': `Bearer ${token}` }
+        });
+
+        if (!res.ok) {
+          throw new Error(`Error ${res.status}: ${await res.text()}`);
+        }
+
+        alquileresOriginales = await res.json();
+        alquileresFiltrados = [...alquileresOriginales];
+        console.log('Alquileres cargados:', alquileresOriginales.length);
+        
+        mostrarAlquileres();
+        actualizarContador();
+      } catch (error) {
+        console.error('Error al cargar alquileres:', error);
+        document.getElementById('contadorAlquileres').innerHTML = 
+          '<i class="fas fa-exclamation-triangle me-1"></i>Error al cargar alquileres';
+        document.getElementById('contadorAlquileres').className = 'badge bg-danger fs-6';
+      }
+    }
+
+    // Cargar clientes para el select
+    async function cargarClientes() {
+      try {
+        const res = await fetch('http://localhost:3000/api/clientes', {
+          headers: { 'Authorization': `Bearer ${token}` }
+        });
+
+        if (res.ok) {
+          clientes = await res.json();
+          
+          // Llenar select del modal
+          const selectCliente = document.getElementById('clienteId');
+          selectCliente.innerHTML = '<option value="">Seleccionar cliente...</option>';
+          
+          // Llenar select del filtro
+          const filtroCliente = document.getElementById('filtroCliente');
+          filtroCliente.innerHTML = '<option value="">Todos los clientes</option>';
+          
+          clientes.forEach(cliente => {
+            // Validar que el cliente tenga nombre y apellido
+            const nombre = cliente.nombre || 'Sin nombre';
+            const apellido = cliente.apellido || 'Sin apellido';
+            
+            // Opción para el modal
+            const option = document.createElement('option');
+            option.value = cliente._id;
+            option.textContent = `${nombre} ${apellido}`;
+            selectCliente.appendChild(option);
+            
+            // Opción para el filtro
+            const optionFiltro = document.createElement('option');
+            optionFiltro.value = cliente._id;
+            optionFiltro.textContent = `${nombre} ${apellido}`;
+            filtroCliente.appendChild(optionFiltro);
+          });
+        }
+      } catch (error) {
+        console.error('Error al cargar clientes:', error);
+      }
+    }
+
+    // Cargar autos disponibles para el select
+    async function cargarAutos() {
+      try {
+        const res = await fetch('http://localhost:3000/api/autos/disponibles', {
+          headers: { 'Authorization': `Bearer ${token}` }
+        });
+
+        if (res.ok) {
+          autos = await res.json();
+          const selectAuto = document.getElementById('autoId');
+          selectAuto.innerHTML = '<option value="">Seleccionar auto...</option>';
+          
+          autos.forEach(auto => {
+            const option = document.createElement('option');
+            option.value = auto._id;
+            option.textContent = `${auto.marca} ${auto.modelo} (${auto.placas})`;
+            selectAuto.appendChild(option);
+          });
+        }
+      } catch (error) {
+        console.error('Error al cargar autos:', error);
+      }
+    }
+
+    // Mostrar alquileres
+    function mostrarAlquileres() {
+      const container = document.getElementById('listaAlquileres');
+      const sinAlquileres = document.getElementById('sinAlquileres');
+
+      if (alquileresFiltrados.length === 0) {
+        container.innerHTML = '';
+        sinAlquileres.style.display = 'block';
+        return;
+      }
+
+      sinAlquileres.style.display = 'none';
+      container.innerHTML = alquileresFiltrados.map(alquiler => {
+        const fechaInicio = new Date(alquiler.fechaInicio).toLocaleDateString();
+        const fechaFin = alquiler.fechaFin ? new Date(alquiler.fechaFin).toLocaleDateString() : 'No definida';
+        const estadoClass = alquiler.estado === 'activo' ? 'estado-activo' : 'estado-finalizado';
+        
+        // Validar datos del cliente
+        const nombreCliente = alquiler.clienteId?.nombre || 'Sin nombre';
+        const apellidoCliente = alquiler.clienteId?.apellido || 'Sin apellido';
+        
+        // Validar datos del auto
+        const marcaAuto = alquiler.autoId?.marca || 'Sin marca';
+        const modeloAuto = alquiler.autoId?.modelo || 'Sin modelo';
+        const placasAuto = alquiler.autoId?.placas || 'Sin placas';
+        
+        return `
+          <div class="alquiler-card">
+            <div class="row align-items-center">
+              <div class="col-md-3">
+                <h6 class="mb-1">${nombreCliente} ${apellidoCliente}</h6>
+                <small class="text-muted">Cliente</small>
+              </div>
+              <div class="col-md-3">
+                <h6 class="mb-1">${marcaAuto} ${modeloAuto}</h6>
+                <small class="text-muted">${placasAuto}</small>
+              </div>
+              <div class="col-md-2">
+                <h6 class="mb-1">$${alquiler.monto.toFixed(2)}</h6>
+                <small class="text-muted">Monto</small>
+              </div>
+              <div class="col-md-2">
+                <span class="${estadoClass}">
+                  <i class="fas fa-circle me-1" style="font-size: 0.6rem;"></i>
+                  ${alquiler.estado.charAt(0).toUpperCase() + alquiler.estado.slice(1)}
+                </span>
+                <div><small class="text-muted">${fechaInicio} - ${fechaFin}</small></div>
+              </div>
+              <div class="col-md-2 text-end">
+                <button class="btn btn-sm btn-outline-primary me-1" onclick="editarAlquiler('${alquiler._id}')">
+                  <i class="fas fa-edit"></i>
+                </button>
+                ${alquiler.estado === 'activo' ? 
+                  `<button class="btn btn-sm btn-outline-success" onclick="finalizarAlquiler('${alquiler._id}')">
+                    <i class="fas fa-check"></i>
+                  </button>` : ''
+                }
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    // Actualizar contador
+    function actualizarContador() {
+      const contador = document.getElementById('contadorAlquileres');
+      const activos = alquileresFiltrados.filter(a => a.estado === 'activo').length;
+      contador.innerHTML = `<i class="fas fa-handshake me-1"></i>${alquileresFiltrados.length} alquiler(es) - ${activos} activo(s)`;
+      contador.className = alquileresFiltrados.length > 0 ? 'badge bg-success fs-6' : 'badge bg-warning fs-6';
+    }
+
+    // Filtrar alquileres
+    function filtrarAlquileres() {
+      const estado = document.getElementById('filtroEstado').value;
+      const clienteId = document.getElementById('filtroCliente').value;
+      const auto = document.getElementById('filtroAuto').value.toLowerCase();
+
+      alquileresFiltrados = alquileresOriginales.filter(alquiler => {
+        const cumpleEstado = !estado || alquiler.estado === estado;
+        const cumpleCliente = !clienteId || alquiler.clienteId._id === clienteId;
+        const cumpleAuto = !auto || 
+          (alquiler.autoId.marca.toLowerCase().includes(auto) || 
+           alquiler.autoId.modelo.toLowerCase().includes(auto) ||
+           alquiler.autoId.placas.toLowerCase().includes(auto));
+
+        return cumpleEstado && cumpleCliente && cumpleAuto;
+      });
+
+      mostrarAlquileres();
+      actualizarContador();
+    }
+
+    // Nuevo alquiler
+    document.getElementById('btnNuevoAlquiler').addEventListener('click', () => {
+      document.getElementById('tituloModal').innerHTML = '<i class="fas fa-plus me-2"></i>Nuevo Alquiler';
+      document.getElementById('formAlquiler').reset();
+      document.getElementById('alquilerId').value = '';
+      document.getElementById('fechaInicio').value = new Date().toISOString().split('T')[0];
+      cargarAutos(); // Recargar autos disponibles
+      modalAlquiler.show();
+    });
+
+    // Guardar alquiler
+    document.getElementById('btnGuardarAlquiler').addEventListener('click', async () => {
+      const formData = {
+        clienteId: document.getElementById('clienteId').value,
+        autoId: document.getElementById('autoId').value,
+        fechaInicio: document.getElementById('fechaInicio').value,
+        fechaFin: document.getElementById('fechaFin').value || null,
+        monto: parseFloat(document.getElementById('monto').value),
+        estado: document.getElementById('estado').value
+      };
+
+      if (!formData.clienteId || !formData.autoId || !formData.monto) {
+        alert('Por favor complete todos los campos requeridos');
+        return;
+      }
+
+      try {
+        const alquilerId = document.getElementById('alquilerId').value;
+        const method = alquilerId ? 'PUT' : 'POST';
+        const url = alquilerId ? 
+          `http://localhost:3000/api/alquileres/${alquilerId}` : 
+          'http://localhost:3000/api/alquileres';
+
+        const res = await fetch(url, {
+          method,
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`
+          },
+          body: JSON.stringify(formData)
+        });
+
+        if (res.ok) {
+          modalAlquiler.hide();
+          await cargarAlquileres();
+          await cargarAutos(); // Recargar lista de autos disponibles
+          alert(alquilerId ? 'Alquiler actualizado exitosamente' : 'Alquiler registrado exitosamente');
+        } else {
+          const error = await res.json();
+          alert('Error: ' + (error.mensaje || 'No se pudo guardar el alquiler'));
+        }
+      } catch (error) {
+        console.error('Error al guardar alquiler:', error);
+        alert('Error al guardar el alquiler');
+      }
+    });
+
+    // Editar alquiler
+    window.editarAlquiler = async (id) => {
+      try {
+        const res = await fetch(`http://localhost:3000/api/alquileres/${id}`, {
+          headers: { 'Authorization': `Bearer ${token}` }
+        });
+
+        if (res.ok) {
+          const alquiler = await res.json();
+          
+          document.getElementById('tituloModal').innerHTML = '<i class="fas fa-edit me-2"></i>Editar Alquiler';
+          document.getElementById('alquilerId').value = alquiler._id;
+          document.getElementById('clienteId').value = alquiler.clienteId._id;
+          document.getElementById('autoId').value = alquiler.autoId._id;
+          document.getElementById('fechaInicio').value = alquiler.fechaInicio.split('T')[0];
+          document.getElementById('fechaFin').value = alquiler.fechaFin ? alquiler.fechaFin.split('T')[0] : '';
+          document.getElementById('monto').value = alquiler.monto;
+          document.getElementById('estado').value = alquiler.estado;
+          
+          // Agregar el auto actual al select si está ocupado
+          const selectAuto = document.getElementById('autoId');
+          let autoEncontrado = false;
+          for (let option of selectAuto.options) {
+            if (option.value === alquiler.autoId._id) {
+              autoEncontrado = true;
+              break;
+            }
+          }
+          
+          if (!autoEncontrado) {
+            const option = document.createElement('option');
+            option.value = alquiler.autoId._id;
+            option.textContent = `${alquiler.autoId.marca} ${alquiler.autoId.modelo} (${alquiler.autoId.placas})`;
+            selectAuto.appendChild(option);
+          }
+          
+          modalAlquiler.show();
+        }
+      } catch (error) {
+        console.error('Error al cargar alquiler:', error);
+        alert('Error al cargar los datos del alquiler');
+      }
+    };
+
+    // Finalizar alquiler
+    window.finalizarAlquiler = async (id) => {
+      if (confirm('¿Está seguro de que desea finalizar este alquiler?')) {
+        try {
+          const res = await fetch(`http://localhost:3000/api/alquileres/${id}`, {
+            method: 'PUT',
+            headers: {
+              'Content-Type': 'application/json',
+              'Authorization': `Bearer ${token}`
+            },
+            body: JSON.stringify({ 
+              estado: 'finalizado',
+              fechaFin: new Date().toISOString().split('T')[0]
+            })
+          });
+
+          if (res.ok) {
+            await cargarAlquileres();
+            await cargarAutos(); // Recargar autos disponibles
+            alert('Alquiler finalizado exitosamente');
+          } else {
+            alert('Error al finalizar el alquiler');
+          }
+        } catch (error) {
+          console.error('Error al finalizar alquiler:', error);
+          alert('Error al finalizar el alquiler');
+        }
+      }
+    };
+
+    // Event listeners para filtros
+    document.getElementById('filtroEstado').addEventListener('change', filtrarAlquileres);
+    document.getElementById('filtroCliente').addEventListener('change', filtrarAlquileres);
+    document.getElementById('filtroAuto').addEventListener('input', filtrarAlquileres);
+
+    // Cargar datos al inicio
+    cargarDatos();
+  </script>
+</body>
+</html>

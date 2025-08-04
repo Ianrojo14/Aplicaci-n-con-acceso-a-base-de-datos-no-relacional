@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Renta de Autos - Sistema de Gestión</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      font-family: 'Arial', sans-serif;
+    }
+    .hero-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      color: white;
+    }
+    .card-home {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .btn-custom {
+      background: linear-gradient(45deg, #007bff, #0056b3);
+      border: none;
+      border-radius: 50px;
+      padding: 15px 40px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 25px rgba(0, 123, 255, 0.3);
+    }
+    .btn-custom:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 35px rgba(0, 123, 255, 0.4);
+    }
+    .icon-feature {
+      font-size: 4rem;
+      color: #007bff;
+      margin-bottom: 1rem;
+    }
+    .feature-card {
+      background: white;
+      border-radius: 15px;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      border: none;
+    }
+    .feature-card:hover {
+      transform: translateY(-5px);
+    }
+    .logo-text {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #007bff;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hero-section">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card-home p-5 text-center">
+            <div class="mb-4">
+              <i class="fas fa-car icon-feature"></i>
+              <h1 class="logo-text mb-3">RENTA DE AUTOS</h1>
+              <p class="lead text-dark mb-4">Sistema Integral de Gestión de Clientes y Vehículos</p>
+              <p class="text-muted mb-5">Administra tu negocio de renta de autos de manera eficiente y profesional</p>
+            </div>
+
+            <!-- Características del sistema -->
+            <div class="row mt-5">
+              <div class="col-md-4 mb-3">
+                <div id="cardAutos" class="text-decoration-none" style="cursor: pointer;">
+                  <div class="feature-card">
+                    <i class="fas fa-clipboard-list text-primary" style="font-size: 2.5rem;"></i>
+                    <h5 class="mt-3 text-dark">Gestión de Autos</h5>
+                    <p class="text-muted small">Registra y administra la información de los vehículos</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 mb-3">
+                <div id="cardClientes" class="feature-card" style="cursor: pointer;">
+                  <i class="fas fa-users text-info" style="font-size: 2.5rem;"></i>
+                  <h5 class="mt-3 text-dark">Gestión de Clientes</h5>
+                  <p class="text-muted small">Registra y administra la información de clientes</p>
+                </div>
+              </div>
+              <div class="col-md-4 mb-3">
+                <div id="cardVehiculosDisponibles" class="feature-card" style="cursor: pointer;">
+                  <i class="fas fa-car text-warning" style="font-size: 2.5rem;"></i>
+                  <h5 class="mt-3 text-dark">Vehículos Disponibles</h5>
+                  <p class="text-muted small">Consulta vehículos disponibles para alquiler</p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4 mb-3">
+                <div id="cardAlquileres" class="feature-card" style="cursor: pointer;">
+                  <i class="fas fa-handshake text-primary" style="font-size: 2.5rem;"></i>
+                  <h5 class="mt-3 text-dark">Gestión de Alquileres</h5>
+                  <p class="text-muted small">Registrar y actualizar alquileres de vehículos</p>
+                </div>
+              </div>
+              <div class="col-md-4 mb-3">
+                <div id="cardConsultaReparaciones" class="feature-card" style="cursor: pointer;">
+                  <i class="fas fa-chart-line text-success" style="font-size: 2.5rem;"></i>
+                  <h5 class="mt-3 text-dark">Consulta de Reparaciones</h5>
+                  <p class="text-muted small">Reportes y análisis de reparaciones por periodo</p>
+                </div>
+              </div>
+              <div class="col-md-4 mb-3">
+                <div id="cardEstadisticasAutos" class="feature-card" style="cursor: pointer;">
+                  <i class="fas fa-chart-bar text-info" style="font-size: 2.5rem;"></i>
+                  <h5 class="mt-3 text-dark">Autos Más Rentados</h5>
+                  <p class="text-muted small">Estadísticas de autos más rentados en los últimos 2 meses</p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4 mb-3">
+                <div id="cardDevoluciones" class="feature-card" style="cursor: pointer;">
+                  <i class="fas fa-undo text-warning" style="font-size: 2.5rem;"></i>
+                  <h5 class="mt-3 text-dark">Registro de Devoluciones</h5>
+                  <p class="text-muted small">Registrar devoluciones de vehículos alquilados</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Botón cerrar sesión -->
+      <div class="row mt-4">
+        <div class="col-12 text-center">
+          <button id="cerrarSesion" class="btn btn-outline-light mb-3">
+            <i class="fas fa-sign-out-alt me-2"></i>Cerrar Sesión
+          </button>
+          
+        </div>
+      </div>      
+    </div>
+  </div>
+
+  <!-- Modal de permisos -->
+  <div class="modal fade" id="modalPermisos" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-warning text-dark">
+          <h5 class="modal-title">
+            <i class="fas fa-exclamation-triangle me-2"></i>Acceso Restringido
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body text-center">
+          <i class="fas fa-lock text-warning" style="font-size: 3rem;"></i>
+          <p class="mt-3 mb-0" id="mensajePermiso"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Entendido</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Verificar si está logueado
+    if (!localStorage.getItem('token')) {
+      window.location.href = '/login.html';
+    }
+
+    // Función para cerrar sesión
+    document.addEventListener('DOMContentLoaded', function() {
+      const rol = localStorage.getItem('rol');
+      const modalPermisos = new bootstrap.Modal(document.getElementById('modalPermisos'));
+
+      // Manejar click en Gestión de Clientes
+      document.getElementById('cardClientes').addEventListener('click', function() {
+        if (rol === 'empleado') {
+          window.location.href = '/clientes.html';
+        } else if (rol === 'encargado' || rol === 'Dueno') {
+          document.getElementById('mensajePermiso').textContent = 
+            'Solo los empleados tienen acceso a la gestión de clientes.';
+          modalPermisos.show();
+        }
+      });
+
+      // Manejar click en Gestión de Autos
+      document.getElementById('cardAutos').addEventListener('click', function() {
+        if (rol === 'encargado') {
+          window.location.href = '/auto.html';
+        } else if (rol === 'empleado' || rol === 'Dueno') {
+          document.getElementById('mensajePermiso').textContent = 
+            'Solo los encargados tienen acceso a la gestión de autos.';
+          modalPermisos.show();
+        }
+      });
+
+      // Manejar click en Consulta de Reparaciones
+      document.getElementById('cardConsultaReparaciones').addEventListener('click', function() {
+        if (rol === 'Dueno') {
+          window.location.href = '/consulta_reparaciones.html';
+        } else if (rol === 'empleado' || rol === 'encargado') {
+          document.getElementById('mensajePermiso').textContent = 
+            'Solo el dueño tiene acceso a la consulta de reparaciones.';
+          modalPermisos.show();
+        }
+      });
+
+      // Manejar click en Vehículos Disponibles
+      document.getElementById('cardVehiculosDisponibles').addEventListener('click', function() {
+        if (rol === 'empleado' || rol === 'encargado') {
+          window.location.href = '/vehiculos_disponibles.html';
+        } else if (rol === 'Dueno') {
+          document.getElementById('mensajePermiso').textContent = 
+            'Solo los empleados y encargados tienen acceso a la consulta de vehículos disponibles.';
+          modalPermisos.show();
+        }
+      });
+
+      // Manejar click en Gestión de Alquileres
+      document.getElementById('cardAlquileres').addEventListener('click', function() {
+        if (rol === 'empleado' || rol === 'encargado') {
+          window.location.href = '/alquileres.html';
+        } else if (rol === 'Dueno') {
+          document.getElementById('mensajePermiso').textContent = 
+            'Solo los empleados y encargados tienen acceso a la gestión de alquileres.';
+          modalPermisos.show();
+        }
+      });
+
+      // Manejar click en Estadísticas de Autos Más Rentados
+      document.getElementById('cardEstadisticasAutos').addEventListener('click', function() {
+        if (rol === 'encargado') {
+          window.location.href = '/estadisticas_autos.html';
+        } else {
+          document.getElementById('mensajePermiso').textContent = 
+            'Solo los encargados tienen acceso a las estadísticas de autos.';
+          modalPermisos.show();
+        }
+      });
+
+      // Manejar click en Registro de Devoluciones
+      document.getElementById('cardDevoluciones').addEventListener('click', function() {
+        if (rol === 'encargado') {
+          window.location.href = '/devoluciones.html';
+        } else {
+          document.getElementById('mensajePermiso').textContent = 
+            'Solo los encargados tienen acceso al registro de devoluciones.';
+          modalPermisos.show();
+        }
+      });
+
+      // Función para cerrar sesión
+      document.getElementById('cerrarSesion').addEventListener('click', function() {
+        if (confirm('¿Estás seguro de que deseas cerrar sesión?')) {
+          localStorage.removeItem('token');
+          localStorage.removeItem('rol');
+          localStorage.removeItem('usuario');
+          window.location.href = '/login.html';
+        }
+      });
+
+      // Efecto de carga suave
+      const card = document.querySelector('.card-home');
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(30px)';
+      
+      setTimeout(() => {
+        card.style.transition = 'all 0.8s ease';
+        card.style.opacity = '1';
+        card.style.transform = 'translateY(0)';
+      }, 100);
+    });
+
+    // Efecto hover en las tarjetas de características
+    document.querySelectorAll('.feature-card').forEach(card => {
+      card.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-5px) scale(1.02)';
+      });
+      
+      card.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0) scale(1)';
+      });
+    });
+  </script>
+</body>
+</html>

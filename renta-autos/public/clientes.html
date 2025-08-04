@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Renta de Autos - Gestión de Clientes</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .header {
+      background-color: #007bff;
+      color: white;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container mt-4">
+    <div class="header">
+      <div class="d-flex justify-content-between align-items-center">
+        <div>
+          <h2>Renta de Autos - Gestión de Clientes</h2>
+          <p>Atención al público</p>
+        </div>
+        <div>
+          <a href="/index.html" class="btn btn-light me-2">
+            <i class="fas fa-home me-2"></i>Inicio
+          </a>
+          <button id="cerrarSesion" class="btn btn-outline-light">
+            <i class="fas fa-sign-out-alt me-2"></i>Cerrar Sesión
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Formulario de Clientes -->
+    <div class="card mb-4">
+      <div class="card-header bg-primary text-white">Registrar / Actualizar</div>
+      <div class="card-body">
+        <form id="clienteForm">
+          <input type="hidden" id="clienteId">
+          <div class="row mb-3">
+            <div class="col">
+              <label for="nombre" class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="nombre" required>
+            </div>
+            <div class="col">
+              <label for="apellido" class="form-label">Apellido</label>
+              <input type="text" class="form-control" id="apellido" required>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col">
+              <label for="telefono" class="form-label">Teléfono</label>
+              <input type="text" class="form-control" id="telefono" required>
+            </div>
+            <div class="col">
+              <label for="email" class="form-label">Correo</label>
+              <input type="email" class="form-control" id="email" required>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col">
+              <label for="direccion" class="form-label">Dirección</label>
+              <input type="text" class="form-control" id="direccion" required>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-success">Guardar</button>
+          <button type="reset" class="btn btn-secondary">Cancelar</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Tabla de Clientes -->
+    <div class="card">
+      <div class="card-header bg-secondary text-white">Clientes Registrados</div>
+      <div class="card-body">
+        <table class="table table-hover">
+          <thead class="table-light">
+            <tr>
+              <th>Nombre</th>
+              <th>Apellido</th>
+              <th>Teléfono</th>
+              <th>Correo</th>
+              <th>Dirección</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="clientesTable"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lógica con JS -->
+  <script>
+    // Verificar autenticación
+    if (!localStorage.getItem('token')) {
+      window.location.href = '/login.html';
+    }
+
+    // Verificar permisos de rol
+    const rol = localStorage.getItem('rol');
+    if (rol !== 'empleado') {
+      alert('Solo los empleados tienen acceso a la gestión de clientes');
+      window.location.href = '/index.html';
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // Función para cerrar sesión
+      document.getElementById('cerrarSesion').addEventListener('click', function() {
+        if (confirm('¿Estás seguro de que deseas cerrar sesión?')) {
+          localStorage.removeItem('token');
+          localStorage.removeItem('rol');
+          localStorage.removeItem('usuario');
+          window.location.href = '/login.html';
+        }
+      });
+
+      const apiUrl = 'http://localhost:3000/api/clientes';
+
+    async function cargarClientes() {
+      const res = await fetch(apiUrl);
+      const clientes = await res.json();
+      const tabla = document.getElementById('clientesTable');
+      tabla.innerHTML = '';
+      clientes.forEach(c => {
+        tabla.innerHTML += `
+          <tr>
+            <td>${c.nombre || 'Sin nombre'}</td>
+            <td>${c.apellido || 'Sin apellido'}</td>
+            <td>${c.telefono}</td>
+            <td>${c.email}</td>
+            <td>${c.direccion}</td>
+            <td>
+              <button class="btn btn-sm btn-warning" onclick='editarCliente(${JSON.stringify(c)})'>Editar</button>
+              <button class="btn btn-sm btn-danger" onclick='eliminarCliente("${c._id}")'>Eliminar</button>
+            </td>
+          </tr>
+        `;
+      });
+    }
+
+    document.getElementById('clienteForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const id = document.getElementById('clienteId').value;
+      const datos = {
+        nombre: document.getElementById('nombre').value,
+        apellido: document.getElementById('apellido').value,
+        telefono: document.getElementById('telefono').value,
+        email: document.getElementById('email').value,
+        direccion: document.getElementById('direccion').value
+      };
+
+      if (id) {
+        await fetch(`${apiUrl}/${id}`, {
+          method: 'PUT',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(datos)
+        });
+      } else {
+        await fetch(apiUrl, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(datos)
+        });
+      }
+
+      e.target.reset();
+      document.getElementById('clienteId').value = '';
+      cargarClientes();
+    });
+
+    function editarCliente(cliente) {
+      document.getElementById('clienteId').value = cliente._id;
+      document.getElementById('nombre').value = cliente.nombre || '';
+      document.getElementById('apellido').value = cliente.apellido || '';
+      document.getElementById('telefono').value = cliente.telefono || '';
+      document.getElementById('email').value = cliente.email || '';
+      document.getElementById('direccion').value = cliente.direccion || '';
+    }
+
+    async function eliminarCliente(id) {
+      if (confirm('¿Deseas eliminar este cliente?')) {
+        await fetch(`${apiUrl}/${id}`, { method: 'DELETE' });
+        cargarClientes();
+      }
+    }
+
+    cargarClientes();
+  }); // <-- Correctly close DOMContentLoaded callback
+  </script>
+</body>
+</html>

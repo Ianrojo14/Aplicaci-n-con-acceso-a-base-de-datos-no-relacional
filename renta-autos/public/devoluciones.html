@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro de Devoluciones</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      padding-top: 3rem;
+      color: white;
+    }
+    .card {
+      background-color: white;
+      color: black;
+      border-radius: 15px;
+      padding: 2rem;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+    .alquiler-card {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+      background: linear-gradient(45deg, #f8f9fa, #e9ecef);
+      transition: all 0.3s ease;
+      position: relative;
+    }
+    .alquiler-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+    .alquiler-card.overdue {
+      border-left: 4px solid #dc3545;
+      background: linear-gradient(45deg, #f8d7da, #f5c6cb);
+    }
+    .alquiler-card.due-soon {
+      border-left: 4px solid #ffc107;
+      background: linear-gradient(45deg, #fff3cd, #ffeaa7);
+    }
+    .alquiler-card.normal {
+      border-left: 4px solid #28a745;
+    }
+    .status-badge {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      padding: 0.25rem 0.5rem;
+      border-radius: 15px;
+      font-size: 0.75rem;
+      font-weight: bold;
+      z-index: 10;
+    }
+    .overdue-badge {
+      background-color: #dc3545;
+      color: white;
+    }
+    .due-soon-badge {
+      background-color: #ffc107;
+      color: black;
+    }
+    .normal-badge {
+      background-color: #28a745;
+      color: white;
+    }
+    .no-data {
+      text-align: center;
+      padding: 3rem;
+      color: #6c757d;
+    }
+    .loading {
+      text-align: center;
+      padding: 2rem;
+    }
+    .info-section {
+      background: rgba(40,167,69,0.1);
+      border-radius: 10px;
+      padding: 1rem;
+      margin-bottom: 2rem;
+      border-left: 4px solid #28a745;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+          <h3><i class="fas fa-undo me-2"></i>Registro de Devoluciones</h3>
+          <p class="text-muted mb-0">Gestión de devoluciones de vehículos</p>
+        </div>
+        <div>
+          <a href="/index.html" class="btn btn-outline-primary me-2">
+            <i class="fas fa-home me-1"></i>Inicio
+          </a>
+          <button id="cerrarSesion" class="btn btn-outline-danger">
+            <i class="fas fa-sign-out-alt me-1"></i>Cerrar Sesión
+          </button>
+        </div>
+      </div>
+
+      <!-- Información del sistema -->
+      <div class="info-section">
+        <div class="row align-items-center">
+          <div class="col-md-8">
+            <h5 class="mb-1"><i class="fas fa-info-circle me-2"></i>Sistema de Devoluciones</h5>
+            <p class="mb-0">Registra la devolución de vehículos y actualiza automáticamente su disponibilidad</p>
+          </div>
+          <div class="col-md-4 text-end">
+            <button id="actualizarBtn" class="btn btn-success">
+              <i class="fas fa-sync-alt me-1"></i>Actualizar Lista
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Loading -->
+      <div id="loading" class="loading">
+        <div class="spinner-border text-primary" role="status">
+          <span class="visually-hidden">Cargando...</span>
+        </div>
+        <p class="mt-2">Cargando alquileres activos...</p>
+      </div>
+
+      <!-- Lista de alquileres activos -->
+      <div id="listaAlquileres"></div>
+
+      <!-- Sin datos -->
+      <div id="noData" class="no-data" style="display: none;">
+        <i class="fas fa-check-circle fa-3x mb-3 text-success"></i>
+        <h4>No hay alquileres activos</h4>
+        <p>Todos los vehículos han sido devueltos o no hay alquileres pendientes.</p>
+        <a href="/alquileres.html" class="btn btn-primary">
+          <i class="fas fa-plus me-1"></i>Gestionar Alquileres
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de Devolución -->
+  <div class="modal fade" id="modalDevolucion" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header bg-primary text-white">
+          <h5 class="modal-title">
+            <i class="fas fa-undo me-2"></i>Registrar Devolución
+          </h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form id="formDevolucion">
+            <input type="hidden" id="alquilerIdDevolucion">
+            
+            <!-- Información del alquiler -->
+            <div class="card mb-3">
+              <div class="card-header bg-light">
+                <h6 class="mb-0">Información del Alquiler</h6>
+              </div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-6">
+                    <strong>Cliente:</strong>
+                    <p id="infoCliente" class="mb-1"></p>
+                    <strong>Vehículo:</strong>
+                    <p id="infoVehiculo" class="mb-1"></p>
+                  </div>
+                  <div class="col-md-6">
+                    <strong>Fecha Inicio:</strong>
+                    <p id="infoFechaInicio" class="mb-1"></p>
+                    <strong>Fecha Fin Prevista:</strong>
+                    <p id="infoFechaFin" class="mb-1"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Datos de devolución -->
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label for="fechaDevolucion" class="form-label">Fecha de Devolución</label>
+                <input type="datetime-local" class="form-control" id="fechaDevolucion" required>
+              </div>
+              <div class="col-md-6">
+                <label for="estadoAuto" class="form-label">Estado del Vehículo</label>
+                <select class="form-select" id="estadoAuto" required>
+                  <option value="">Seleccionar estado...</option>
+                  <option value="disponible">En buen estado - Disponible</option>
+                  <option value="reparacion">Requiere reparación - No disponible</option>
+                </select>
+              </div>
+            </div>
+            
+            <div class="mb-3">
+              <label for="observaciones" class="form-label">Observaciones</label>
+              <textarea class="form-control" id="observaciones" rows="3" 
+                        placeholder="Comentarios sobre el estado del vehículo, daños encontrados, etc."></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-success" id="btnConfirmarDevolucion">
+            <i class="fas fa-check me-1"></i>Registrar Devolución
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Verificar autenticación
+    const token = localStorage.getItem('token');
+    if (!token) {
+      window.location.href = '/login.html';
+    }
+
+    // Verificar permisos de rol (solo encargados)
+    const rol = localStorage.getItem('rol');
+    if (rol !== 'encargado') {
+      alert('Solo los encargados tienen acceso al registro de devoluciones');
+      window.location.href = '/index.html';
+    }
+
+    let modalDevolucion;
+    let alquileresActivos = [];
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // Inicializar modal
+      modalDevolucion = new bootstrap.Modal(document.getElementById('modalDevolucion'));
+      
+      // Configurar fecha y hora actual por defecto
+      configurarFechaActual();
+      
+      // Cargar alquileres activos
+      cargarAlquileresActivos();
+
+      // Event listeners
+      document.getElementById('actualizarBtn').addEventListener('click', cargarAlquileresActivos);
+      document.getElementById('btnConfirmarDevolucion').addEventListener('click', confirmarDevolucion);
+      
+      document.getElementById('cerrarSesion').addEventListener('click', function() {
+        if (confirm('¿Estás seguro de que deseas cerrar sesión?')) {
+          localStorage.removeItem('token');
+          localStorage.removeItem('rol');
+          localStorage.removeItem('usuario');
+          window.location.href = '/login.html';
+        }
+      });
+    });
+
+    function configurarFechaActual() {
+      const ahora = new Date();
+      const fechaLocal = new Date(ahora.getTime() - ahora.getTimezoneOffset() * 60000);
+      document.getElementById('fechaDevolucion').value = fechaLocal.toISOString().slice(0, 16);
+    }
+
+    async function cargarAlquileresActivos() {
+      try {
+        console.log('Cargando alquileres activos...');
+        
+        // Mostrar loading
+        document.getElementById('loading').style.display = 'block';
+        document.getElementById('listaAlquileres').innerHTML = '';
+        document.getElementById('noData').style.display = 'none';
+
+        const response = await fetch('http://localhost:3000/api/alquileres/activos', {
+          headers: {
+            'Authorization': `Bearer ${token}`
+          }
+        });
+
+        if (!response.ok) {
+          throw new Error(`Error ${response.status}: ${await response.text()}`);
+        }
+
+        alquileresActivos = await response.json();
+        console.log('Alquileres activos cargados:', alquileresActivos.length);
+
+        // Ocultar loading
+        document.getElementById('loading').style.display = 'none';
+
+        if (alquileresActivos.length === 0) {
+          document.getElementById('noData').style.display = 'block';
+          return;
+        }
+
+        mostrarAlquileresActivos();
+
+      } catch (error) {
+        console.error('Error al cargar alquileres activos:', error);
+        document.getElementById('loading').style.display = 'none';
+        document.getElementById('listaAlquileres').innerHTML = `
+          <div class="alert alert-danger">
+            <i class="fas fa-exclamation-triangle me-2"></i>
+            Error al cargar alquileres: ${error.message}
+          </div>
+        `;
+      }
+    }
+
+    function mostrarAlquileresActivos() {
+      const listaAlquileres = document.getElementById('listaAlquileres');
+      
+      listaAlquileres.innerHTML = alquileresActivos.map(alquiler => {
+        const fechaInicio = new Date(alquiler.fechaInicio).toLocaleDateString('es-ES');
+        const fechaFin = alquiler.fechaFin ? new Date(alquiler.fechaFin).toLocaleDateString('es-ES') : 'No especificada';
+        
+        // Calcular estado basado en fechas
+        const ahora = new Date();
+        const fechaFinDate = alquiler.fechaFin ? new Date(alquiler.fechaFin) : null;
+        let statusClass = 'normal';
+        let statusBadge = 'normal-badge';
+        let statusText = 'En tiempo';
+        
+        if (fechaFinDate) {
+          const diffDays = Math.ceil((fechaFinDate - ahora) / (1000 * 60 * 60 * 24));
+          
+          if (diffDays < 0) {
+            statusClass = 'overdue';
+            statusBadge = 'overdue-badge';
+            statusText = `Vencido ${Math.abs(diffDays)} días`;
+          } else if (diffDays <= 2) {
+            statusClass = 'due-soon';
+            statusBadge = 'due-soon-badge';
+            statusText = `Vence en ${diffDays} días`;
+          }
+        }
+
+        const clienteNombre = alquiler.clienteId ? 
+          `${alquiler.clienteId.nombre || 'Sin nombre'} ${alquiler.clienteId.apellido || 'Sin apellido'}` : 
+          'Cliente no encontrado';
+
+        return `
+          <div class="alquiler-card ${statusClass}">
+            <div class="status-badge ${statusBadge}">${statusText}</div>
+            
+            <div class="row">
+              <div class="col-md-8">
+                <h5 class="mb-2">
+                  <i class="fas fa-user me-2"></i>${clienteNombre}
+                </h5>
+                
+                <div class="row mb-2">
+                  <div class="col-md-6">
+                    <small class="text-muted">Vehículo:</small><br>
+                    <strong><i class="fas fa-car me-1"></i>
+                      ${alquiler.autoId.marca} ${alquiler.autoId.modelo} ${alquiler.autoId.anio}
+                    </strong><br>
+                    <small class="text-muted">Placas: ${alquiler.autoId.placas}</small>
+                  </div>
+                  <div class="col-md-6">
+                    <small class="text-muted">Período de alquiler:</small><br>
+                    <strong>Inicio:</strong> ${fechaInicio}<br>
+                    <strong>Fin previsto:</strong> ${fechaFin}
+                  </div>
+                </div>
+                
+                <div class="mt-2">
+                  <small class="text-muted">
+                    <i class="fas fa-phone me-1"></i>${alquiler.clienteId?.telefono || 'No disponible'} |
+                    <i class="fas fa-envelope me-1"></i>${alquiler.clienteId?.email || 'No disponible'}
+                  </small>
+                </div>
+              </div>
+              
+              <div class="col-md-4 text-end">
+                <div class="d-flex flex-column align-items-end h-100" style="padding-top: 2rem;">
+                  <div class="mb-2">
+                    <span class="badge bg-primary">Monto: $${alquiler.monto.toLocaleString()}</span>
+                  </div>
+                  <div class="mt-auto">
+                    <button class="btn btn-success" onclick="abrirModalDevolucion('${alquiler._id}')">
+                      <i class="fas fa-undo me-1"></i>Registrar Devolución
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function abrirModalDevolucion(alquilerId) {
+      const alquiler = alquileresActivos.find(a => a._id === alquilerId);
+      if (!alquiler) return;
+
+      // Llenar información del alquiler
+      document.getElementById('alquilerIdDevolucion').value = alquilerId;
+      
+      const clienteNombre = `${alquiler.clienteId.nombre || 'Sin nombre'} ${alquiler.clienteId.apellido || 'Sin apellido'}`;
+      document.getElementById('infoCliente').textContent = clienteNombre;
+      
+      const vehiculoInfo = `${alquiler.autoId.marca} ${alquiler.autoId.modelo} ${alquiler.autoId.anio} - ${alquiler.autoId.placas}`;
+      document.getElementById('infoVehiculo').textContent = vehiculoInfo;
+      
+      document.getElementById('infoFechaInicio').textContent = new Date(alquiler.fechaInicio).toLocaleDateString('es-ES');
+      document.getElementById('infoFechaFin').textContent = alquiler.fechaFin ? 
+        new Date(alquiler.fechaFin).toLocaleDateString('es-ES') : 'No especificada';
+
+      // Configurar fecha actual
+      configurarFechaActual();
+      
+      // Limpiar formulario
+      document.getElementById('estadoAuto').value = '';
+      document.getElementById('observaciones').value = '';
+
+      modalDevolucion.show();
+    }
+
+    async function confirmarDevolucion() {
+      try {
+        const alquilerId = document.getElementById('alquilerIdDevolucion').value;
+        const fechaDevolucion = document.getElementById('fechaDevolucion').value;
+        const estadoAuto = document.getElementById('estadoAuto').value;
+        const observaciones = document.getElementById('observaciones').value;
+
+        if (!fechaDevolucion || !estadoAuto) {
+          alert('Por favor completa todos los campos obligatorios');
+          return;
+        }
+
+        // Deshabilitar botón
+        const btnConfirmar = document.getElementById('btnConfirmarDevolucion');
+        btnConfirmar.disabled = true;
+        btnConfirmar.innerHTML = '<i class="fas fa-spinner fa-spin me-1"></i>Procesando...';
+
+        const response = await fetch(`http://localhost:3000/api/alquileres/${alquilerId}/devolucion`, {
+          method: 'PATCH',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`
+          },
+          body: JSON.stringify({
+            fechaDevolucion: new Date(fechaDevolucion).toISOString(),
+            observaciones,
+            estadoAuto
+          })
+        });
+
+        if (!response.ok) {
+          const errorData = await response.json();
+          throw new Error(errorData.mensaje || 'Error al registrar devolución');
+        }
+
+        const resultado = await response.json();
+        console.log('Devolución registrada:', resultado);
+
+        // Mostrar mensaje de éxito
+        alert('Devolución registrada exitosamente');
+
+        // Cerrar modal y recargar lista
+        modalDevolucion.hide();
+        await cargarAlquileresActivos();
+
+      } catch (error) {
+        console.error('Error al confirmar devolución:', error);
+        alert(`Error al registrar devolución: ${error.message}`);
+      } finally {
+        // Rehabilitar botón
+        const btnConfirmar = document.getElementById('btnConfirmarDevolucion');
+        btnConfirmar.disabled = false;
+        btnConfirmar.innerHTML = '<i class="fas fa-check me-1"></i>Registrar Devolución';
+      }
+    }
+  </script>
+</body>
+</html>
