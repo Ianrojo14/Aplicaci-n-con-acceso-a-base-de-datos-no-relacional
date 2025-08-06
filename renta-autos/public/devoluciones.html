@@ -184,19 +184,54 @@
                 <input type="datetime-local" class="form-control" id="fechaDevolucion" required>
               </div>
               <div class="col-md-6">
-                <label for="estadoAuto" class="form-label">Estado del Vehículo</label>
+                <label for="estadoAuto" class="form-label">Disponibilidad del Vehículo</label>
                 <select class="form-select" id="estadoAuto" required>
                   <option value="">Seleccionar estado...</option>
-                  <option value="disponible">En buen estado - Disponible</option>
-                  <option value="reparacion">Requiere reparación - No disponible</option>
+                  <option value="disponible">Disponible para alquiler</option>
+                  <option value="reparacion">No disponible - Requiere reparación</option>
                 </select>
+              </div>
+            </div>
+
+            <!-- Evaluación del estado del vehículo -->
+            <div class="card mb-3" style="border-left: 4px solid #dc3545;">
+              <div class="card-header bg-light">
+                <h6 class="mb-0">
+                  <i class="fas fa-exclamation-triangle text-warning me-2"></i>
+                  Evaluación del Estado del Vehículo
+                </h6>
+                <small class="text-muted">Esta información es importante para generar alertas automáticas</small>
+              </div>
+              <div class="card-body">
+                <div class="row mb-3">
+                  <div class="col-md-12">
+                    <label for="estadoVehiculo" class="form-label">Estado General del Vehículo</label>
+                    <select class="form-select" id="estadoVehiculo" required>
+                      <option value="">Evaluar estado...</option>
+                      <option value="bueno">Excelente - Sin daños ni desgaste</option>
+                      <option value="regular">Regular - Desgaste normal de uso</option>
+                      <option value="malo">Malo - Daños visibles o problemas funcionales</option>
+                      <option value="requiere_reparacion">Crítico - Requiere reparación inmediata</option>
+                    </select>
+                  </div>
+                </div>
+                
+                <div class="mb-3">
+                  <label for="danos" class="form-label">Descripción de Daños o Problemas</label>
+                  <textarea class="form-control" id="danos" rows="3" 
+                            placeholder="Describa detalladamente cualquier daño, rayón, problema mecánico o funcional encontrado..."></textarea>
+                  <small class="text-muted">
+                    <i class="fas fa-info-circle me-1"></i>
+                    Sea específico: ubicación de rayones, tipo de daño, problemas mecánicos, etc.
+                  </small>
+                </div>
               </div>
             </div>
             
             <div class="mb-3">
-              <label for="observaciones" class="form-label">Observaciones</label>
-              <textarea class="form-control" id="observaciones" rows="3" 
-                        placeholder="Comentarios sobre el estado del vehículo, daños encontrados, etc."></textarea>
+              <label for="observaciones" class="form-label">Observaciones Generales</label>
+              <textarea class="form-control" id="observaciones" rows="2" 
+                        placeholder="Comentarios adicionales sobre la devolución..."></textarea>
             </div>
           </form>
         </div>
@@ -407,6 +442,8 @@
       
       // Limpiar formulario
       document.getElementById('estadoAuto').value = '';
+      document.getElementById('estadoVehiculo').value = '';
+      document.getElementById('danos').value = '';
       document.getElementById('observaciones').value = '';
 
       modalDevolucion.show();
@@ -417,10 +454,12 @@
         const alquilerId = document.getElementById('alquilerIdDevolucion').value;
         const fechaDevolucion = document.getElementById('fechaDevolucion').value;
         const estadoAuto = document.getElementById('estadoAuto').value;
+        const estadoVehiculo = document.getElementById('estadoVehiculo').value;
+        const danos = document.getElementById('danos').value;
         const observaciones = document.getElementById('observaciones').value;
 
-        if (!fechaDevolucion || !estadoAuto) {
-          alert('Por favor completa todos los campos obligatorios');
+        if (!fechaDevolucion || !estadoAuto || !estadoVehiculo) {
+          alert('Por favor completa todos los campos obligatorios (Fecha, Disponibilidad y Estado del Vehículo)');
           return;
         }
 
@@ -438,7 +477,9 @@
           body: JSON.stringify({
             fechaDevolucion: new Date(fechaDevolucion).toISOString(),
             observaciones,
-            estadoAuto
+            estadoAuto,
+            estadoVehiculo,
+            danos
           })
         });
 
@@ -450,8 +491,12 @@
         const resultado = await response.json();
         console.log('Devolución registrada:', resultado);
 
-        // Mostrar mensaje de éxito
-        alert('Devolución registrada exitosamente');
+        // Mostrar mensaje de éxito con información sobre alertas
+        let mensaje = 'Devolución registrada exitosamente';
+        if (estadoVehiculo === 'malo' || estadoVehiculo === 'requiere_reparacion' || (danos && danos.trim() !== '')) {
+          mensaje += '\n\n⚠️ ALERTA: Este vehículo ha sido marcado para revisión debido a su estado.';
+        }
+        alert(mensaje);
 
         // Cerrar modal y recargar lista
         modalDevolucion.hide();

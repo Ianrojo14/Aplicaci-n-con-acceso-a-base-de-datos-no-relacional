@@ -197,7 +197,7 @@ router.patch('/:id/devolucion', verificarToken, verificarRol(['encargado']), asy
   try {
     console.log('Procesando devolución de alquiler:', req.params.id);
     
-    const { fechaDevolucion, observaciones, estadoAuto } = req.body;
+    const { fechaDevolucion, observaciones, estadoAuto, estadoVehiculo, danos } = req.body;
     
     // Buscar el alquiler
     const alquiler = await Alquiler.findById(req.params.id).populate('autoId');
@@ -214,16 +214,22 @@ router.patch('/:id/devolucion', verificarToken, verificarRol(['encargado']), asy
     alquiler.estado = 'finalizado';
     alquiler.fechaDevolucion = fechaDevolucion || new Date();
     alquiler.observaciones = observaciones || '';
+    alquiler.estadoVehiculo = estadoVehiculo || 'bueno';
+    alquiler.danos = danos || '';
+    
+    // Determinar si requiere atención especial
+    alquiler.requiereAtencion = (estadoVehiculo === 'malo' || estadoVehiculo === 'requiere_reparacion' || (danos && danos.trim() !== ''));
+    
     await alquiler.save();
     
     // Actualizar el estado del auto
     const auto = await Auto.findById(alquiler.autoId._id);
     if (auto) {
-      // Si no se especifica estado del auto, se asume que está disponible
-      auto.disponible = estadoAuto !== 'reparacion';
+      // Si el vehículo está en mal estado, marcarlo como no disponible
+      auto.disponible = !(estadoAuto === 'reparacion' || estadoVehiculo === 'malo' || estadoVehiculo === 'requiere_reparacion');
       await auto.save();
       
-      console.log(`Auto ${auto.placas} actualizado - Disponible: ${auto.disponible}`);
+      console.log(`Auto ${auto.placas} actualizado - Disponible: ${auto.disponible}, Estado: ${estadoVehiculo}`);
     }
     
     // Retornar el alquiler actualizado con información completa
@@ -240,6 +246,50 @@ router.patch('/:id/devolucion', verificarToken, verificarRol(['encargado']), asy
   } catch (error) {
     console.error('Error al registrar devolución:', error);
     res.status(500).json({ mensaje: 'Error al registrar devolución', error: error.message });
+  }
+});
+
+// Obtener alertas de vehículos devueltos en mal estado (solo encargados)
+router.get('/alertas/vehiculos-mal-estado', verificarToken, verificarRol(['encargado']), async (req, res) => {
+  try {
+    console.log('Obteniendo alertas de vehículos en mal estado...');
+    
+    // Buscar alquileres finalizados que requieren atención
+    const alertas = await Alquiler.find({ 
+      estado: 'finalizado',
+      requiereAtencion: true
+    })
+    .populate('clienteId')
+    .populate('autoId')
+    .sort({ fechaDevolucion: -1 })
+    .limit(50); // Limitar a los últimos 50 para rendimiento
+    
+    console.log('Alertas encontradas:', alertas.length);
+    res.json(alertas);
+    
+  } catch (error) {
+    console.error('Error al obtener alertas:', error);
+    res.status(500).json({ mensaje: 'Error al obtener alertas', error: error.message });
+  }
+});
+
+// Marcar alerta como revisada (solo encargados)
+router.patch('/:id/marcar-revisado', verificarToken, verificarRol(['encargado']), async (req, res) => {
+  try {
+    const alquiler = await Alquiler.findByIdAndUpdate(
+      req.params.id,
+      { requiereAtencion: false },
+      { new: true }
+    ).populate('clienteId').populate('autoId');
+    
+    if (!alquiler) {
+      return res.status(404).json({ mensaje: 'Alquiler no encontrado' });
+    }
+    
+    res.json({ mensaje: 'Alerta marcada como revisada', alquiler });
+  } catch (error) {
+    console.error('Error al marcar alerta como revisada:', error);
+    res.status(500).json({ mensaje: 'Error al actualizar alerta', error: error.message });
   }
 });
 

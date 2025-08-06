@@ -16,7 +16,14 @@ const alquilerSchema = new mongoose.Schema({
   fechaDevolucion: { type: Date },
   observaciones: { type: String, default: '' },
   monto: { type: Number, required: true },
-  estado: { type: String, enum: ['activo', 'finalizado'], default: 'activo' }
+  estado: { type: String, enum: ['activo', 'finalizado'], default: 'activo' },
+  estadoVehiculo: { 
+    type: String, 
+    enum: ['bueno', 'regular', 'malo', 'requiere_reparacion'], 
+    default: 'bueno' 
+  },
+  danos: { type: String, default: '' },
+  requiereAtencion: { type: Boolean, default: false }
 });
 
 module.exports = mongoose.model('Alquiler', alquilerSchema);

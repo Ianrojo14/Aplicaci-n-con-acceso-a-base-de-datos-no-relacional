@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Alertas de Vehículos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      font-family: Arial, sans-serif;
+      min-height: 100vh;
+      padding-top: 2rem;
+    }
+    .container {
+      margin-top: 2rem;
+    }
+    .card {
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      background: white;
+    }
+    .alert-card {
+      border-radius: 10px;
+      margin-bottom: 1rem;
+      transition: all 0.3s ease;
+      border-left: 5px solid #dc3545;
+    }
+    .alert-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+    .alert-card.critico {
+      border-left-color: #dc3545;
+      background: linear-gradient(45deg, #f8d7da, #f5c6cb);
+    }
+    .alert-card.malo {
+      border-left-color: #fd7e14;
+      background: linear-gradient(45deg, #fde2e4, #fadadd);
+    }
+    .alert-card.regular {
+      border-left-color: #ffc107;
+      background: linear-gradient(45deg, #fff3cd, #ffeaa7);
+    }
+    .badge-estado {
+      font-size: 0.75rem;
+      padding: 0.5rem 0.75rem;
+      border-radius: 15px;
+    }
+    .estado-critico {
+      background-color: #dc3545;
+      color: white;
+    }
+    .estado-malo {
+      background-color: #fd7e14;
+      color: white;
+    }
+    .estado-regular {
+      background-color: #ffc107;
+      color: black;
+    }
+    .no-alerts {
+      text-align: center;
+      padding: 3rem;
+      color: #6c757d;
+    }
+    .loading {
+      text-align: center;
+      padding: 2rem;
+    }
+    .stats-card {
+      background: linear-gradient(45deg, #f8f9fa, #e9ecef);
+      border-radius: 10px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-left: 4px solid #28a745;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card p-4">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+          <h3>
+            <i class="fas fa-exclamation-triangle text-warning me-2"></i>
+            Alertas de Vehículos
+          </h3>
+          <p class="text-muted mb-0">Vehículos devueltos que requieren atención especial</p>
+        </div>
+        <div>
+          <a href="/index.html" class="btn btn-light me-2">
+            <i class="fas fa-home me-1"></i>Inicio
+          </a>
+          <a href="/devoluciones.html" class="btn btn-outline-primary me-2">
+            <i class="fas fa-undo me-1"></i>Devoluciones
+          </a>
+          <button id="cerrarSesion" class="btn btn-outline-danger">
+            <i class="fas fa-sign-out-alt me-1"></i>Cerrar Sesión
+          </button>
+        </div>
+      </div>
+
+      <!-- Estadísticas resumen -->
+      <div class="stats-card">
+        <div class="row align-items-center">
+          <div class="col-md-8">
+            <h6 class="mb-1">
+              <i class="fas fa-chart-line me-2"></i>
+              Resumen de Alertas
+            </h6>
+            <p class="mb-0" id="resumenAlertas">Cargando estadísticas...</p>
+          </div>
+          <div class="col-md-4 text-end">
+            <button id="actualizarBtn" class="btn btn-success">
+              <i class="fas fa-sync-alt me-1"></i>Actualizar
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Filtros -->
+      <div class="card mb-4">
+        <div class="card-header">
+          <h6 class="mb-0">
+            <i class="fas fa-filter me-2"></i>Filtros
+          </h6>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-4">
+              <label for="filtroEstado" class="form-label">Estado del Vehículo</label>
+              <select class="form-select" id="filtroEstado">
+                <option value="">Todos los estados</option>
+                <option value="requiere_reparacion">Crítico - Requiere reparación</option>
+                <option value="malo">Malo - Daños visibles</option>
+                <option value="regular">Regular - Desgaste normal</option>
+              </select>
+            </div>
+            <div class="col-md-4">
+              <label for="filtroFecha" class="form-label">Últimos días</label>
+              <select class="form-select" id="filtroFecha">
+                <option value="">Todas las fechas</option>
+                <option value="7">Últimos 7 días</option>
+                <option value="15">Últimos 15 días</option>
+                <option value="30">Últimos 30 días</option>
+              </select>
+            </div>
+            <div class="col-md-4 d-flex align-items-end">
+              <button class="btn btn-primary w-100" onclick="aplicarFiltros()">
+                <i class="fas fa-search me-1"></i>Aplicar Filtros
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Loading -->
+      <div id="loading" class="loading">
+        <div class="spinner-border text-primary" role="status">
+          <span class="visually-hidden">Cargando...</span>
+        </div>
+        <p class="mt-2">Cargando alertas...</p>
+      </div>
+
+      <!-- Lista de alertas -->
+      <div id="listaAlertas"></div>
+
+      <!-- Sin alertas -->
+      <div id="noAlertas" class="no-alerts" style="display: none;">
+        <i class="fas fa-check-circle fa-3x mb-3 text-success"></i>
+        <h4>¡Excelente!</h4>
+        <p>No hay vehículos que requieran atención especial en este momento.</p>
+        <a href="/devoluciones.html" class="btn btn-primary">
+          <i class="fas fa-undo me-1"></i>Ir a Devoluciones
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal para ver detalles de la alerta -->
+  <div class="modal fade" id="modalDetalles" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header bg-warning text-dark">
+          <h5 class="modal-title">
+            <i class="fas fa-exclamation-triangle me-2"></i>
+            Detalles de la Alerta
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body" id="contenidoDetalles">
+          <!-- Contenido dinámico -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" id="btnMarcarRevisado">
+            <i class="fas fa-check me-1"></i>Marcar como Revisado
+          </button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+            Cerrar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Verificar autenticación y permisos
+    const token = localStorage.getItem('token');
+    const rol = localStorage.getItem('rol');
+
+    if (!token || rol !== 'encargado') {
+      alert('Acceso denegado - Solo los encargados pueden ver las alertas');
+      window.location.href = 'login.html';
+    }
+
+    let alertas = [];
+    let alertaSeleccionada = null;
+    const modal = new bootstrap.Modal(document.getElementById('modalDetalles'));
+
+    document.addEventListener('DOMContentLoaded', () => {
+      cargarAlertas();
+      
+      // Event listeners
+      document.getElementById('actualizarBtn').addEventListener('click', cargarAlertas);
+      document.getElementById('btnMarcarRevisado').addEventListener('click', marcarComoRevisado);
+      
+      document.getElementById('cerrarSesion').addEventListener('click', function() {
+        if (confirm('¿Estás seguro de que deseas cerrar sesión?')) {
+          localStorage.removeItem('token');
+          localStorage.removeItem('rol');
+          localStorage.removeItem('usuario');
+          window.location.href = 'login.html';
+        }
+      });
+    });
+
+    async function cargarAlertas() {
+      try {
+        console.log('Cargando alertas de vehículos...');
+        
+        // Mostrar loading
+        document.getElementById('loading').style.display = 'block';
+        document.getElementById('listaAlertas').innerHTML = '';
+        document.getElementById('noAlertas').style.display = 'none';
+
+        const response = await fetch('http://localhost:3000/api/alquileres/alertas/vehiculos-mal-estado', {
+          headers: {
+            'Authorization': `Bearer ${token}`
+          }
+        });
+
+        if (!response.ok) {
+          throw new Error(`Error ${response.status}: ${await response.text()}`);
+        }
+
+        alertas = await response.json();
+        console.log('Alertas cargadas:', alertas.length);
+
+        // Ocultar loading
+        document.getElementById('loading').style.display = 'none';
+
+        if (alertas.length === 0) {
+          document.getElementById('noAlertas').style.display = 'block';
+          document.getElementById('resumenAlertas').textContent = 'No hay alertas activas';
+          return;
+        }
+
+        mostrarAlertas(alertas);
+        actualizarResumen(alertas);
+
+      } catch (error) {
+        console.error('Error al cargar alertas:', error);
+        document.getElementById('loading').style.display = 'none';
+        document.getElementById('listaAlertas').innerHTML = `
+          <div class="alert alert-danger">
+            <i class="fas fa-exclamation-triangle me-2"></i>
+            Error al cargar alertas: ${error.message}
+          </div>
+        `;
+      }
+    }
+
+    function mostrarAlertas(alertasFiltradas) {
+      const listaAlertas = document.getElementById('listaAlertas');
+      
+      if (alertasFiltradas.length === 0) {
+        listaAlertas.innerHTML = `
+          <div class="alert alert-info">
+            <i class="fas fa-info-circle me-2"></i>
+            No se encontraron alertas con los filtros aplicados.
+          </div>
+        `;
+        return;
+      }
+
+      listaAlertas.innerHTML = alertasFiltradas.map((alerta, index) => {
+        const fechaDevolucion = new Date(alerta.fechaDevolucion).toLocaleDateString('es-ES');
+        const clienteNombre = `${alerta.clienteId?.nombre || 'Sin nombre'} ${alerta.clienteId?.apellido || 'Sin apellido'}`;
+        const vehiculoInfo = `${alerta.autoId?.marca} ${alerta.autoId?.modelo} ${alerta.autoId?.anio}`;
+        
+        let claseEstado = '';
+        let estadoBadge = '';
+        
+        switch(alerta.estadoVehiculo) {
+          case 'requiere_reparacion':
+            claseEstado = 'critico';
+            estadoBadge = 'estado-critico';
+            break;
+          case 'malo':
+            claseEstado = 'malo';
+            estadoBadge = 'estado-malo';
+            break;
+          case 'regular':
+            claseEstado = 'regular';
+            estadoBadge = 'estado-regular';
+            break;
+          default:
+            claseEstado = 'malo';
+            estadoBadge = 'estado-malo';
+        }
+
+        const prioridad = alerta.estadoVehiculo === 'requiere_reparacion' ? 'ALTA' : 
+                         alerta.estadoVehiculo === 'malo' ? 'MEDIA' : 'BAJA';
+
+        return `
+          <div class="alert-card ${claseEstado} p-3">
+            <div class="row align-items-center">
+              <div class="col-md-8">
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge ${estadoBadge} me-2">${getEstadoTexto(alerta.estadoVehiculo)}</span>
+                  <span class="badge bg-danger">Prioridad ${prioridad}</span>
+                </div>
+                
+                <h6 class="mb-1">
+                  <i class="fas fa-car me-2"></i>
+                  ${vehiculoInfo} - ${alerta.autoId?.placas}
+                </h6>
+                
+                <div class="row mb-2">
+                  <div class="col-md-6">
+                    <small class="text-muted">Cliente:</small><br>
+                    <strong>${clienteNombre}</strong>
+                  </div>
+                  <div class="col-md-6">
+                    <small class="text-muted">Fecha de devolución:</small><br>
+                    <strong>${fechaDevolucion}</strong>
+                  </div>
+                </div>
+
+                ${alerta.danos ? `
+                  <div class="alert alert-warning py-2 mb-2">
+                    <small><strong>Daños reportados:</strong> ${alerta.danos.substring(0, 100)}${alerta.danos.length > 100 ? '...' : ''}</small>
+                  </div>
+                ` : ''}
+              </div>
+              
+              <div class="col-md-4 text-end">
+                <div class="d-flex flex-column gap-2">
+                  <button class="btn btn-info btn-sm" onclick="verDetalles(${index})">
+                    <i class="fas fa-eye me-1"></i>Ver Detalles
+                  </button>
+                  <button class="btn btn-success btn-sm" onclick="marcarRevisadoDirecto('${alerta._id}')">
+                    <i class="fas fa-check me-1"></i>Marcar Revisado
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function getEstadoTexto(estado) {
+      switch(estado) {
+        case 'requiere_reparacion': return 'CRÍTICO';
+        case 'malo': return 'MALO';
+        case 'regular': return 'REGULAR';
+        default: return 'PROBLEMA';
+      }
+    }
+
+    function actualizarResumen(alertasList) {
+      const criticos = alertasList.filter(a => a.estadoVehiculo === 'requiere_reparacion').length;
+      const malos = alertasList.filter(a => a.estadoVehiculo === 'malo').length;
+      const regulares = alertasList.filter(a => a.estadoVehiculo === 'regular').length;
+      
+      document.getElementById('resumenAlertas').innerHTML = `
+        <strong>${alertasList.length}</strong> alertas activas: 
+        <span class="text-danger">${criticos} críticos</span>, 
+        <span class="text-warning">${malos} malos</span>, 
+        <span class="text-info">${regulares} regulares</span>
+      `;
+    }
+
+    function aplicarFiltros() {
+      const filtroEstado = document.getElementById('filtroEstado').value;
+      const filtroFecha = document.getElementById('filtroFecha').value;
+      
+      let alertasFiltradas = [...alertas];
+      
+      // Filtrar por estado
+      if (filtroEstado) {
+        alertasFiltradas = alertasFiltradas.filter(a => a.estadoVehiculo === filtroEstado);
+      }
+      
+      // Filtrar por fecha
+      if (filtroFecha) {
+        const diasAtras = parseInt(filtroFecha);
+        const fechaLimite = new Date();
+        fechaLimite.setDate(fechaLimite.getDate() - diasAtras);
+        
+        alertasFiltradas = alertasFiltradas.filter(a => 
+          new Date(a.fechaDevolucion) >= fechaLimite
+        );
+      }
+      
+      mostrarAlertas(alertasFiltradas);
+      actualizarResumen(alertasFiltradas);
+    }
+
+    function verDetalles(index) {
+      const alerta = alertas[index];
+      alertaSeleccionada = alerta;
+      
+      const fechaDevolucion = new Date(alerta.fechaDevolucion).toLocaleDateString('es-ES');
+      const fechaInicio = new Date(alerta.fechaInicio).toLocaleDateString('es-ES');
+      const clienteNombre = `${alerta.clienteId?.nombre || 'Sin nombre'} ${alerta.clienteId?.apellido || 'Sin apellido'}`;
+      const vehiculoInfo = `${alerta.autoId?.marca} ${alerta.autoId?.modelo} ${alerta.autoId?.anio} - ${alerta.autoId?.placas}`;
+      
+      document.getElementById('contenidoDetalles').innerHTML = `
+        <div class="row">
+          <div class="col-md-6">
+            <h6>Información del Vehículo</h6>
+            <p><strong>Vehículo:</strong> ${vehiculoInfo}</p>
+            <p><strong>Estado:</strong> <span class="badge ${getEstadoBadgeClass(alerta.estadoVehiculo)}">${getEstadoTexto(alerta.estadoVehiculo)}</span></p>
+            <p><strong>Disponible:</strong> ${alerta.autoId?.disponible ? 'Sí' : 'No'}</p>
+          </div>
+          <div class="col-md-6">
+            <h6>Información del Alquiler</h6>
+            <p><strong>Cliente:</strong> ${clienteNombre}</p>
+            <p><strong>Fecha inicio:</strong> ${fechaInicio}</p>
+            <p><strong>Fecha devolución:</strong> ${fechaDevolucion}</p>
+          </div>
+        </div>
+        
+        ${alerta.danos ? `
+          <div class="mt-3">
+            <h6>Daños Reportados</h6>
+            <div class="alert alert-warning">
+              ${alerta.danos}
+            </div>
+          </div>
+        ` : ''}
+        
+        ${alerta.observaciones ? `
+          <div class="mt-3">
+            <h6>Observaciones</h6>
+            <div class="alert alert-info">
+              ${alerta.observaciones}
+            </div>
+          </div>
+        ` : ''}
+        
+        <div class="mt-3">
+          <h6>Recomendaciones</h6>
+          <ul class="list-group">
+            ${alerta.estadoVehiculo === 'requiere_reparacion' ? 
+              '<li class="list-group-item list-group-item-danger">🔧 Llevar inmediatamente al taller</li>' : ''}
+            ${alerta.estadoVehiculo === 'malo' ? 
+              '<li class="list-group-item list-group-item-warning">🔍 Inspección detallada requerida</li>' : ''}
+            <li class="list-group-item">📋 Documentar todas las reparaciones realizadas</li>
+            <li class="list-group-item">✅ Marcar como revisado una vez atendido</li>
+          </ul>
+        </div>
+      `;
+      
+      modal.show();
+    }
+
+    function getEstadoBadgeClass(estado) {
+      switch(estado) {
+        case 'requiere_reparacion': return 'estado-critico';
+        case 'malo': return 'estado-malo';
+        case 'regular': return 'estado-regular';
+        default: return 'estado-malo';
+      }
+    }
+
+    async function marcarComoRevisado() {
+      if (!alertaSeleccionada) return;
+      await marcarRevisadoDirecto(alertaSeleccionada._id);
+      modal.hide();
+    }
+
+    async function marcarRevisadoDirecto(alquilerId) {
+      try {
+        const response = await fetch(`http://localhost:3000/api/alquileres/${alquilerId}/marcar-revisado`, {
+          method: 'PATCH',
+          headers: {
+            'Authorization': `Bearer ${token}`
+          }
+        });
+
+        if (!response.ok) {
+          throw new Error('Error al marcar como revisado');
+        }
+
+        alert('Alerta marcada como revisada exitosamente');
+        await cargarAlertas(); // Recargar la lista
+
+      } catch (error) {
+        console.error('Error:', error);
+        alert('Error al marcar la alerta como revisada');
+      }
+    }
+  </script>
+</body>
+</html>

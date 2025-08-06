@@ -1,0 +1,1010 @@
+2025-08-06T00:07:17.658Z - [SYSTEM] Sistema de tareas automatizadas iniciado
+2025-08-06T00:07:33.551Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/alquileres/alertas/vehiculos-mal-estado
+2025-08-06T00:07:33.566Z - [AUDIT] {"timestamp":"2025-08-06T00:07:33.566Z","usuario":"encargado","metodo":"GET","ruta":"/api/alquileres/alertas/vehiculos-mal-estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":22,"tamaño_respuesta":2}
+2025-08-06T00:07:42.661Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/permisos
+2025-08-06T00:07:42.662Z - [AUDIT] {"timestamp":"2025-08-06T00:07:42.662Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/permisos","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":6,"tamaño_respuesta":334}
+2025-08-06T00:07:42.665Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T00:07:42.670Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T00:07:42.671Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T00:07:42.671Z - [AUDIT] {"timestamp":"2025-08-06T00:07:42.671Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":14,"tamaño_respuesta":155}
+2025-08-06T00:07:42.691Z - [AUDIT] {"timestamp":"2025-08-06T00:07:42.691Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":35,"tamaño_respuesta":443}
+2025-08-06T00:08:03.034Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T00:08:03.035Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T00:08:03.035Z - [AUDIT] {"timestamp":"2025-08-06T00:08:03.035Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":3,"tamaño_respuesta":155}
+2025-08-06T00:08:12.674Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T00:08:12.674Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T00:08:12.675Z - [AUDIT] {"timestamp":"2025-08-06T00:08:12.675Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":5,"tamaño_respuesta":155}
+2025-08-06T00:08:12.678Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T00:08:12.695Z - [AUDIT] {"timestamp":"2025-08-06T00:08:12.695Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":24,"tamaño_respuesta":443}
+2025-08-06T00:08:15.072Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/alquileres/alertas/vehiculos-mal-estado
+2025-08-06T00:08:15.076Z - [AUDIT] {"timestamp":"2025-08-06T00:08:15.076Z","usuario":"encargado","metodo":"GET","ruta":"/api/alquileres/alertas/vehiculos-mal-estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":7,"tamaño_respuesta":2}
+2025-08-06T00:08:18.874Z - [AUDIT] {"timestamp":"2025-08-06T00:08:18.874Z","usuario":"anonimo","metodo":"GET","ruta":"/api/autos","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":10,"tamaño_respuesta":3022}
+2025-08-06T00:08:31.264Z - [AUDIT] {"timestamp":"2025-08-06T00:08:31.264Z","usuario":"anonimo","metodo":"GET","ruta":"/api/autos","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":4,"tamaño_respuesta":3022}
+2025-08-06T00:09:04.677Z - [AUTH] Usuario encargado (undefined) autenticado para POST /api/reparaciones
+2025-08-06T00:09:04.695Z - [AUDIT] {"timestamp":"2025-08-06T00:09:04.694Z","usuario":"encargado","metodo":"POST","ruta":"/api/reparaciones","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":201,"duracion":19,"tamaño_respuesta":183}
+2025-08-06T00:09:06.159Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/reparaciones/auto/689297e5c3974fb88294270f
+2025-08-06T00:09:06.163Z - [AUDIT] {"timestamp":"2025-08-06T00:09:06.163Z","usuario":"encargado","metodo":"GET","ruta":"/api/reparaciones/auto/689297e5c3974fb88294270f","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":7,"tamaño_respuesta":185}
+2025-08-06T00:09:09.153Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/alquileres/alertas/vehiculos-mal-estado
+2025-08-06T00:09:09.157Z - [AUDIT] {"timestamp":"2025-08-06T00:09:09.157Z","usuario":"encargado","metodo":"GET","ruta":"/api/alquileres/alertas/vehiculos-mal-estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":6,"tamaño_respuesta":2}
+2025-08-06T00:09:20.176Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/alquileres/activos
+2025-08-06T00:09:20.179Z - [AUDIT] {"timestamp":"2025-08-06T00:09:20.179Z","usuario":"encargado","metodo":"GET","ruta":"/api/alquileres/activos","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":5,"tamaño_respuesta":2}
+2025-08-06T00:09:22.466Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/alquileres/activos
+2025-08-06T00:09:22.469Z - [AUDIT] {"timestamp":"2025-08-06T00:09:22.469Z","usuario":"encargado","metodo":"GET","ruta":"/api/alquileres/activos","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":5,"tamaño_respuesta":2}
+2025-08-06T00:09:23.925Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/alquileres/alertas/vehiculos-mal-estado
+2025-08-06T00:09:23.929Z - [AUDIT] {"timestamp":"2025-08-06T00:09:23.929Z","usuario":"encargado","metodo":"GET","ruta":"/api/alquileres/alertas/vehiculos-mal-estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":6,"tamaño_respuesta":2}
+2025-08-06T00:09:29.431Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/alquileres
+2025-08-06T00:09:29.438Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/autos/disponibles
+2025-08-06T00:09:29.456Z - [AUDIT] {"timestamp":"2025-08-06T00:09:29.456Z","usuario":"anonimo","metodo":"GET","ruta":"/api/clientes","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":27,"tamaño_respuesta":4215}
+2025-08-06T00:09:29.460Z - [AUDIT] {"timestamp":"2025-08-06T00:09:29.460Z","usuario":"encargado","metodo":"GET","ruta":"/api/autos/disponibles","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":31,"tamaño_respuesta":1779}
+2025-08-06T00:09:29.470Z - [AUDIT] {"timestamp":"2025-08-06T00:09:29.470Z","usuario":"encargado","metodo":"GET","ruta":"/api/alquileres","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":42,"tamaño_respuesta":3132}
+2025-08-06T00:09:35.686Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/alquileres/alertas/vehiculos-mal-estado
+2025-08-06T00:09:35.690Z - [AUDIT] {"timestamp":"2025-08-06T00:09:35.690Z","usuario":"encargado","metodo":"GET","ruta":"/api/alquileres/alertas/vehiculos-mal-estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":6,"tamaño_respuesta":2}
+2025-08-06T00:09:39.731Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/alquileres/estadisticas/autos-mas-rentados
+2025-08-06T00:09:39.740Z - [AUDIT] {"timestamp":"2025-08-06T00:09:39.740Z","usuario":"encargado","metodo":"GET","ruta":"/api/alquileres/estadisticas/autos-mas-rentados","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":11,"tamaño_respuesta":703}
+2025-08-06T00:09:48.731Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/alquileres/alertas/vehiculos-mal-estado
+2025-08-06T00:09:48.735Z - [AUDIT] {"timestamp":"2025-08-06T00:09:48.735Z","usuario":"encargado","metodo":"GET","ruta":"/api/alquileres/alertas/vehiculos-mal-estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":6,"tamaño_respuesta":2}
+2025-08-06T00:09:51.305Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/alquileres/activos
+2025-08-06T00:09:51.309Z - [AUDIT] {"timestamp":"2025-08-06T00:09:51.309Z","usuario":"encargado","metodo":"GET","ruta":"/api/alquileres/activos","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":6,"tamaño_respuesta":2}
+2025-08-06T00:09:52.867Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/alquileres/activos
+2025-08-06T00:09:52.871Z - [AUDIT] {"timestamp":"2025-08-06T00:09:52.870Z","usuario":"encargado","metodo":"GET","ruta":"/api/alquileres/activos","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":5,"tamaño_respuesta":2}
+2025-08-06T00:09:56.317Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/alquileres
+2025-08-06T00:09:56.322Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/autos/disponibles
+2025-08-06T00:09:56.330Z - [AUDIT] {"timestamp":"2025-08-06T00:09:56.330Z","usuario":"anonimo","metodo":"GET","ruta":"/api/clientes","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":15,"tamaño_respuesta":4215}
+2025-08-06T00:09:56.335Z - [AUDIT] {"timestamp":"2025-08-06T00:09:56.335Z","usuario":"encargado","metodo":"GET","ruta":"/api/autos/disponibles","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":20,"tamaño_respuesta":1779}
+2025-08-06T00:09:56.339Z - [AUDIT] {"timestamp":"2025-08-06T00:09:56.339Z","usuario":"encargado","metodo":"GET","ruta":"/api/alquileres","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":25,"tamaño_respuesta":3132}
+2025-08-06T00:10:06.205Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/alquileres/alertas/vehiculos-mal-estado
+2025-08-06T00:10:06.209Z - [AUDIT] {"timestamp":"2025-08-06T00:10:06.209Z","usuario":"encargado","metodo":"GET","ruta":"/api/alquileres/alertas/vehiculos-mal-estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":6,"tamaño_respuesta":2}
+2025-08-06T00:10:08.021Z - [AUDIT] {"timestamp":"2025-08-06T00:10:08.021Z","usuario":"anonimo","metodo":"GET","ruta":"/api/autos","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":4,"tamaño_respuesta":3022}
+2025-08-06T00:10:09.863Z - [AUDIT] {"timestamp":"2025-08-06T00:10:09.863Z","usuario":"anonimo","metodo":"GET","ruta":"/api/autos","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":4,"tamaño_respuesta":3022}
+2025-08-06T00:10:19.323Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/reparaciones/auto/689297e5c3974fb88294270f
+2025-08-06T00:10:19.327Z - [AUDIT] {"timestamp":"2025-08-06T00:10:19.327Z","usuario":"encargado","metodo":"GET","ruta":"/api/reparaciones/auto/689297e5c3974fb88294270f","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":6,"tamaño_respuesta":185}
+2025-08-06T00:10:22.504Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/alquileres/alertas/vehiculos-mal-estado
+2025-08-06T00:10:22.507Z - [AUDIT] {"timestamp":"2025-08-06T00:10:22.507Z","usuario":"encargado","metodo":"GET","ruta":"/api/alquileres/alertas/vehiculos-mal-estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":5,"tamaño_respuesta":2}
+2025-08-06T00:10:26.001Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/autos/marcas-modelos
+2025-08-06T00:10:26.032Z - [AUDIT] {"timestamp":"2025-08-06T00:10:26.032Z","usuario":"encargado","metodo":"GET","ruta":"/api/autos/marcas-modelos","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":33,"tamaño_respuesta":564}
+2025-08-06T00:10:26.074Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/autos/disponibles
+2025-08-06T00:10:26.078Z - [AUDIT] {"timestamp":"2025-08-06T00:10:26.078Z","usuario":"encargado","metodo":"GET","ruta":"/api/autos/disponibles","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":6,"tamaño_respuesta":1779}
+2025-08-06T00:10:59.361Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/alquileres/alertas/vehiculos-mal-estado
+2025-08-06T00:10:59.364Z - [AUDIT] {"timestamp":"2025-08-06T00:10:59.364Z","usuario":"encargado","metodo":"GET","ruta":"/api/alquileres/alertas/vehiculos-mal-estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":5,"tamaño_respuesta":2}
+2025-08-06T00:11:16.753Z - [AUDIT] {"timestamp":"2025-08-06T00:11:16.753Z","usuario":"anonimo","metodo":"POST","ruta":"/api/auth/login","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":121,"tamaño_respuesta":351}
+2025-08-06T00:11:34.099Z - [AUTH] Usuario Dueno (undefined) autenticado para GET /api/reparaciones/filtro?desde=2025-08-05&hasta=2025-08-21
+2025-08-06T00:11:34.106Z - [AUDIT] {"timestamp":"2025-08-06T00:11:34.106Z","usuario":"Dueno","metodo":"GET","ruta":"/api/reparaciones/filtro?desde=2025-08-05&hasta=2025-08-21","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":9,"tamaño_respuesta":288}
+2025-08-06T00:11:54.991Z - [AUDIT] {"timestamp":"2025-08-06T00:11:54.991Z","usuario":"anonimo","metodo":"POST","ruta":"/api/auth/login","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":102,"tamaño_respuesta":371}
+2025-08-06T00:11:58.276Z - [AUDIT] {"timestamp":"2025-08-06T00:11:58.276Z","usuario":"anonimo","metodo":"GET","ruta":"/api/clientes","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":4,"tamaño_respuesta":4215}
+2025-08-06T00:12:24.930Z - [AUTH] Usuario empleado (undefined) autenticado para GET /api/autos/marcas-modelos
+2025-08-06T00:12:24.964Z - [AUDIT] {"timestamp":"2025-08-06T00:12:24.964Z","usuario":"empleado","metodo":"GET","ruta":"/api/autos/marcas-modelos","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":37,"tamaño_respuesta":564}
+2025-08-06T00:12:25.043Z - [AUTH] Usuario empleado (undefined) autenticado para GET /api/autos/disponibles
+2025-08-06T00:12:25.049Z - [AUDIT] {"timestamp":"2025-08-06T00:12:25.049Z","usuario":"empleado","metodo":"GET","ruta":"/api/autos/disponibles","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":8,"tamaño_respuesta":1779}
+2025-08-06T00:12:45.156Z - [AUDIT] {"timestamp":"2025-08-06T00:12:45.156Z","usuario":"anonimo","metodo":"POST","ruta":"/api/auth/login","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":118,"tamaño_respuesta":377}
+2025-08-06T00:12:46.896Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/alquileres/alertas/vehiculos-mal-estado
+2025-08-06T00:12:46.900Z - [AUDIT] {"timestamp":"2025-08-06T00:12:46.899Z","usuario":"encargado","metodo":"GET","ruta":"/api/alquileres/alertas/vehiculos-mal-estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":5,"tamaño_respuesta":2}
+2025-08-06T00:12:53.331Z - [AUDIT] {"timestamp":"2025-08-06T00:12:53.331Z","usuario":"anonimo","metodo":"GET","ruta":"/api/autos","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":4,"tamaño_respuesta":3022}
+2025-08-06T00:12:55.680Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/alquileres/alertas/vehiculos-mal-estado
+2025-08-06T00:12:55.684Z - [AUDIT] {"timestamp":"2025-08-06T00:12:55.683Z","usuario":"encargado","metodo":"GET","ruta":"/api/alquileres/alertas/vehiculos-mal-estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":5,"tamaño_respuesta":2}
+2025-08-06T00:12:57.839Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/autos/marcas-modelos
+2025-08-06T00:12:57.865Z - [AUDIT] {"timestamp":"2025-08-06T00:12:57.865Z","usuario":"encargado","metodo":"GET","ruta":"/api/autos/marcas-modelos","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":28,"tamaño_respuesta":564}
+2025-08-06T00:12:57.920Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/autos/disponibles
+2025-08-06T00:12:57.924Z - [AUDIT] {"timestamp":"2025-08-06T00:12:57.924Z","usuario":"encargado","metodo":"GET","ruta":"/api/autos/disponibles","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":5,"tamaño_respuesta":1779}
+2025-08-06T00:13:07.014Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/alquileres/alertas/vehiculos-mal-estado
+2025-08-06T00:13:07.018Z - [AUDIT] {"timestamp":"2025-08-06T00:13:07.018Z","usuario":"encargado","metodo":"GET","ruta":"/api/alquileres/alertas/vehiculos-mal-estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":6,"tamaño_respuesta":2}
+2025-08-06T00:13:14.891Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/autos/marcas-modelos
+2025-08-06T00:13:14.914Z - [AUDIT] {"timestamp":"2025-08-06T00:13:14.914Z","usuario":"encargado","metodo":"GET","ruta":"/api/autos/marcas-modelos","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":25,"tamaño_respuesta":564}
+2025-08-06T00:13:14.954Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/autos/disponibles
+2025-08-06T00:13:14.958Z - [AUDIT] {"timestamp":"2025-08-06T00:13:14.958Z","usuario":"encargado","metodo":"GET","ruta":"/api/autos/disponibles","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":6,"tamaño_respuesta":1779}
+2025-08-06T00:13:16.342Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/alquileres/alertas/vehiculos-mal-estado
+2025-08-06T00:13:16.346Z - [AUDIT] {"timestamp":"2025-08-06T00:13:16.346Z","usuario":"encargado","metodo":"GET","ruta":"/api/alquileres/alertas/vehiculos-mal-estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":5,"tamaño_respuesta":2}
+2025-08-06T00:13:17.841Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/alquileres
+2025-08-06T00:13:17.849Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/autos/disponibles
+2025-08-06T00:13:17.853Z - [AUDIT] {"timestamp":"2025-08-06T00:13:17.853Z","usuario":"encargado","metodo":"GET","ruta":"/api/alquileres","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":14,"tamaño_respuesta":3132}
+2025-08-06T00:13:17.856Z - [AUDIT] {"timestamp":"2025-08-06T00:13:17.856Z","usuario":"anonimo","metodo":"GET","ruta":"/api/clientes","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":17,"tamaño_respuesta":4215}
+2025-08-06T00:13:17.859Z - [AUDIT] {"timestamp":"2025-08-06T00:13:17.859Z","usuario":"encargado","metodo":"GET","ruta":"/api/autos/disponibles","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":15,"tamaño_respuesta":1779}
+2025-08-06T00:13:36.970Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/autos/disponibles
+2025-08-06T00:13:36.974Z - [AUDIT] {"timestamp":"2025-08-06T00:13:36.974Z","usuario":"encargado","metodo":"GET","ruta":"/api/autos/disponibles","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":6,"tamaño_respuesta":1779}
+2025-08-06T00:15:17.366Z - [AUTH] Usuario encargado (undefined) autenticado para POST /api/alquileres
+2025-08-06T00:15:17.388Z - [AUDIT] {"timestamp":"2025-08-06T00:15:17.388Z","usuario":"encargado","metodo":"POST","ruta":"/api/alquileres","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":201,"duracion":23,"tamaño_respuesta":575}
+2025-08-06T00:15:17.395Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/alquileres
+2025-08-06T00:15:17.402Z - [AUDIT] {"timestamp":"2025-08-06T00:15:17.402Z","usuario":"encargado","metodo":"GET","ruta":"/api/alquileres","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":9,"tamaño_respuesta":3708}
+2025-08-06T00:15:17.411Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/autos/disponibles
+2025-08-06T00:15:17.415Z - [AUDIT] {"timestamp":"2025-08-06T00:15:17.415Z","usuario":"encargado","metodo":"GET","ruta":"/api/autos/disponibles","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":5,"tamaño_respuesta":1649}
+2025-08-06T00:15:23.872Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/alquileres/alertas/vehiculos-mal-estado
+2025-08-06T00:15:23.876Z - [AUDIT] {"timestamp":"2025-08-06T00:15:23.876Z","usuario":"encargado","metodo":"GET","ruta":"/api/alquileres/alertas/vehiculos-mal-estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":6,"tamaño_respuesta":2}
+2025-08-06T00:15:26.776Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/alquileres/activos
+2025-08-06T00:15:26.783Z - [AUDIT] {"timestamp":"2025-08-06T00:15:26.783Z","usuario":"encargado","metodo":"GET","ruta":"/api/alquileres/activos","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":9,"tamaño_respuesta":577}
+2025-08-06T00:15:59.219Z - [AUTH] Usuario encargado (undefined) autenticado para PATCH /api/alquileres/68929e95f0dc924bf3de8561/devolucion
+2025-08-06T00:15:59.236Z - [AUDIT] {"timestamp":"2025-08-06T00:15:59.236Z","usuario":"encargado","metodo":"PATCH","ruta":"/api/alquileres/68929e95f0dc924bf3de8561/devolucion","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":18,"tamaño_respuesta":714}
+2025-08-06T00:16:00.422Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/alquileres/activos
+2025-08-06T00:16:00.425Z - [AUDIT] {"timestamp":"2025-08-06T00:16:00.425Z","usuario":"encargado","metodo":"GET","ruta":"/api/alquileres/activos","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":5,"tamaño_respuesta":2}
+2025-08-06T00:16:06.435Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/alquileres
+2025-08-06T00:16:06.442Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/autos/disponibles
+2025-08-06T00:16:06.446Z - [AUDIT] {"timestamp":"2025-08-06T00:16:06.446Z","usuario":"encargado","metodo":"GET","ruta":"/api/alquileres","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":13,"tamaño_respuesta":3786}
+2025-08-06T00:16:06.449Z - [AUDIT] {"timestamp":"2025-08-06T00:16:06.449Z","usuario":"anonimo","metodo":"GET","ruta":"/api/clientes","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":12,"tamaño_respuesta":4215}
+2025-08-06T00:16:06.451Z - [AUDIT] {"timestamp":"2025-08-06T00:16:06.451Z","usuario":"encargado","metodo":"GET","ruta":"/api/autos/disponibles","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":13,"tamaño_respuesta":1779}
+2025-08-06T00:16:08.953Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/alquileres/alertas/vehiculos-mal-estado
+2025-08-06T00:16:08.962Z - [AUDIT] {"timestamp":"2025-08-06T00:16:08.962Z","usuario":"encargado","metodo":"GET","ruta":"/api/alquileres/alertas/vehiculos-mal-estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":11,"tamaño_respuesta":655}
+2025-08-06T00:16:12.137Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/permisos
+2025-08-06T00:16:12.138Z - [AUDIT] {"timestamp":"2025-08-06T00:16:12.138Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/permisos","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":3,"tamaño_respuesta":334}
+2025-08-06T00:16:12.141Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T00:16:12.141Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T00:16:12.142Z - [AUDIT] {"timestamp":"2025-08-06T00:16:12.142Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":7,"tamaño_respuesta":155}
+2025-08-06T00:16:12.144Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T00:16:12.157Z - [AUDIT] {"timestamp":"2025-08-06T00:16:12.157Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":21,"tamaño_respuesta":444}
+2025-08-06T00:16:14.948Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T00:16:14.949Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T00:16:14.950Z - [AUDIT] {"timestamp":"2025-08-06T00:16:14.950Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":4,"tamaño_respuesta":155}
+2025-08-06T00:16:17.825Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/alquileres/alertas/vehiculos-mal-estado
+2025-08-06T00:16:17.831Z - [AUDIT] {"timestamp":"2025-08-06T00:16:17.831Z","usuario":"encargado","metodo":"GET","ruta":"/api/alquileres/alertas/vehiculos-mal-estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":8,"tamaño_respuesta":655}
+2025-08-06T00:16:19.432Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/alquileres/alertas/vehiculos-mal-estado
+2025-08-06T00:16:19.439Z - [AUDIT] {"timestamp":"2025-08-06T00:16:19.439Z","usuario":"encargado","metodo":"GET","ruta":"/api/alquileres/alertas/vehiculos-mal-estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":8,"tamaño_respuesta":655}
+2025-08-06T00:17:10.982Z - [AUTH] Usuario encargado (undefined) autenticado para PATCH /api/alquileres/68929e95f0dc924bf3de8561/marcar-revisado
+2025-08-06T00:17:10.990Z - [AUDIT] {"timestamp":"2025-08-06T00:17:10.989Z","usuario":"encargado","metodo":"PATCH","ruta":"/api/alquileres/68929e95f0dc924bf3de8561/marcar-revisado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":9,"tamaño_respuesta":708}
+2025-08-06T00:17:12.128Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/alquileres/alertas/vehiculos-mal-estado
+2025-08-06T00:17:12.131Z - [AUDIT] {"timestamp":"2025-08-06T00:17:12.131Z","usuario":"encargado","metodo":"GET","ruta":"/api/alquileres/alertas/vehiculos-mal-estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":5,"tamaño_respuesta":2}
+2025-08-06T00:17:14.892Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/alquileres/alertas/vehiculos-mal-estado
+2025-08-06T00:17:14.895Z - [AUDIT] {"timestamp":"2025-08-06T00:17:14.895Z","usuario":"encargado","metodo":"GET","ruta":"/api/alquileres/alertas/vehiculos-mal-estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":5,"tamaño_respuesta":2}
+2025-08-06T00:17:16.887Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/permisos
+2025-08-06T00:17:16.888Z - [AUDIT] {"timestamp":"2025-08-06T00:17:16.888Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/permisos","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":3,"tamaño_respuesta":334}
+2025-08-06T00:17:16.891Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T00:17:16.892Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T00:17:16.893Z - [AUDIT] {"timestamp":"2025-08-06T00:17:16.893Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":4,"tamaño_respuesta":155}
+2025-08-06T00:17:16.895Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T00:17:16.911Z - [AUDIT] {"timestamp":"2025-08-06T00:17:16.911Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":21,"tamaño_respuesta":443}
+2025-08-06T00:17:22.765Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/logs?fecha=2025-08-06
+2025-08-06T00:17:22.767Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/logs?fecha=2025-08-06 (requiere: Dueno)
+2025-08-06T00:17:22.767Z - [AUDIT] {"timestamp":"2025-08-06T00:17:22.767Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/logs?fecha=2025-08-06","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":4,"tamaño_respuesta":155}
+2025-08-06T00:17:47.044Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T00:17:47.045Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T00:17:47.046Z - [AUDIT] {"timestamp":"2025-08-06T00:17:47.046Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":4,"tamaño_respuesta":155}
+2025-08-06T00:17:47.050Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T00:17:47.071Z - [AUDIT] {"timestamp":"2025-08-06T00:17:47.071Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":29,"tamaño_respuesta":443}
+2025-08-06T00:18:17.053Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T00:18:17.054Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T00:18:17.055Z - [AUDIT] {"timestamp":"2025-08-06T00:18:17.055Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":5,"tamaño_respuesta":155}
+2025-08-06T00:18:17.058Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T00:18:17.077Z - [AUDIT] {"timestamp":"2025-08-06T00:18:17.077Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":26,"tamaño_respuesta":444}
+2025-08-06T00:18:47.053Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T00:18:47.054Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T00:18:47.055Z - [AUDIT] {"timestamp":"2025-08-06T00:18:47.055Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":5,"tamaño_respuesta":155}
+2025-08-06T00:18:47.058Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T00:18:47.077Z - [AUDIT] {"timestamp":"2025-08-06T00:18:47.077Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":26,"tamaño_respuesta":444}
+2025-08-06T00:19:17.048Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T00:19:17.049Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T00:19:17.050Z - [AUDIT] {"timestamp":"2025-08-06T00:19:17.050Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":6,"tamaño_respuesta":155}
+2025-08-06T00:19:17.052Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T00:19:17.068Z - [AUDIT] {"timestamp":"2025-08-06T00:19:17.068Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":23,"tamaño_respuesta":444}
+2025-08-06T00:19:47.046Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T00:19:47.048Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T00:19:47.049Z - [AUDIT] {"timestamp":"2025-08-06T00:19:47.049Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":5,"tamaño_respuesta":155}
+2025-08-06T00:19:47.051Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T00:19:47.072Z - [AUDIT] {"timestamp":"2025-08-06T00:19:47.072Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":28,"tamaño_respuesta":444}
+2025-08-06T00:20:17.045Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T00:20:17.045Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T00:20:17.046Z - [AUDIT] {"timestamp":"2025-08-06T00:20:17.046Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":4,"tamaño_respuesta":155}
+2025-08-06T00:20:17.050Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T00:20:17.071Z - [AUDIT] {"timestamp":"2025-08-06T00:20:17.071Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":28,"tamaño_respuesta":444}
+2025-08-06T00:20:47.057Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T00:20:47.058Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T00:20:47.059Z - [AUDIT] {"timestamp":"2025-08-06T00:20:47.058Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":3,"tamaño_respuesta":155}
+2025-08-06T00:20:47.061Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T00:20:47.079Z - [AUDIT] {"timestamp":"2025-08-06T00:20:47.079Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":24,"tamaño_respuesta":444}
+2025-08-06T00:21:31.057Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T00:21:31.057Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T00:21:31.058Z - [AUDIT] {"timestamp":"2025-08-06T00:21:31.058Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":4,"tamaño_respuesta":155}
+2025-08-06T00:21:31.061Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T00:21:31.078Z - [AUDIT] {"timestamp":"2025-08-06T00:21:31.078Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":23,"tamaño_respuesta":444}
+2025-08-06T00:22:31.043Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T00:22:31.044Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T00:22:31.045Z - [AUDIT] {"timestamp":"2025-08-06T00:22:31.045Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":4,"tamaño_respuesta":155}
+2025-08-06T00:22:31.048Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T00:22:31.064Z - [AUDIT] {"timestamp":"2025-08-06T00:22:31.064Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":23,"tamaño_respuesta":444}
+2025-08-06T00:23:31.062Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T00:23:31.063Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T00:23:31.065Z - [AUDIT] {"timestamp":"2025-08-06T00:23:31.065Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":7,"tamaño_respuesta":155}
+2025-08-06T00:23:31.069Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T00:23:31.088Z - [AUDIT] {"timestamp":"2025-08-06T00:23:31.088Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":30,"tamaño_respuesta":444}
+2025-08-06T00:24:31.048Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T00:24:31.049Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T00:24:31.050Z - [AUDIT] {"timestamp":"2025-08-06T00:24:31.050Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":5,"tamaño_respuesta":155}
+2025-08-06T00:24:31.052Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T00:24:31.068Z - [AUDIT] {"timestamp":"2025-08-06T00:24:31.068Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":22,"tamaño_respuesta":445}
+2025-08-06T00:25:31.053Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T00:25:31.054Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T00:25:31.056Z - [AUDIT] {"timestamp":"2025-08-06T00:25:31.056Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":7,"tamaño_respuesta":155}
+2025-08-06T00:25:31.059Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T00:25:31.081Z - [AUDIT] {"timestamp":"2025-08-06T00:25:31.081Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":31,"tamaño_respuesta":445}
+2025-08-06T00:26:31.047Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T00:26:31.048Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T00:26:31.049Z - [AUDIT] {"timestamp":"2025-08-06T00:26:31.049Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":4,"tamaño_respuesta":155}
+2025-08-06T00:26:31.052Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T00:26:31.069Z - [AUDIT] {"timestamp":"2025-08-06T00:26:31.069Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":24,"tamaño_respuesta":445}
+2025-08-06T00:27:31.057Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T00:27:31.058Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T00:27:31.059Z - [AUDIT] {"timestamp":"2025-08-06T00:27:31.059Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":6,"tamaño_respuesta":155}
+2025-08-06T00:27:31.063Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T00:27:31.081Z - [AUDIT] {"timestamp":"2025-08-06T00:27:31.080Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":19,"tamaño_respuesta":445}
+2025-08-06T00:28:31.048Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T00:28:31.049Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T00:28:31.050Z - [AUDIT] {"timestamp":"2025-08-06T00:28:31.050Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":4,"tamaño_respuesta":155}
+2025-08-06T00:28:31.054Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T00:28:31.071Z - [AUDIT] {"timestamp":"2025-08-06T00:28:31.071Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":25,"tamaño_respuesta":445}
+2025-08-06T00:29:31.055Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T00:29:31.057Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T00:29:31.058Z - [AUDIT] {"timestamp":"2025-08-06T00:29:31.058Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":7,"tamaño_respuesta":155}
+2025-08-06T00:29:31.061Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T00:29:31.081Z - [AUDIT] {"timestamp":"2025-08-06T00:29:31.081Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":29,"tamaño_respuesta":445}
+2025-08-06T00:30:31.048Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T00:30:31.049Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T00:30:31.050Z - [AUDIT] {"timestamp":"2025-08-06T00:30:31.050Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":5,"tamaño_respuesta":155}
+2025-08-06T00:30:31.052Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T00:30:31.069Z - [AUDIT] {"timestamp":"2025-08-06T00:30:31.069Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":23,"tamaño_respuesta":445}
+2025-08-06T00:31:31.048Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T00:31:31.049Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T00:31:31.050Z - [AUDIT] {"timestamp":"2025-08-06T00:31:31.050Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":5,"tamaño_respuesta":155}
+2025-08-06T00:31:31.052Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T00:31:31.068Z - [AUDIT] {"timestamp":"2025-08-06T00:31:31.068Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":22,"tamaño_respuesta":445}
+2025-08-06T00:32:31.055Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T00:32:31.056Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T00:32:31.057Z - [AUDIT] {"timestamp":"2025-08-06T00:32:31.057Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":5,"tamaño_respuesta":155}
+2025-08-06T00:32:31.060Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T00:32:31.076Z - [AUDIT] {"timestamp":"2025-08-06T00:32:31.076Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":24,"tamaño_respuesta":445}
+2025-08-06T00:33:31.045Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T00:33:31.046Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T00:33:31.047Z - [AUDIT] {"timestamp":"2025-08-06T00:33:31.047Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":4,"tamaño_respuesta":155}
+2025-08-06T00:33:31.049Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T00:33:31.063Z - [AUDIT] {"timestamp":"2025-08-06T00:33:31.063Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":19,"tamaño_respuesta":445}
+2025-08-06T00:33:58.903Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T00:33:58.904Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T00:33:58.905Z - [AUDIT] {"timestamp":"2025-08-06T00:33:58.905Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":4,"tamaño_respuesta":155}
+2025-08-06T00:33:58.908Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T00:33:58.924Z - [AUDIT] {"timestamp":"2025-08-06T00:33:58.924Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":23,"tamaño_respuesta":445}
+2025-08-06T00:34:16.904Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T00:34:16.905Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T00:34:16.906Z - [AUDIT] {"timestamp":"2025-08-06T00:34:16.906Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":4,"tamaño_respuesta":155}
+2025-08-06T00:34:16.909Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T00:34:16.927Z - [AUDIT] {"timestamp":"2025-08-06T00:34:16.927Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":23,"tamaño_respuesta":445}
+2025-08-06T00:34:27.917Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/alquileres/alertas/vehiculos-mal-estado
+2025-08-06T00:34:27.922Z - [AUDIT] {"timestamp":"2025-08-06T00:34:27.921Z","usuario":"encargado","metodo":"GET","ruta":"/api/alquileres/alertas/vehiculos-mal-estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":5,"tamaño_respuesta":2}
+2025-08-06T00:34:30.872Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/permisos
+2025-08-06T00:34:30.873Z - [AUDIT] {"timestamp":"2025-08-06T00:34:30.873Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/permisos","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":4,"tamaño_respuesta":334}
+2025-08-06T00:34:30.875Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T00:34:30.876Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T00:34:30.877Z - [AUDIT] {"timestamp":"2025-08-06T00:34:30.877Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":7,"tamaño_respuesta":155}
+2025-08-06T00:34:30.879Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T00:34:30.891Z - [AUDIT] {"timestamp":"2025-08-06T00:34:30.891Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":20,"tamaño_respuesta":445}
+2025-08-06T00:35:01.060Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T00:35:01.061Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T00:35:01.062Z - [AUDIT] {"timestamp":"2025-08-06T00:35:01.062Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":5,"tamaño_respuesta":155}
+2025-08-06T00:35:01.065Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T00:35:01.082Z - [AUDIT] {"timestamp":"2025-08-06T00:35:01.082Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":25,"tamaño_respuesta":445}
+2025-08-06T00:35:31.060Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T00:35:31.061Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T00:35:31.062Z - [AUDIT] {"timestamp":"2025-08-06T00:35:31.062Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":4,"tamaño_respuesta":155}
+2025-08-06T00:35:31.065Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T00:35:31.084Z - [AUDIT] {"timestamp":"2025-08-06T00:35:31.084Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":26,"tamaño_respuesta":445}
+2025-08-06T00:36:01.047Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T00:36:01.049Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T00:36:01.050Z - [AUDIT] {"timestamp":"2025-08-06T00:36:01.050Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":7,"tamaño_respuesta":155}
+2025-08-06T00:36:01.055Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T00:36:01.077Z - [AUDIT] {"timestamp":"2025-08-06T00:36:01.077Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":33,"tamaño_respuesta":445}
+2025-08-06T00:36:31.056Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T00:36:31.058Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T00:36:31.059Z - [AUDIT] {"timestamp":"2025-08-06T00:36:31.059Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":8,"tamaño_respuesta":155}
+2025-08-06T00:36:31.062Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T00:36:31.077Z - [AUDIT] {"timestamp":"2025-08-06T00:36:31.077Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":25,"tamaño_respuesta":444}
+2025-08-06T00:37:01.047Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T00:37:01.048Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T00:37:01.049Z - [AUDIT] {"timestamp":"2025-08-06T00:37:01.049Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":5,"tamaño_respuesta":155}
+2025-08-06T00:37:01.052Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T00:37:01.070Z - [AUDIT] {"timestamp":"2025-08-06T00:37:01.070Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":25,"tamaño_respuesta":445}
+2025-08-06T00:37:31.061Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T00:37:31.062Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T00:37:31.063Z - [AUDIT] {"timestamp":"2025-08-06T00:37:31.063Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":5,"tamaño_respuesta":155}
+2025-08-06T00:37:31.066Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T00:37:31.084Z - [AUDIT] {"timestamp":"2025-08-06T00:37:31.084Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":25,"tamaño_respuesta":445}
+2025-08-06T00:38:14.050Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T00:38:14.051Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T00:38:14.052Z - [AUDIT] {"timestamp":"2025-08-06T00:38:14.051Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":4,"tamaño_respuesta":155}
+2025-08-06T00:38:14.054Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T00:38:14.075Z - [AUDIT] {"timestamp":"2025-08-06T00:38:14.075Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":28,"tamaño_respuesta":445}
+2025-08-06T00:38:31.056Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T00:38:31.057Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T00:38:31.058Z - [AUDIT] {"timestamp":"2025-08-06T00:38:31.058Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":4,"tamaño_respuesta":155}
+2025-08-06T00:38:31.062Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T00:38:31.078Z - [AUDIT] {"timestamp":"2025-08-06T00:38:31.078Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":18,"tamaño_respuesta":442}
+2025-08-06T00:39:31.052Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T00:39:31.054Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T00:39:31.055Z - [AUDIT] {"timestamp":"2025-08-06T00:39:31.055Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":7,"tamaño_respuesta":155}
+2025-08-06T00:39:31.059Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T00:39:31.075Z - [AUDIT] {"timestamp":"2025-08-06T00:39:31.075Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":26,"tamaño_respuesta":445}
+2025-08-06T00:40:31.048Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T00:40:31.050Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T00:40:31.051Z - [AUDIT] {"timestamp":"2025-08-06T00:40:31.051Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":6,"tamaño_respuesta":155}
+2025-08-06T00:40:31.054Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T00:40:31.070Z - [AUDIT] {"timestamp":"2025-08-06T00:40:31.070Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":24,"tamaño_respuesta":444}
+2025-08-06T00:41:31.057Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T00:41:31.058Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T00:41:31.059Z - [AUDIT] {"timestamp":"2025-08-06T00:41:31.059Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":4,"tamaño_respuesta":155}
+2025-08-06T00:41:31.062Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T00:41:31.078Z - [AUDIT] {"timestamp":"2025-08-06T00:41:31.078Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":23,"tamaño_respuesta":445}
+2025-08-06T00:42:31.057Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T00:42:31.059Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T00:42:31.060Z - [AUDIT] {"timestamp":"2025-08-06T00:42:31.060Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":6,"tamaño_respuesta":155}
+2025-08-06T00:42:31.062Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T00:42:31.079Z - [AUDIT] {"timestamp":"2025-08-06T00:42:31.079Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":25,"tamaño_respuesta":445}
+2025-08-06T00:43:31.058Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T00:43:31.059Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T00:43:31.060Z - [AUDIT] {"timestamp":"2025-08-06T00:43:31.060Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":5,"tamaño_respuesta":155}
+2025-08-06T00:43:31.062Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T00:43:31.080Z - [AUDIT] {"timestamp":"2025-08-06T00:43:31.080Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":24,"tamaño_respuesta":445}
+2025-08-06T00:44:31.048Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T00:44:31.050Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T00:44:31.051Z - [AUDIT] {"timestamp":"2025-08-06T00:44:31.051Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":6,"tamaño_respuesta":155}
+2025-08-06T00:44:31.056Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T00:44:31.071Z - [AUDIT] {"timestamp":"2025-08-06T00:44:31.071Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":25,"tamaño_respuesta":445}
+2025-08-06T00:45:31.051Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T00:45:31.053Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T00:45:31.055Z - [AUDIT] {"timestamp":"2025-08-06T00:45:31.054Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":7,"tamaño_respuesta":155}
+2025-08-06T00:45:31.059Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T00:45:31.075Z - [AUDIT] {"timestamp":"2025-08-06T00:45:31.075Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":27,"tamaño_respuesta":444}
+2025-08-06T00:46:31.052Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T00:46:31.054Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T00:46:31.055Z - [AUDIT] {"timestamp":"2025-08-06T00:46:31.055Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":5,"tamaño_respuesta":155}
+2025-08-06T00:46:31.059Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T00:46:31.075Z - [AUDIT] {"timestamp":"2025-08-06T00:46:31.075Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":24,"tamaño_respuesta":445}
+2025-08-06T00:47:31.058Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T00:47:31.059Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T00:47:31.060Z - [AUDIT] {"timestamp":"2025-08-06T00:47:31.060Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":7,"tamaño_respuesta":155}
+2025-08-06T00:47:31.062Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T00:47:31.079Z - [AUDIT] {"timestamp":"2025-08-06T00:47:31.079Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":25,"tamaño_respuesta":445}
+2025-08-06T00:48:31.053Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T00:48:31.054Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T00:48:31.055Z - [AUDIT] {"timestamp":"2025-08-06T00:48:31.055Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":5,"tamaño_respuesta":155}
+2025-08-06T00:48:31.058Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T00:48:31.075Z - [AUDIT] {"timestamp":"2025-08-06T00:48:31.075Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":24,"tamaño_respuesta":445}
+2025-08-06T00:49:31.047Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T00:49:31.048Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T00:49:31.049Z - [AUDIT] {"timestamp":"2025-08-06T00:49:31.049Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":4,"tamaño_respuesta":155}
+2025-08-06T00:49:31.051Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T00:49:31.068Z - [AUDIT] {"timestamp":"2025-08-06T00:49:31.068Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":23,"tamaño_respuesta":445}
+2025-08-06T00:50:31.045Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T00:50:31.046Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T00:50:31.046Z - [AUDIT] {"timestamp":"2025-08-06T00:50:31.046Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":4,"tamaño_respuesta":155}
+2025-08-06T00:50:31.049Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T00:50:31.064Z - [AUDIT] {"timestamp":"2025-08-06T00:50:31.064Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":21,"tamaño_respuesta":445}
+2025-08-06T00:51:31.058Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T00:51:31.059Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T00:51:31.060Z - [AUDIT] {"timestamp":"2025-08-06T00:51:31.060Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":4,"tamaño_respuesta":155}
+2025-08-06T00:51:31.063Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T00:51:31.081Z - [AUDIT] {"timestamp":"2025-08-06T00:51:31.081Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":25,"tamaño_respuesta":445}
+2025-08-06T00:52:31.045Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T00:52:31.046Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T00:52:31.047Z - [AUDIT] {"timestamp":"2025-08-06T00:52:31.047Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":5,"tamaño_respuesta":155}
+2025-08-06T00:52:31.049Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T00:52:31.064Z - [AUDIT] {"timestamp":"2025-08-06T00:52:31.064Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":21,"tamaño_respuesta":445}
+2025-08-06T00:53:31.051Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T00:53:31.052Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T00:53:31.054Z - [AUDIT] {"timestamp":"2025-08-06T00:53:31.054Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":7,"tamaño_respuesta":155}
+2025-08-06T00:53:31.058Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T00:53:31.074Z - [AUDIT] {"timestamp":"2025-08-06T00:53:31.074Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":26,"tamaño_respuesta":445}
+2025-08-06T00:54:31.059Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T00:54:31.060Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T00:54:31.061Z - [AUDIT] {"timestamp":"2025-08-06T00:54:31.061Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":6,"tamaño_respuesta":155}
+2025-08-06T00:54:31.063Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T00:54:31.078Z - [AUDIT] {"timestamp":"2025-08-06T00:54:31.078Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":22,"tamaño_respuesta":444}
+2025-08-06T00:55:31.052Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T00:55:31.054Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T00:55:31.055Z - [AUDIT] {"timestamp":"2025-08-06T00:55:31.055Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":7,"tamaño_respuesta":155}
+2025-08-06T00:55:31.060Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T00:55:31.076Z - [AUDIT] {"timestamp":"2025-08-06T00:55:31.076Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":27,"tamaño_respuesta":445}
+2025-08-06T00:56:31.050Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T00:56:31.051Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T00:56:31.052Z - [AUDIT] {"timestamp":"2025-08-06T00:56:31.052Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":4,"tamaño_respuesta":155}
+2025-08-06T00:56:31.054Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T00:56:31.069Z - [AUDIT] {"timestamp":"2025-08-06T00:56:31.069Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":21,"tamaño_respuesta":445}
+2025-08-06T00:57:31.047Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T00:57:31.049Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T00:57:31.050Z - [AUDIT] {"timestamp":"2025-08-06T00:57:31.049Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":4,"tamaño_respuesta":155}
+2025-08-06T00:57:31.053Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T00:57:31.072Z - [AUDIT] {"timestamp":"2025-08-06T00:57:31.072Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":27,"tamaño_respuesta":445}
+2025-08-06T00:58:31.055Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T00:58:31.056Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T00:58:31.057Z - [AUDIT] {"timestamp":"2025-08-06T00:58:31.057Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":4,"tamaño_respuesta":155}
+2025-08-06T00:58:31.060Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T00:58:31.075Z - [AUDIT] {"timestamp":"2025-08-06T00:58:31.075Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":22,"tamaño_respuesta":445}
+2025-08-06T00:59:31.053Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T00:59:31.054Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T00:59:31.055Z - [AUDIT] {"timestamp":"2025-08-06T00:59:31.055Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":4,"tamaño_respuesta":155}
+2025-08-06T00:59:31.057Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T00:59:31.073Z - [AUDIT] {"timestamp":"2025-08-06T00:59:31.073Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":22,"tamaño_respuesta":445}
+2025-08-06T01:00:31.046Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T01:00:31.048Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T01:00:31.049Z - [AUDIT] {"timestamp":"2025-08-06T01:00:31.049Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":6,"tamaño_respuesta":155}
+2025-08-06T01:00:31.052Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T01:00:31.071Z - [AUDIT] {"timestamp":"2025-08-06T01:00:31.071Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":27,"tamaño_respuesta":445}
+2025-08-06T01:01:31.050Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T01:01:31.051Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T01:01:31.052Z - [AUDIT] {"timestamp":"2025-08-06T01:01:31.052Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":4,"tamaño_respuesta":155}
+2025-08-06T01:01:31.055Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T01:01:31.069Z - [AUDIT] {"timestamp":"2025-08-06T01:01:31.069Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":21,"tamaño_respuesta":445}
+2025-08-06T01:02:31.057Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T01:02:31.058Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T01:02:31.059Z - [AUDIT] {"timestamp":"2025-08-06T01:02:31.059Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":4,"tamaño_respuesta":155}
+2025-08-06T01:02:31.061Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T01:02:31.076Z - [AUDIT] {"timestamp":"2025-08-06T01:02:31.076Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":21,"tamaño_respuesta":444}
+2025-08-06T01:03:08.279Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T01:03:08.280Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T01:03:08.281Z - [AUDIT] {"timestamp":"2025-08-06T01:03:08.280Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":4,"tamaño_respuesta":155}
+2025-08-06T01:03:08.283Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T01:03:08.299Z - [AUDIT] {"timestamp":"2025-08-06T01:03:08.299Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":22,"tamaño_respuesta":445}
+2025-08-06T01:03:30.871Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T01:03:30.872Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T01:03:30.872Z - [AUDIT] {"timestamp":"2025-08-06T01:03:30.872Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":3,"tamaño_respuesta":155}
+2025-08-06T01:03:30.875Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T01:03:30.893Z - [AUDIT] {"timestamp":"2025-08-06T01:03:30.893Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":24,"tamaño_respuesta":445}
+2025-08-06T01:04:00.880Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T01:04:00.881Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T01:04:00.882Z - [AUDIT] {"timestamp":"2025-08-06T01:04:00.882Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":4,"tamaño_respuesta":155}
+2025-08-06T01:04:00.884Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T01:04:00.902Z - [AUDIT] {"timestamp":"2025-08-06T01:04:00.902Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":24,"tamaño_respuesta":445}
+2025-08-06T01:04:30.878Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T01:04:30.879Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T01:04:30.880Z - [AUDIT] {"timestamp":"2025-08-06T01:04:30.880Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":5,"tamaño_respuesta":155}
+2025-08-06T01:04:30.883Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T01:04:30.901Z - [AUDIT] {"timestamp":"2025-08-06T01:04:30.901Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":25,"tamaño_respuesta":445}
+2025-08-06T01:05:00.875Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T01:05:00.876Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T01:05:00.877Z - [AUDIT] {"timestamp":"2025-08-06T01:05:00.877Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":4,"tamaño_respuesta":155}
+2025-08-06T01:05:00.880Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T01:05:00.899Z - [AUDIT] {"timestamp":"2025-08-06T01:05:00.899Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":26,"tamaño_respuesta":445}
+2025-08-06T01:05:30.873Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T01:05:30.874Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T01:05:30.875Z - [AUDIT] {"timestamp":"2025-08-06T01:05:30.875Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":5,"tamaño_respuesta":155}
+2025-08-06T01:05:30.878Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T01:05:30.898Z - [AUDIT] {"timestamp":"2025-08-06T01:05:30.898Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":27,"tamaño_respuesta":445}
+2025-08-06T01:06:00.870Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T01:06:00.871Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T01:06:00.872Z - [AUDIT] {"timestamp":"2025-08-06T01:06:00.872Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":4,"tamaño_respuesta":155}
+2025-08-06T01:06:00.875Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T01:06:00.894Z - [AUDIT] {"timestamp":"2025-08-06T01:06:00.894Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":26,"tamaño_respuesta":445}
+2025-08-06T01:06:30.874Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T01:06:30.875Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T01:06:30.876Z - [AUDIT] {"timestamp":"2025-08-06T01:06:30.876Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":4,"tamaño_respuesta":155}
+2025-08-06T01:06:30.880Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T01:06:30.898Z - [AUDIT] {"timestamp":"2025-08-06T01:06:30.898Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":26,"tamaño_respuesta":445}
+2025-08-06T01:07:00.871Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T01:07:00.873Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T01:07:00.874Z - [AUDIT] {"timestamp":"2025-08-06T01:07:00.874Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":5,"tamaño_respuesta":155}
+2025-08-06T01:07:00.876Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T01:07:00.895Z - [AUDIT] {"timestamp":"2025-08-06T01:07:00.895Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":26,"tamaño_respuesta":445}
+2025-08-06T01:07:30.872Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T01:07:30.873Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T01:07:30.874Z - [AUDIT] {"timestamp":"2025-08-06T01:07:30.874Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":4,"tamaño_respuesta":155}
+2025-08-06T01:07:30.876Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T01:07:30.896Z - [AUDIT] {"timestamp":"2025-08-06T01:07:30.896Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":26,"tamaño_respuesta":445}
+2025-08-06T01:08:01.051Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T01:08:01.052Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T01:08:01.053Z - [AUDIT] {"timestamp":"2025-08-06T01:08:01.052Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":3,"tamaño_respuesta":155}
+2025-08-06T01:08:01.055Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T01:08:01.067Z - [AUDIT] {"timestamp":"2025-08-06T01:08:01.067Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":18,"tamaño_respuesta":445}
+2025-08-06T01:08:31.047Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T01:08:31.048Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T01:08:31.049Z - [AUDIT] {"timestamp":"2025-08-06T01:08:31.049Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":5,"tamaño_respuesta":155}
+2025-08-06T01:08:31.052Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T01:08:31.067Z - [AUDIT] {"timestamp":"2025-08-06T01:08:31.067Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":22,"tamaño_respuesta":445}
+2025-08-06T01:09:31.059Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T01:09:31.061Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T01:09:31.061Z - [AUDIT] {"timestamp":"2025-08-06T01:09:31.061Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":5,"tamaño_respuesta":155}
+2025-08-06T01:09:31.064Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T01:09:31.079Z - [AUDIT] {"timestamp":"2025-08-06T01:09:31.079Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":22,"tamaño_respuesta":445}
+2025-08-06T01:10:31.051Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T01:10:31.052Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T01:10:31.053Z - [AUDIT] {"timestamp":"2025-08-06T01:10:31.053Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":4,"tamaño_respuesta":155}
+2025-08-06T01:10:31.057Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T01:10:31.074Z - [AUDIT] {"timestamp":"2025-08-06T01:10:31.074Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":24,"tamaño_respuesta":445}
+2025-08-06T01:11:31.051Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T01:11:31.052Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T01:11:31.053Z - [AUDIT] {"timestamp":"2025-08-06T01:11:31.053Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":4,"tamaño_respuesta":155}
+2025-08-06T01:11:31.055Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T01:11:31.073Z - [AUDIT] {"timestamp":"2025-08-06T01:11:31.073Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":23,"tamaño_respuesta":445}
+2025-08-06T01:12:31.058Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T01:12:31.059Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T01:12:31.060Z - [AUDIT] {"timestamp":"2025-08-06T01:12:31.060Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":6,"tamaño_respuesta":155}
+2025-08-06T01:12:31.063Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T01:12:31.077Z - [AUDIT] {"timestamp":"2025-08-06T01:12:31.077Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":23,"tamaño_respuesta":445}
+2025-08-06T01:13:31.046Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T01:13:31.047Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T01:13:31.048Z - [AUDIT] {"timestamp":"2025-08-06T01:13:31.048Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":5,"tamaño_respuesta":155}
+2025-08-06T01:13:31.051Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T01:13:31.065Z - [AUDIT] {"timestamp":"2025-08-06T01:13:31.065Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":21,"tamaño_respuesta":445}
+2025-08-06T01:14:31.042Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T01:14:31.043Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T01:14:31.044Z - [AUDIT] {"timestamp":"2025-08-06T01:14:31.044Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":4,"tamaño_respuesta":155}
+2025-08-06T01:14:31.046Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T01:14:31.060Z - [AUDIT] {"timestamp":"2025-08-06T01:14:31.060Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":19,"tamaño_respuesta":445}
+2025-08-06T01:15:31.047Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T01:15:31.052Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T01:15:31.053Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T01:15:31.055Z - [AUDIT] {"timestamp":"2025-08-06T01:15:31.054Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":10,"tamaño_respuesta":155}
+2025-08-06T01:15:31.070Z - [AUDIT] {"timestamp":"2025-08-06T01:15:31.070Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":27,"tamaño_respuesta":445}
+2025-08-06T01:16:31.052Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T01:16:31.054Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T01:16:31.056Z - [AUDIT] {"timestamp":"2025-08-06T01:16:31.056Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":7,"tamaño_respuesta":155}
+2025-08-06T01:16:31.059Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T01:16:31.075Z - [AUDIT] {"timestamp":"2025-08-06T01:16:31.075Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":26,"tamaño_respuesta":445}
+2025-08-06T01:17:31.049Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T01:17:31.050Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T01:17:31.051Z - [AUDIT] {"timestamp":"2025-08-06T01:17:31.051Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":5,"tamaño_respuesta":155}
+2025-08-06T01:17:31.054Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T01:17:31.069Z - [AUDIT] {"timestamp":"2025-08-06T01:17:31.069Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":22,"tamaño_respuesta":445}
+2025-08-06T01:18:31.046Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T01:18:31.047Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T01:18:31.048Z - [AUDIT] {"timestamp":"2025-08-06T01:18:31.048Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":5,"tamaño_respuesta":155}
+2025-08-06T01:18:31.050Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T01:18:31.064Z - [AUDIT] {"timestamp":"2025-08-06T01:18:31.064Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":20,"tamaño_respuesta":445}
+2025-08-06T01:19:31.043Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T01:19:31.044Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T01:19:31.044Z - [AUDIT] {"timestamp":"2025-08-06T01:19:31.044Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":3,"tamaño_respuesta":155}
+2025-08-06T01:19:31.046Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T01:19:31.060Z - [AUDIT] {"timestamp":"2025-08-06T01:19:31.060Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":19,"tamaño_respuesta":444}
+2025-08-06T01:20:31.057Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T01:20:31.058Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T01:20:31.059Z - [AUDIT] {"timestamp":"2025-08-06T01:20:31.059Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":4,"tamaño_respuesta":155}
+2025-08-06T01:20:31.061Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T01:20:31.078Z - [AUDIT] {"timestamp":"2025-08-06T01:20:31.078Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":23,"tamaño_respuesta":445}
+2025-08-06T01:21:31.050Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T01:21:31.052Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T01:21:31.053Z - [AUDIT] {"timestamp":"2025-08-06T01:21:31.053Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":6,"tamaño_respuesta":155}
+2025-08-06T01:21:31.056Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T01:21:31.074Z - [AUDIT] {"timestamp":"2025-08-06T01:21:31.074Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":26,"tamaño_respuesta":445}
+2025-08-06T01:22:31.045Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T01:22:31.046Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T01:22:31.047Z - [AUDIT] {"timestamp":"2025-08-06T01:22:31.047Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":5,"tamaño_respuesta":155}
+2025-08-06T01:22:31.050Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T01:22:31.066Z - [AUDIT] {"timestamp":"2025-08-06T01:22:31.066Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":23,"tamaño_respuesta":445}
+2025-08-06T01:23:31.050Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T01:23:31.051Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T01:23:31.052Z - [AUDIT] {"timestamp":"2025-08-06T01:23:31.052Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":4,"tamaño_respuesta":155}
+2025-08-06T01:23:31.055Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T01:23:31.070Z - [AUDIT] {"timestamp":"2025-08-06T01:23:31.070Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":22,"tamaño_respuesta":445}
+2025-08-06T01:24:31.059Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T01:24:31.060Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T01:24:31.061Z - [AUDIT] {"timestamp":"2025-08-06T01:24:31.061Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":6,"tamaño_respuesta":155}
+2025-08-06T01:24:31.063Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T01:24:31.080Z - [AUDIT] {"timestamp":"2025-08-06T01:24:31.080Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":23,"tamaño_respuesta":445}
+2025-08-06T01:25:31.051Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T01:25:31.053Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T01:25:31.054Z - [AUDIT] {"timestamp":"2025-08-06T01:25:31.054Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":7,"tamaño_respuesta":155}
+2025-08-06T01:25:31.058Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T01:25:31.076Z - [AUDIT] {"timestamp":"2025-08-06T01:25:31.076Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":28,"tamaño_respuesta":444}
+2025-08-06T01:26:31.046Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T01:26:31.047Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T01:26:31.048Z - [AUDIT] {"timestamp":"2025-08-06T01:26:31.048Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":4,"tamaño_respuesta":155}
+2025-08-06T01:26:31.050Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T01:26:31.065Z - [AUDIT] {"timestamp":"2025-08-06T01:26:31.065Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":21,"tamaño_respuesta":444}
+2025-08-06T01:27:31.044Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T01:27:31.045Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T01:27:31.046Z - [AUDIT] {"timestamp":"2025-08-06T01:27:31.046Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":4,"tamaño_respuesta":155}
+2025-08-06T01:27:31.048Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T01:27:31.064Z - [AUDIT] {"timestamp":"2025-08-06T01:27:31.064Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":22,"tamaño_respuesta":445}
+2025-08-06T01:28:31.045Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T01:28:31.046Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T01:28:31.047Z - [AUDIT] {"timestamp":"2025-08-06T01:28:31.047Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":4,"tamaño_respuesta":155}
+2025-08-06T01:28:31.049Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T01:28:31.064Z - [AUDIT] {"timestamp":"2025-08-06T01:28:31.064Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":21,"tamaño_respuesta":445}
+2025-08-06T01:29:31.054Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T01:29:31.056Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T01:29:31.057Z - [AUDIT] {"timestamp":"2025-08-06T01:29:31.057Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":6,"tamaño_respuesta":155}
+2025-08-06T01:29:31.060Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T01:29:31.077Z - [AUDIT] {"timestamp":"2025-08-06T01:29:31.077Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":26,"tamaño_respuesta":445}
+2025-08-06T01:30:31.054Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T01:30:31.055Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T01:30:31.057Z - [AUDIT] {"timestamp":"2025-08-06T01:30:31.057Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":7,"tamaño_respuesta":155}
+2025-08-06T01:30:31.060Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T01:30:31.075Z - [AUDIT] {"timestamp":"2025-08-06T01:30:31.075Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":24,"tamaño_respuesta":445}
+2025-08-06T01:31:31.057Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T01:31:31.058Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T01:31:31.059Z - [AUDIT] {"timestamp":"2025-08-06T01:31:31.059Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":5,"tamaño_respuesta":155}
+2025-08-06T01:31:31.061Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T01:31:31.075Z - [AUDIT] {"timestamp":"2025-08-06T01:31:31.075Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":21,"tamaño_respuesta":445}
+2025-08-06T01:32:31.045Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T01:32:31.046Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T01:32:31.047Z - [AUDIT] {"timestamp":"2025-08-06T01:32:31.047Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":4,"tamaño_respuesta":155}
+2025-08-06T01:32:31.050Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T01:32:31.064Z - [AUDIT] {"timestamp":"2025-08-06T01:32:31.064Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":21,"tamaño_respuesta":445}
+2025-08-06T01:33:31.045Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T01:33:31.048Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T01:33:31.049Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T01:33:31.050Z - [AUDIT] {"timestamp":"2025-08-06T01:33:31.049Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":6,"tamaño_respuesta":155}
+2025-08-06T01:33:31.065Z - [AUDIT] {"timestamp":"2025-08-06T01:33:31.065Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":22,"tamaño_respuesta":445}
+2025-08-06T01:34:31.052Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T01:34:31.053Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T01:34:31.055Z - [AUDIT] {"timestamp":"2025-08-06T01:34:31.055Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":7,"tamaño_respuesta":155}
+2025-08-06T01:34:31.059Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T01:34:31.075Z - [AUDIT] {"timestamp":"2025-08-06T01:34:31.075Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":26,"tamaño_respuesta":445}
+2025-08-06T01:35:31.057Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T01:35:31.058Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T01:35:31.058Z - [AUDIT] {"timestamp":"2025-08-06T01:35:31.058Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":4,"tamaño_respuesta":155}
+2025-08-06T01:35:31.060Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T01:35:31.077Z - [AUDIT] {"timestamp":"2025-08-06T01:35:31.076Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":21,"tamaño_respuesta":445}
+2025-08-06T01:36:00.881Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T01:36:00.882Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T01:36:00.882Z - [AUDIT] {"timestamp":"2025-08-06T01:36:00.882Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":4,"tamaño_respuesta":155}
+2025-08-06T01:36:00.885Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T01:36:00.902Z - [AUDIT] {"timestamp":"2025-08-06T01:36:00.901Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":23,"tamaño_respuesta":445}
+2025-08-06T01:36:31.048Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T01:36:31.049Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T01:36:31.049Z - [AUDIT] {"timestamp":"2025-08-06T01:36:31.049Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":3,"tamaño_respuesta":155}
+2025-08-06T01:36:31.051Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T01:36:31.065Z - [AUDIT] {"timestamp":"2025-08-06T01:36:31.065Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":19,"tamaño_respuesta":445}
+2025-08-06T01:37:01.042Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T01:37:01.042Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T01:37:01.043Z - [AUDIT] {"timestamp":"2025-08-06T01:37:01.043Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":4,"tamaño_respuesta":155}
+2025-08-06T01:37:01.045Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T01:37:01.061Z - [AUDIT] {"timestamp":"2025-08-06T01:37:01.061Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":21,"tamaño_respuesta":445}
+2025-08-06T01:37:31.047Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T01:37:31.048Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T01:37:31.049Z - [AUDIT] {"timestamp":"2025-08-06T01:37:31.049Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":5,"tamaño_respuesta":155}
+2025-08-06T01:37:31.052Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T01:37:31.070Z - [AUDIT] {"timestamp":"2025-08-06T01:37:31.069Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":24,"tamaño_respuesta":443}
+2025-08-06T01:38:07.043Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T01:38:07.044Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T01:38:07.044Z - [AUDIT] {"timestamp":"2025-08-06T01:38:07.044Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":3,"tamaño_respuesta":155}
+2025-08-06T01:38:07.047Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T01:38:07.062Z - [AUDIT] {"timestamp":"2025-08-06T01:38:07.062Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":21,"tamaño_respuesta":445}
+2025-08-06T01:38:25.113Z - [AUDIT] {"timestamp":"2025-08-06T01:38:25.113Z","usuario":"anonimo","metodo":"POST","ruta":"/api/auth/login","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":101,"tamaño_respuesta":367}
+2025-08-06T01:38:27.049Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/alquileres/alertas/vehiculos-mal-estado
+2025-08-06T01:38:27.054Z - [AUDIT] {"timestamp":"2025-08-06T01:38:27.054Z","usuario":"encargado","metodo":"GET","ruta":"/api/alquileres/alertas/vehiculos-mal-estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":7,"tamaño_respuesta":2}
+2025-08-06T01:46:01.382Z - [SYSTEM] Sistema de tareas detenido
+2025-08-06T01:46:01.395Z - [CRITICAL] Error no manejado: Connection.prototype.close() no longer accepts a callback
+2025-08-06T01:46:06.714Z - [SYSTEM] Sistema de tareas detenido
+2025-08-06T01:46:06.717Z - [CRITICAL] Error no manejado: Connection.prototype.close() no longer accepts a callback
+2025-08-06T01:46:29.841Z - [SYSTEM] Sistema de tareas detenido
+2025-08-06T01:46:29.843Z - [CRITICAL] Error no manejado: Connection.prototype.close() no longer accepts a callback
+2025-08-06T01:46:30.577Z - [SYSTEM] Sistema de tareas detenido
+2025-08-06T01:46:30.580Z - [CRITICAL] Error no manejado: Connection.prototype.close() no longer accepts a callback
+2025-08-06T01:46:31.017Z - [SYSTEM] Sistema de tareas detenido
+2025-08-06T01:46:31.020Z - [CRITICAL] Error no manejado: Connection.prototype.close() no longer accepts a callback
+2025-08-06T01:46:47.481Z - [SYSTEM] Sistema de tareas detenido
+2025-08-06T01:46:47.484Z - [CRITICAL] Error no manejado: Connection.prototype.close() no longer accepts a callback
+2025-08-06T01:46:47.800Z - [SYSTEM] Sistema de tareas detenido
+2025-08-06T01:46:47.804Z - [CRITICAL] Error no manejado: Connection.prototype.close() no longer accepts a callback
+2025-08-06T01:46:47.968Z - [SYSTEM] Sistema de tareas detenido
+2025-08-06T01:46:47.971Z - [CRITICAL] Error no manejado: Connection.prototype.close() no longer accepts a callback
+2025-08-06T01:46:48.144Z - [SYSTEM] Sistema de tareas detenido
+2025-08-06T01:46:48.147Z - [CRITICAL] Error no manejado: Connection.prototype.close() no longer accepts a callback
+2025-08-06T01:46:48.304Z - [SYSTEM] Sistema de tareas detenido
+2025-08-06T01:46:48.307Z - [CRITICAL] Error no manejado: Connection.prototype.close() no longer accepts a callback
+2025-08-06T01:48:01.826Z - [SYSTEM] Sistema de tareas detenido
+2025-08-06T01:48:01.829Z - [CRITICAL] Error no manejado: Connection.prototype.close() no longer accepts a callback
+2025-08-06T01:48:09.593Z - [SYSTEM] Sistema de tareas detenido
+2025-08-06T01:48:09.596Z - [CRITICAL] Error no manejado: Connection.prototype.close() no longer accepts a callback
+2025-08-06T01:48:36.441Z - [SYSTEM] Sistema de tareas detenido
+2025-08-06T01:48:36.445Z - [CRITICAL] Error no manejado: Connection.prototype.close() no longer accepts a callback
+2025-08-06T01:49:29.261Z - [SYSTEM] Sistema de tareas automatizadas iniciado
+2025-08-06T01:49:36.376Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/alquileres/alertas/vehiculos-mal-estado
+2025-08-06T01:49:36.386Z - [AUDIT] {"timestamp":"2025-08-06T01:49:36.386Z","usuario":"encargado","metodo":"GET","ruta":"/api/alquileres/alertas/vehiculos-mal-estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":12,"tamaño_respuesta":2}
+2025-08-06T01:49:45.361Z - [AUDIT] {"timestamp":"2025-08-06T01:49:45.361Z","usuario":"anonimo","metodo":"POST","ruta":"/api/auth/login","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":129,"tamaño_respuesta":377}
+2025-08-06T01:49:46.890Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/alquileres/alertas/vehiculos-mal-estado
+2025-08-06T01:49:46.894Z - [AUDIT] {"timestamp":"2025-08-06T01:49:46.894Z","usuario":"encargado","metodo":"GET","ruta":"/api/alquileres/alertas/vehiculos-mal-estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":5,"tamaño_respuesta":2}
+2025-08-06T01:49:49.844Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/permisos
+2025-08-06T01:49:49.846Z - [AUDIT] {"timestamp":"2025-08-06T01:49:49.846Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/permisos","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":5,"tamaño_respuesta":334}
+2025-08-06T01:49:49.848Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T01:49:49.851Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T01:49:49.852Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T01:49:49.853Z - [AUDIT] {"timestamp":"2025-08-06T01:49:49.852Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":10,"tamaño_respuesta":155}
+2025-08-06T01:49:49.868Z - [AUDIT] {"timestamp":"2025-08-06T01:49:49.868Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":26,"tamaño_respuesta":444}
+2025-08-06T01:49:57.588Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/alquileres/alertas/vehiculos-mal-estado
+2025-08-06T01:49:57.592Z - [AUDIT] {"timestamp":"2025-08-06T01:49:57.592Z","usuario":"encargado","metodo":"GET","ruta":"/api/alquileres/alertas/vehiculos-mal-estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":6,"tamaño_respuesta":2}
+2025-08-06T01:50:00.794Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/alquileres
+2025-08-06T01:50:00.811Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/autos/disponibles
+2025-08-06T01:50:00.821Z - [AUDIT] {"timestamp":"2025-08-06T01:50:00.821Z","usuario":"encargado","metodo":"GET","ruta":"/api/alquileres","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":29,"tamaño_respuesta":3787}
+2025-08-06T01:50:00.824Z - [AUDIT] {"timestamp":"2025-08-06T01:50:00.824Z","usuario":"anonimo","metodo":"GET","ruta":"/api/clientes","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":27,"tamaño_respuesta":4215}
+2025-08-06T01:50:00.828Z - [AUDIT] {"timestamp":"2025-08-06T01:50:00.828Z","usuario":"encargado","metodo":"GET","ruta":"/api/autos/disponibles","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":31,"tamaño_respuesta":1779}
+2025-08-06T01:50:07.064Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/alquileres/alertas/vehiculos-mal-estado
+2025-08-06T01:50:07.067Z - [AUDIT] {"timestamp":"2025-08-06T01:50:07.067Z","usuario":"encargado","metodo":"GET","ruta":"/api/alquileres/alertas/vehiculos-mal-estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":5,"tamaño_respuesta":2}
+2025-08-06T01:52:37.114Z - [SYSTEM] Sistema de tareas detenido
+2025-08-06T01:52:37.118Z - [CRITICAL] Error no manejado: Connection.prototype.close() no longer accepts a callback
+2025-08-06T01:52:40.585Z - [SYSTEM] Sistema de tareas detenido
+2025-08-06T01:52:40.587Z - [CRITICAL] Error no manejado: Connection.prototype.close() no longer accepts a callback
+2025-08-06T01:52:40.769Z - [SYSTEM] Sistema de tareas detenido
+2025-08-06T01:52:40.772Z - [CRITICAL] Error no manejado: Connection.prototype.close() no longer accepts a callback
+2025-08-06T01:52:41.017Z - [SYSTEM] Sistema de tareas detenido
+2025-08-06T01:52:41.019Z - [CRITICAL] Error no manejado: Connection.prototype.close() no longer accepts a callback
+2025-08-06T01:52:41.185Z - [SYSTEM] Sistema de tareas detenido
+2025-08-06T01:52:41.188Z - [CRITICAL] Error no manejado: Connection.prototype.close() no longer accepts a callback
+2025-08-06T01:52:41.689Z - [SYSTEM] Sistema de tareas detenido
+2025-08-06T01:52:41.691Z - [CRITICAL] Error no manejado: Connection.prototype.close() no longer accepts a callback
+2025-08-06T01:52:43.160Z - [SYSTEM] Sistema de tareas detenido
+2025-08-06T01:52:43.163Z - [CRITICAL] Error no manejado: Connection.prototype.close() no longer accepts a callback
+2025-08-06T01:52:43.361Z - [SYSTEM] Sistema de tareas detenido
+2025-08-06T01:52:43.364Z - [CRITICAL] Error no manejado: Connection.prototype.close() no longer accepts a callback
+2025-08-06T01:56:10.794Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/permisos
+2025-08-06T01:56:10.795Z - [AUDIT] {"timestamp":"2025-08-06T01:56:10.795Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/permisos","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":4,"tamaño_respuesta":334}
+2025-08-06T01:56:10.797Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T01:56:10.797Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T01:56:10.798Z - [AUDIT] {"timestamp":"2025-08-06T01:56:10.798Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":7,"tamaño_respuesta":155}
+2025-08-06T01:56:10.800Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T01:56:10.813Z - [AUDIT] {"timestamp":"2025-08-06T01:56:10.813Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":22,"tamaño_respuesta":445}
+2025-08-06T01:56:40.810Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T01:56:40.811Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T01:56:40.812Z - [AUDIT] {"timestamp":"2025-08-06T01:56:40.812Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":5,"tamaño_respuesta":155}
+2025-08-06T01:56:40.815Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T01:56:40.832Z - [AUDIT] {"timestamp":"2025-08-06T01:56:40.831Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":23,"tamaño_respuesta":445}
+2025-08-06T01:57:10.798Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T01:57:10.802Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T01:57:10.802Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T01:57:10.803Z - [AUDIT] {"timestamp":"2025-08-06T01:57:10.803Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":7,"tamaño_respuesta":155}
+2025-08-06T01:57:10.819Z - [AUDIT] {"timestamp":"2025-08-06T01:57:10.819Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":23,"tamaño_respuesta":445}
+2025-08-06T01:57:40.798Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T01:57:40.800Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T01:57:40.800Z - [AUDIT] {"timestamp":"2025-08-06T01:57:40.800Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":4,"tamaño_respuesta":155}
+2025-08-06T01:57:40.803Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T01:57:40.824Z - [AUDIT] {"timestamp":"2025-08-06T01:57:40.824Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":27,"tamaño_respuesta":445}
+2025-08-06T01:57:43.095Z - [SYSTEM] Sistema de tareas detenido
+2025-08-06T01:57:43.097Z - [CRITICAL] Error no manejado: Connection.prototype.close() no longer accepts a callback
+2025-08-06T01:58:11.044Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T01:58:11.045Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T01:58:11.046Z - [AUDIT] {"timestamp":"2025-08-06T01:58:11.046Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":4,"tamaño_respuesta":155}
+2025-08-06T01:58:11.048Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T01:58:11.066Z - [AUDIT] {"timestamp":"2025-08-06T01:58:11.066Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":24,"tamaño_respuesta":445}
+2025-08-06T01:58:41.052Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T01:58:41.054Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T01:58:41.055Z - [AUDIT] {"timestamp":"2025-08-06T01:58:41.055Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":7,"tamaño_respuesta":155}
+2025-08-06T01:58:41.060Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T01:58:41.078Z - [AUDIT] {"timestamp":"2025-08-06T01:58:41.078Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":29,"tamaño_respuesta":445}
+2025-08-06T01:59:11.057Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estado
+2025-08-06T01:59:11.058Z - [UNAUTHORIZED_ACCESS] Usuario encargado intentó acceder a /api/admin/estado (requiere: Dueno)
+2025-08-06T01:59:11.059Z - [AUDIT] {"timestamp":"2025-08-06T01:59:11.059Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":5,"tamaño_respuesta":155}
+2025-08-06T01:59:11.062Z - [AUTH] Usuario encargado (undefined) autenticado para GET /api/admin/estadisticas
+2025-08-06T01:59:11.081Z - [AUDIT] {"timestamp":"2025-08-06T01:59:11.081Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":26,"tamaño_respuesta":445}
+2025-08-06T02:00:00.045Z - [SYSTEM_STATS] {"timestamp":"2025-08-06T02:00:00.045Z","tareas_activas":5,"memoria_libre":"21 MB","uptime":"0 horas"}
+2025-08-06T02:01:06.146Z - [SYSTEM] Sistema de tareas automatizadas iniciado
+2025-08-06T02:01:06.182Z - [ERROR] Backup completo falló: Command failed: mongodump --uri="mongodb://127.0.0.1:27017/renta_autos" --out="C:\Users\ichav\OneDrive\Documents\Aplicaci-n-con-acceso-a-base-de-datos-no-relacional\renta-autos\backups\backup_completo_2025-08-06"
+"mongodump" no se reconoce como un comando interno o externo,
+programa o archivo por lotes ejecutable.
+
+2025-08-06T02:01:06.183Z - [ERROR] Error en backup manual completo: Command failed: mongodump --uri="mongodb://127.0.0.1:27017/renta_autos" --out="C:\Users\ichav\OneDrive\Documents\Aplicaci-n-con-acceso-a-base-de-datos-no-relacional\renta-autos\backups\backup_completo_2025-08-06"
+"mongodump" no se reconoce como un comando interno o externo,
+programa o archivo por lotes ejecutable.
+
+2025-08-06T02:01:21.743Z - [SYSTEM] Sistema de tareas automatizadas iniciado
+2025-08-06T02:01:21.783Z - [LOG_MANUAL] Logging ejecutado manualmente
+2025-08-06T02:01:29.108Z - [SYSTEM] Sistema de tareas automatizadas iniciado
+2025-08-06T02:01:29.248Z - [SUCCESS] Backup diferencial creado: backup_diferencial_2025-08-06
+2025-08-06T02:01:29.249Z - [BACKUP_MANUAL] Backup diferencial ejecutado manualmente: backup_diferencial_2025-08-06
+2025-08-06T02:01:36.283Z - [SYSTEM] Sistema de tareas automatizadas iniciado
+2025-08-06T02:01:36.444Z - [SUCCESS] Backup diferencial creado: backup_diferencial_2025-08-06
+2025-08-06T02:01:36.445Z - [BACKUP_MANUAL] Backup diferencial ejecutado manualmente: backup_diferencial_2025-08-06
+2025-08-06T02:01:36.484Z - [LOG_MANUAL] Logging ejecutado manualmente
+2025-08-06T02:02:59.042Z - [SYSTEM] Sistema de tareas automatizadas iniciado
+2025-08-06T02:04:13.049Z - [SYSTEM] Sistema de tareas detenido
+2025-08-06T02:04:13.054Z - [CRITICAL] Error no manejado: Connection.prototype.close() no longer accepts a callback
+2025-08-06T02:04:27.727Z - [SYSTEM] Sistema de tareas automatizadas iniciado
+2025-08-06T02:09:16.121Z - [SYSTEM] Sistema de tareas automatizadas iniciado
+2025-08-06T02:09:22.701Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:09:22.716Z - [AUDIT] {"timestamp":"2025-08-06T02:09:22.716Z","usuario":"encargado","metodo":"GET","ruta":"/api/alquileres/alertas/vehiculos-mal-estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":24,"tamaño_respuesta":2}
+2025-08-06T02:09:45.499Z - [AUDIT] {"timestamp":"2025-08-06T02:09:45.499Z","usuario":"anonimo","metodo":"POST","ruta":"/api/auth/login","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":126,"tamaño_respuesta":377}
+2025-08-06T02:09:47.055Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:09:47.060Z - [AUDIT] {"timestamp":"2025-08-06T02:09:47.060Z","usuario":"encargado","metodo":"GET","ruta":"/api/alquileres/alertas/vehiculos-mal-estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":7,"tamaño_respuesta":2}
+2025-08-06T02:09:49.640Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:09:49.642Z - [AUDIT] {"timestamp":"2025-08-06T02:09:49.642Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/permisos","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":4,"tamaño_respuesta":334}
+2025-08-06T02:09:49.645Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:09:49.650Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:09:49.650Z - [UNAUTHORIZED_ACCESS] Rol encargado intentó acceder a /api/admin/estado
+2025-08-06T02:09:49.652Z - [AUDIT] {"timestamp":"2025-08-06T02:09:49.651Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":3,"tamaño_respuesta":155}
+2025-08-06T02:09:49.671Z - [AUDIT] {"timestamp":"2025-08-06T02:09:49.671Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":28,"tamaño_respuesta":443}
+2025-08-06T02:10:19.639Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:10:19.641Z - [UNAUTHORIZED_ACCESS] Rol encargado intentó acceder a /api/admin/estado
+2025-08-06T02:10:19.643Z - [AUDIT] {"timestamp":"2025-08-06T02:10:19.643Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":6,"tamaño_respuesta":155}
+2025-08-06T02:10:19.646Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:10:19.663Z - [AUDIT] {"timestamp":"2025-08-06T02:10:19.663Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":18,"tamaño_respuesta":443}
+2025-08-06T02:10:49.645Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:10:49.646Z - [UNAUTHORIZED_ACCESS] Rol encargado intentó acceder a /api/admin/estado
+2025-08-06T02:10:49.647Z - [AUDIT] {"timestamp":"2025-08-06T02:10:49.647Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":4,"tamaño_respuesta":155}
+2025-08-06T02:10:49.653Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:10:49.670Z - [AUDIT] {"timestamp":"2025-08-06T02:10:49.670Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":20,"tamaño_respuesta":443}
+2025-08-06T02:11:20.052Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:11:20.053Z - [UNAUTHORIZED_ACCESS] Rol encargado intentó acceder a /api/admin/estado
+2025-08-06T02:11:20.054Z - [AUDIT] {"timestamp":"2025-08-06T02:11:20.053Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":2,"tamaño_respuesta":155}
+2025-08-06T02:11:20.056Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:11:20.072Z - [AUDIT] {"timestamp":"2025-08-06T02:11:20.072Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":17,"tamaño_respuesta":443}
+2025-08-06T02:11:50.042Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:11:50.045Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:11:50.046Z - [UNAUTHORIZED_ACCESS] Rol encargado intentó acceder a /api/admin/estado
+2025-08-06T02:11:50.047Z - [AUDIT] {"timestamp":"2025-08-06T02:11:50.047Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":3,"tamaño_respuesta":155}
+2025-08-06T02:11:50.062Z - [AUDIT] {"timestamp":"2025-08-06T02:11:50.062Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":22,"tamaño_respuesta":444}
+2025-08-06T02:12:20.049Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:12:20.050Z - [UNAUTHORIZED_ACCESS] Rol encargado intentó acceder a /api/admin/estado
+2025-08-06T02:12:20.051Z - [AUDIT] {"timestamp":"2025-08-06T02:12:20.051Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":3,"tamaño_respuesta":155}
+2025-08-06T02:12:20.053Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:12:20.069Z - [AUDIT] {"timestamp":"2025-08-06T02:12:20.069Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":17,"tamaño_respuesta":444}
+2025-08-06T02:12:50.049Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:12:50.050Z - [UNAUTHORIZED_ACCESS] Rol encargado intentó acceder a /api/admin/estado
+2025-08-06T02:12:50.051Z - [AUDIT] {"timestamp":"2025-08-06T02:12:50.051Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":4,"tamaño_respuesta":155}
+2025-08-06T02:12:50.054Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:12:50.072Z - [AUDIT] {"timestamp":"2025-08-06T02:12:50.072Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":20,"tamaño_respuesta":444}
+2025-08-06T02:13:20.051Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:13:20.052Z - [UNAUTHORIZED_ACCESS] Rol encargado intentó acceder a /api/admin/estado
+2025-08-06T02:13:20.052Z - [AUDIT] {"timestamp":"2025-08-06T02:13:20.052Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":3,"tamaño_respuesta":155}
+2025-08-06T02:13:20.055Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:13:20.069Z - [AUDIT] {"timestamp":"2025-08-06T02:13:20.069Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":15,"tamaño_respuesta":444}
+2025-08-06T02:14:21.054Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:14:21.055Z - [UNAUTHORIZED_ACCESS] Rol encargado intentó acceder a /api/admin/estado
+2025-08-06T02:14:21.055Z - [AUDIT] {"timestamp":"2025-08-06T02:14:21.055Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":3,"tamaño_respuesta":155}
+2025-08-06T02:14:21.057Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:14:21.074Z - [AUDIT] {"timestamp":"2025-08-06T02:14:21.074Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":18,"tamaño_respuesta":444}
+2025-08-06T02:15:22.047Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:15:22.048Z - [UNAUTHORIZED_ACCESS] Rol encargado intentó acceder a /api/admin/estado
+2025-08-06T02:15:22.049Z - [AUDIT] {"timestamp":"2025-08-06T02:15:22.048Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":2,"tamaño_respuesta":155}
+2025-08-06T02:15:22.051Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:15:22.066Z - [AUDIT] {"timestamp":"2025-08-06T02:15:22.066Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":16,"tamaño_respuesta":444}
+2025-08-06T02:16:23.051Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:16:23.052Z - [UNAUTHORIZED_ACCESS] Rol encargado intentó acceder a /api/admin/estado
+2025-08-06T02:16:23.053Z - [AUDIT] {"timestamp":"2025-08-06T02:16:23.053Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":3,"tamaño_respuesta":155}
+2025-08-06T02:16:23.055Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:16:23.073Z - [AUDIT] {"timestamp":"2025-08-06T02:16:23.073Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":19,"tamaño_respuesta":444}
+2025-08-06T02:17:24.051Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:17:24.052Z - [UNAUTHORIZED_ACCESS] Rol encargado intentó acceder a /api/admin/estado
+2025-08-06T02:17:24.053Z - [AUDIT] {"timestamp":"2025-08-06T02:17:24.053Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":3,"tamaño_respuesta":155}
+2025-08-06T02:17:24.056Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:17:24.072Z - [AUDIT] {"timestamp":"2025-08-06T02:17:24.072Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":17,"tamaño_respuesta":444}
+2025-08-06T02:18:25.046Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:18:25.047Z - [UNAUTHORIZED_ACCESS] Rol encargado intentó acceder a /api/admin/estado
+2025-08-06T02:18:25.048Z - [AUDIT] {"timestamp":"2025-08-06T02:18:25.048Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":3,"tamaño_respuesta":155}
+2025-08-06T02:18:25.050Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:18:25.066Z - [AUDIT] {"timestamp":"2025-08-06T02:18:25.066Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":17,"tamaño_respuesta":444}
+2025-08-06T02:19:26.052Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:19:26.053Z - [UNAUTHORIZED_ACCESS] Rol encargado intentó acceder a /api/admin/estado
+2025-08-06T02:19:26.053Z - [AUDIT] {"timestamp":"2025-08-06T02:19:26.053Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":3,"tamaño_respuesta":155}
+2025-08-06T02:19:26.055Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:19:26.071Z - [AUDIT] {"timestamp":"2025-08-06T02:19:26.071Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":17,"tamaño_respuesta":444}
+2025-08-06T02:19:45.607Z - [SYSTEM] Sistema de tareas automatizadas iniciado
+2025-08-06T02:19:45.774Z - [SUCCESS] Backup diferencial creado: backup_diferencial_2025-08-06
+2025-08-06T02:19:45.775Z - [BACKUP_MANUAL] Backup diferencial ejecutado manualmente: backup_diferencial_2025-08-06
+2025-08-06T02:19:45.811Z - [LOG_MANUAL] Logging ejecutado manualmente
+2025-08-06T02:20:27.045Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:20:27.046Z - [UNAUTHORIZED_ACCESS] Rol encargado intentó acceder a /api/admin/estado
+2025-08-06T02:20:27.046Z - [AUDIT] {"timestamp":"2025-08-06T02:20:27.046Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":3,"tamaño_respuesta":155}
+2025-08-06T02:20:27.049Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:20:27.064Z - [AUDIT] {"timestamp":"2025-08-06T02:20:27.064Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":16,"tamaño_respuesta":444}
+2025-08-06T02:21:01.280Z - [SYSTEM] Sistema de tareas automatizadas iniciado
+2025-08-06T02:21:01.449Z - [SUCCESS] Backup diferencial creado: backup_diferencial_2025-08-06
+2025-08-06T02:21:01.450Z - [BACKUP_MANUAL] Backup diferencial ejecutado manualmente: backup_diferencial_2025-08-06
+2025-08-06T02:21:01.487Z - [LOG_MANUAL] Logging ejecutado manualmente
+2025-08-06T02:21:28.056Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:21:28.057Z - [UNAUTHORIZED_ACCESS] Rol encargado intentó acceder a /api/admin/estado
+2025-08-06T02:21:28.058Z - [AUDIT] {"timestamp":"2025-08-06T02:21:28.058Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":3,"tamaño_respuesta":155}
+2025-08-06T02:21:28.061Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:21:28.078Z - [AUDIT] {"timestamp":"2025-08-06T02:21:28.078Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":18,"tamaño_respuesta":444}
+2025-08-06T02:22:29.053Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:22:29.056Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:22:29.056Z - [UNAUTHORIZED_ACCESS] Rol encargado intentó acceder a /api/admin/estado
+2025-08-06T02:22:29.057Z - [AUDIT] {"timestamp":"2025-08-06T02:22:29.057Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":2,"tamaño_respuesta":155}
+2025-08-06T02:22:29.069Z - [AUDIT] {"timestamp":"2025-08-06T02:22:29.069Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":18,"tamaño_respuesta":444}
+2025-08-06T02:23:30.048Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:23:30.049Z - [UNAUTHORIZED_ACCESS] Rol encargado intentó acceder a /api/admin/estado
+2025-08-06T02:23:30.050Z - [AUDIT] {"timestamp":"2025-08-06T02:23:30.050Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":3,"tamaño_respuesta":155}
+2025-08-06T02:23:30.052Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:23:30.067Z - [AUDIT] {"timestamp":"2025-08-06T02:23:30.067Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":16,"tamaño_respuesta":444}
+2025-08-06T02:24:31.052Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:24:31.054Z - [UNAUTHORIZED_ACCESS] Rol encargado intentó acceder a /api/admin/estado
+2025-08-06T02:24:31.054Z - [AUDIT] {"timestamp":"2025-08-06T02:24:31.054Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":3,"tamaño_respuesta":155}
+2025-08-06T02:24:31.057Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:24:31.074Z - [AUDIT] {"timestamp":"2025-08-06T02:24:31.074Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":18,"tamaño_respuesta":444}
+2025-08-06T02:25:31.045Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:25:31.046Z - [UNAUTHORIZED_ACCESS] Rol encargado intentó acceder a /api/admin/estado
+2025-08-06T02:25:31.047Z - [AUDIT] {"timestamp":"2025-08-06T02:25:31.047Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":3,"tamaño_respuesta":155}
+2025-08-06T02:25:31.050Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:25:31.067Z - [AUDIT] {"timestamp":"2025-08-06T02:25:31.067Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":19,"tamaño_respuesta":444}
+2025-08-06T02:26:31.050Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:26:31.051Z - [UNAUTHORIZED_ACCESS] Rol encargado intentó acceder a /api/admin/estado
+2025-08-06T02:26:31.051Z - [AUDIT] {"timestamp":"2025-08-06T02:26:31.051Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":3,"tamaño_respuesta":155}
+2025-08-06T02:26:31.054Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:26:31.069Z - [AUDIT] {"timestamp":"2025-08-06T02:26:31.069Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":17,"tamaño_respuesta":445}
+2025-08-06T02:27:31.055Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:27:31.057Z - [UNAUTHORIZED_ACCESS] Rol encargado intentó acceder a /api/admin/estado
+2025-08-06T02:27:31.058Z - [AUDIT] {"timestamp":"2025-08-06T02:27:31.057Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":4,"tamaño_respuesta":155}
+2025-08-06T02:27:31.060Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:27:31.074Z - [AUDIT] {"timestamp":"2025-08-06T02:27:31.074Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":15,"tamaño_respuesta":445}
+2025-08-06T02:28:31.054Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:28:31.056Z - [UNAUTHORIZED_ACCESS] Rol encargado intentó acceder a /api/admin/estado
+2025-08-06T02:28:31.058Z - [AUDIT] {"timestamp":"2025-08-06T02:28:31.058Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":6,"tamaño_respuesta":155}
+2025-08-06T02:28:31.060Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:28:31.075Z - [AUDIT] {"timestamp":"2025-08-06T02:28:31.075Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":16,"tamaño_respuesta":445}
+2025-08-06T02:29:31.048Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:29:31.049Z - [UNAUTHORIZED_ACCESS] Rol encargado intentó acceder a /api/admin/estado
+2025-08-06T02:29:31.050Z - [AUDIT] {"timestamp":"2025-08-06T02:29:31.050Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":3,"tamaño_respuesta":155}
+2025-08-06T02:29:31.052Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:29:31.067Z - [AUDIT] {"timestamp":"2025-08-06T02:29:31.067Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":16,"tamaño_respuesta":445}
+2025-08-06T02:30:31.043Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:30:31.044Z - [UNAUTHORIZED_ACCESS] Rol encargado intentó acceder a /api/admin/estado
+2025-08-06T02:30:31.045Z - [AUDIT] {"timestamp":"2025-08-06T02:30:31.045Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":3,"tamaño_respuesta":155}
+2025-08-06T02:30:31.047Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:30:31.062Z - [AUDIT] {"timestamp":"2025-08-06T02:30:31.062Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":16,"tamaño_respuesta":445}
+2025-08-06T02:31:31.056Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:31:31.058Z - [UNAUTHORIZED_ACCESS] Rol encargado intentó acceder a /api/admin/estado
+2025-08-06T02:31:31.058Z - [AUDIT] {"timestamp":"2025-08-06T02:31:31.058Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":3,"tamaño_respuesta":155}
+2025-08-06T02:31:31.061Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:31:31.080Z - [AUDIT] {"timestamp":"2025-08-06T02:31:31.080Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":20,"tamaño_respuesta":445}
+2025-08-06T02:32:31.044Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:32:31.045Z - [UNAUTHORIZED_ACCESS] Rol encargado intentó acceder a /api/admin/estado
+2025-08-06T02:32:31.046Z - [AUDIT] {"timestamp":"2025-08-06T02:32:31.046Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":2,"tamaño_respuesta":155}
+2025-08-06T02:32:31.048Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:32:31.065Z - [AUDIT] {"timestamp":"2025-08-06T02:32:31.065Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":18,"tamaño_respuesta":445}
+2025-08-06T02:33:31.051Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:33:31.052Z - [UNAUTHORIZED_ACCESS] Rol encargado intentó acceder a /api/admin/estado
+2025-08-06T02:33:31.053Z - [AUDIT] {"timestamp":"2025-08-06T02:33:31.053Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":3,"tamaño_respuesta":155}
+2025-08-06T02:33:31.055Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:33:31.071Z - [AUDIT] {"timestamp":"2025-08-06T02:33:31.071Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":17,"tamaño_respuesta":445}
+2025-08-06T02:34:31.057Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:34:31.058Z - [UNAUTHORIZED_ACCESS] Rol encargado intentó acceder a /api/admin/estado
+2025-08-06T02:34:31.058Z - [AUDIT] {"timestamp":"2025-08-06T02:34:31.058Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":2,"tamaño_respuesta":155}
+2025-08-06T02:34:31.060Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:34:31.076Z - [AUDIT] {"timestamp":"2025-08-06T02:34:31.076Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":17,"tamaño_respuesta":445}
+2025-08-06T02:35:31.046Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:35:31.046Z - [UNAUTHORIZED_ACCESS] Rol encargado intentó acceder a /api/admin/estado
+2025-08-06T02:35:31.047Z - [AUDIT] {"timestamp":"2025-08-06T02:35:31.047Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":3,"tamaño_respuesta":155}
+2025-08-06T02:35:31.050Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:35:31.065Z - [AUDIT] {"timestamp":"2025-08-06T02:35:31.065Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":16,"tamaño_respuesta":445}
+2025-08-06T02:36:31.055Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:36:31.056Z - [UNAUTHORIZED_ACCESS] Rol encargado intentó acceder a /api/admin/estado
+2025-08-06T02:36:31.057Z - [AUDIT] {"timestamp":"2025-08-06T02:36:31.057Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":3,"tamaño_respuesta":155}
+2025-08-06T02:36:31.059Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:36:31.073Z - [AUDIT] {"timestamp":"2025-08-06T02:36:31.073Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":15,"tamaño_respuesta":445}
+2025-08-06T02:37:31.046Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:37:31.047Z - [UNAUTHORIZED_ACCESS] Rol encargado intentó acceder a /api/admin/estado
+2025-08-06T02:37:31.048Z - [AUDIT] {"timestamp":"2025-08-06T02:37:31.048Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":3,"tamaño_respuesta":155}
+2025-08-06T02:37:31.051Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:37:31.067Z - [AUDIT] {"timestamp":"2025-08-06T02:37:31.067Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":17,"tamaño_respuesta":445}
+2025-08-06T02:38:31.047Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:38:31.048Z - [UNAUTHORIZED_ACCESS] Rol encargado intentó acceder a /api/admin/estado
+2025-08-06T02:38:31.049Z - [AUDIT] {"timestamp":"2025-08-06T02:38:31.049Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":4,"tamaño_respuesta":155}
+2025-08-06T02:38:31.052Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:38:31.067Z - [AUDIT] {"timestamp":"2025-08-06T02:38:31.067Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":17,"tamaño_respuesta":445}
+2025-08-06T02:39:31.048Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:39:31.049Z - [UNAUTHORIZED_ACCESS] Rol encargado intentó acceder a /api/admin/estado
+2025-08-06T02:39:31.050Z - [AUDIT] {"timestamp":"2025-08-06T02:39:31.050Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":4,"tamaño_respuesta":155}
+2025-08-06T02:39:31.052Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:39:31.067Z - [AUDIT] {"timestamp":"2025-08-06T02:39:31.067Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":16,"tamaño_respuesta":445}
+2025-08-06T02:40:31.056Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:40:31.057Z - [UNAUTHORIZED_ACCESS] Rol encargado intentó acceder a /api/admin/estado
+2025-08-06T02:40:31.058Z - [AUDIT] {"timestamp":"2025-08-06T02:40:31.058Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":4,"tamaño_respuesta":155}
+2025-08-06T02:40:31.061Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:40:31.077Z - [AUDIT] {"timestamp":"2025-08-06T02:40:31.077Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":17,"tamaño_respuesta":445}
+2025-08-06T02:41:31.045Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:41:31.046Z - [UNAUTHORIZED_ACCESS] Rol encargado intentó acceder a /api/admin/estado
+2025-08-06T02:41:31.047Z - [AUDIT] {"timestamp":"2025-08-06T02:41:31.047Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":4,"tamaño_respuesta":155}
+2025-08-06T02:41:31.049Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:41:31.065Z - [AUDIT] {"timestamp":"2025-08-06T02:41:31.065Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":17,"tamaño_respuesta":445}
+2025-08-06T02:42:31.054Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:42:31.055Z - [UNAUTHORIZED_ACCESS] Rol encargado intentó acceder a /api/admin/estado
+2025-08-06T02:42:31.055Z - [AUDIT] {"timestamp":"2025-08-06T02:42:31.055Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":3,"tamaño_respuesta":155}
+2025-08-06T02:42:31.058Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:42:31.073Z - [AUDIT] {"timestamp":"2025-08-06T02:42:31.072Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":15,"tamaño_respuesta":445}
+2025-08-06T02:43:31.054Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:43:31.055Z - [UNAUTHORIZED_ACCESS] Rol encargado intentó acceder a /api/admin/estado
+2025-08-06T02:43:31.056Z - [AUDIT] {"timestamp":"2025-08-06T02:43:31.056Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":3,"tamaño_respuesta":155}
+2025-08-06T02:43:31.059Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:43:31.075Z - [AUDIT] {"timestamp":"2025-08-06T02:43:31.075Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":17,"tamaño_respuesta":445}
+2025-08-06T02:44:31.054Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:44:31.056Z - [UNAUTHORIZED_ACCESS] Rol encargado intentó acceder a /api/admin/estado
+2025-08-06T02:44:31.057Z - [AUDIT] {"timestamp":"2025-08-06T02:44:31.057Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":403,"duracion":4,"tamaño_respuesta":155}
+2025-08-06T02:44:31.061Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:44:31.077Z - [AUDIT] {"timestamp":"2025-08-06T02:44:31.077Z","usuario":"encargado","metodo":"GET","ruta":"/api/admin/estadisticas","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":19,"tamaño_respuesta":445}
+2025-08-06T02:45:23.037Z - [SYSTEM] Sistema de tareas automatizadas iniciado
+2025-08-06T02:45:26.015Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:45:26.020Z - [AUDIT] {"timestamp":"2025-08-06T02:45:26.020Z","usuario":"encargado","metodo":"GET","ruta":"/api/alquileres/alertas/vehiculos-mal-estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":7,"tamaño_respuesta":2}
+2025-08-06T02:45:29.691Z - [AUDIT] {"timestamp":"2025-08-06T02:45:29.691Z","usuario":"anonimo","metodo":"GET","ruta":"/admin.html","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":404,"duracion":0,"tamaño_respuesta":68}
+2025-08-06T02:45:35.333Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:45:35.337Z - [AUDIT] {"timestamp":"2025-08-06T02:45:35.337Z","usuario":"encargado","metodo":"GET","ruta":"/api/alquileres/alertas/vehiculos-mal-estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":5,"tamaño_respuesta":2}
+2025-08-06T02:45:42.210Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:45:42.215Z - [AUDIT] {"timestamp":"2025-08-06T02:45:42.214Z","usuario":"encargado","metodo":"GET","ruta":"/api/alquileres/alertas/vehiculos-mal-estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":5,"tamaño_respuesta":2}
+2025-08-06T02:46:23.154Z - [SYSTEM] Sistema de tareas detenido
+2025-08-06T02:46:27.770Z - [SYSTEM] Sistema de tareas automatizadas iniciado
+2025-08-06T02:46:31.660Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T02:46:31.665Z - [AUDIT] {"timestamp":"2025-08-06T02:46:31.665Z","usuario":"encargado","metodo":"GET","ruta":"/api/alquileres/alertas/vehiculos-mal-estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":7,"tamaño_respuesta":2}
+2025-08-06T04:00:00.056Z - [SYSTEM_STATS] {"timestamp":"2025-08-06T04:00:00.056Z","tareas_activas":5,"memoria_libre":"25 MB","uptime":"2 horas"}
+2025-08-06T04:00:00.065Z - [SYSTEM_STATS] {"timestamp":"2025-08-06T04:00:00.065Z","tareas_activas":5,"memoria_libre":"21 MB","uptime":"1 horas"}
+2025-08-06T06:00:00.059Z - [SYSTEM_STATS] {"timestamp":"2025-08-06T06:00:00.059Z","tareas_activas":5,"memoria_libre":"21 MB","uptime":"3 horas"}
+2025-08-06T06:00:00.293Z - [SYSTEM_STATS] {"timestamp":"2025-08-06T06:00:00.293Z","tareas_activas":5,"memoria_libre":"25 MB","uptime":"4 horas"}
+2025-08-06T06:34:24.048Z - [SYSTEM] Sistema de tareas detenido
+2025-08-06T07:00:00.415Z - [SUCCESS] Backup diferencial creado: backup_diferencial_2025-08-06
