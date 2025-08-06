@@ -1008,3 +1008,14 @@ programa o archivo por lotes ejecutable.
 2025-08-06T06:00:00.293Z - [SYSTEM_STATS] {"timestamp":"2025-08-06T06:00:00.293Z","tareas_activas":5,"memoria_libre":"25 MB","uptime":"4 horas"}
 2025-08-06T06:34:24.048Z - [SYSTEM] Sistema de tareas detenido
 2025-08-06T07:00:00.415Z - [SUCCESS] Backup diferencial creado: backup_diferencial_2025-08-06
+2025-08-06T08:11:33.651Z - [SYSTEM] Sistema de tareas automatizadas iniciado
+2025-08-06T08:12:20.937Z - [SYSTEM] Sistema de tareas detenido
+2025-08-06T08:12:25.115Z - [SYSTEM] Sistema de tareas automatizadas iniciado
+2025-08-06T08:18:25.922Z - [SYSTEM] Sistema de tareas detenido
+2025-08-06T08:18:30.699Z - [SYSTEM] Sistema de tareas automatizadas iniciado
+2025-08-06T08:22:55.148Z - [SYSTEM] Sistema de tareas automatizadas iniciado
+2025-08-06T08:23:10.665Z - [AUDIT] {"timestamp":"2025-08-06T08:23:10.665Z","usuario":"anonimo","metodo":"POST","ruta":"/api/auth/login","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":137,"tamaño_respuesta":377}
+2025-08-06T08:23:12.619Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T08:23:12.627Z - [AUDIT] {"timestamp":"2025-08-06T08:23:12.627Z","usuario":"encargado","metodo":"GET","ruta":"/api/alquileres/alertas/vehiculos-mal-estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":11,"tamaño_respuesta":2}
+2025-08-06T08:23:21.537Z - [AUTH] Usuario encargado (undefined) autenticado
+2025-08-06T08:23:21.541Z - [AUDIT] {"timestamp":"2025-08-06T08:23:21.541Z","usuario":"encargado","metodo":"GET","ruta":"/api/alquileres/alertas/vehiculos-mal-estado","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","statusCode":200,"duracion":6,"tamaño_respuesta":2}
